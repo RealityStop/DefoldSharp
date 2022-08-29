@@ -54,8 +54,10 @@ namespace src2.defold
 		/// </summary>
 		public static extern float dot(Vector4 v1, Vector4 v2);
 
-
-		//TODO:inv
+		/// <summary>
+		/// @CSharpLua.Template = "vmath.inv({0})"
+		/// </summary>
+		public static extern Matrix4 inv(Matrix4 m1);
 
 
 		/// <summary>
