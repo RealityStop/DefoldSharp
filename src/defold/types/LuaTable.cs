@@ -43,20 +43,19 @@ namespace src2.defold.types
 		private static extern ILuaTable ReturnTable();
 	}
 
+	
 	public abstract class LuaTableBase : ILuaTable
 	{
 		
 	}
 	
-	/// <summary>
-	/// @CSharpLua.Ignore
-	/// </summary>	
-	public class LuaTable<TKey, TValue> : LuaTableBase
+
+	public class LuaTableOf<TKey, TValue> : LuaTableBase
 	{
 		/// <summary>
 		/// @CSharpLua.Template = "{}"
 		/// </summary>	
-		public extern LuaTable();
+		public extern LuaTableOf();
 
 
 		/// <summary>
@@ -91,21 +90,30 @@ namespace src2.defold.types
 		/// <summary>
 		/// @CSharpLua.Template = "{this}[{0}] = {1}"
 		/// </summary>
-		public extern LuaType Set(TKey key, TValue value);
+		public extern void Set(TKey key, TValue value);
 	}
 
-
-	public class LuaTable : LuaTable<LuaType, LuaType>
+	public class LuaTable : LuaTableOf<LuaType, LuaType>
 	{
-		
+		/// <summary>
+		/// @CSharpLua.Template = "{}"
+		/// </summary>	
+		public extern LuaTable();
 	}
-	
-	public class LuaArray : LuaTable<int, LuaType>
+
+	public class LuaArray : LuaTableOf<int, LuaType>
 	{
-		
+		/// <summary>
+		/// @CSharpLua.Template = "{}"
+		/// </summary>	
+		public extern LuaArray();
 	}	
-	public class LuaArray<TValue> : LuaTable<int, TValue>
+	
+	public class LuaArray<TValue> : LuaTableOf<int, TValue>
 	{
-		
+		/// <summary>
+		/// @CSharpLua.Template = "{}"
+		/// </summary>	
+		public extern LuaArray();
 	}	
 }

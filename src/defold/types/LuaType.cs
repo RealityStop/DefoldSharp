@@ -2,9 +2,6 @@
 
 namespace src2.defold.types
 {
-	/// <summary>
-	/// @CSharpLua.Ignore
-	/// </summary>
 	public class LuaType
 	{
 		/// <summary>
