@@ -1,6 +1,6 @@
-﻿using src2.defold.types;
+﻿using defold.types;
 
-namespace src2.defold
+namespace defold
 {
 	/// <summary>
 	/// @CSharpLua.Ignore

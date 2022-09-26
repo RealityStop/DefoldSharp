@@ -1,6 +1,6 @@
-using src2.defold.types;
+using defold.types;
 
-namespace src2.defold.support
+namespace defold.support
 {
 	public static class LuaTableSerializableExt
 	{
@@ -18,7 +18,12 @@ namespace src2.defold.support
 			
 			if metadata.properties then
 			  for _, value in ipairs(metadata.properties) do
-			    table[ value[1] ] = self[ value[1] ];
+			    --We want to skip over non-auto properties. Only auto-properties have implicit backing
+			    --if we have getters and/or setters, then we assume that the property state can be recostructed
+			    --from fields and other properties. 
+			    if #value <= 3 then
+			      table[ value[1] ] = self[ value[1] ];
+			    end
 			  end
 			end			
 			]]*/
@@ -48,7 +53,12 @@ namespace src2.defold.support
 			
 			if metadata.properties then
 			  for _, value in ipairs(metadata.properties) do
-			    table[ value[1] ] = self[ value[1] ];
+			  	--We want to skip over non-auto properties. Only auto-properties have implicit backing
+			    --if we have getters and/or setters, then we assume that the property state can be recostructed
+			    --from fields and other properties. 
+			    if #value <= 3 then
+			      table[ value[1] ] = self[ value[1] ];
+			    end
 			  end
 			end			
 			]]*/

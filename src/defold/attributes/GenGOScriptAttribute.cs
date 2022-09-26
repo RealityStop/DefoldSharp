@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace src2.defold.support
+namespace defold.attributes
 {
 	/// <summary>
 	/// Flags a class as needing to be generated to .script file.  This is almost always done

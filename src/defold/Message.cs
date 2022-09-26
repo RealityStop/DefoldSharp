@@ -1,8 +1,8 @@
 ﻿using System.Dynamic;
-using src2.defold.support;
-using src2.defold.types;
+using defold.support;
+using defold.types;
 
-namespace src2.defold
+namespace defold
 {
 	public static class Message
 	{
@@ -28,36 +28,79 @@ namespace src2.defold
 		/// <summary>
 		/// @CSharpLua.Template = msg.post({0},{1})
 		/// </summary>
-		public static extern void post(HashOrStringOrUrl id, string message);
+		public static extern void post(string id, string message);
+		public static extern void post(Url id, string message);
+		public static extern void post(Hash id, string message);
 
 
 		/// <summary>
 		/// @CSharpLua.Template = msg.post({0},{1},{2})
 		/// </summary>
-		public static extern void post(HashOrStringOrUrl id, string code, ILuaTable data);
+		public static extern void post(string id, string code, ILuaTable data);
+		public static extern void post(Url id, string code, ILuaTable data);
+		public static extern void post(Hash id, string code, ILuaTable data);
 
-
-		public static void postMessage(HashOrStringOrUrl id, string code, ILuaTableSerializable data)
+		
+		public static void postMessage(string id, string code, ILuaTableSerializable data)
 		{
 			post(id, code, data.ToTable());
 		}
 		
-		public static void postMessage(HashOrStringOrUrl id, StandardMessageImplementation message)
+		public static void postMessage(Url id, string code, ILuaTableSerializable data)
+		{
+			post(id, code, data.ToTable());
+		}
+
+		public static void postMessage(Hash id, string code, ILuaTableSerializable data)
+		{
+			post(id, code, data.ToTable());
+		}
+		
+		
+		public static void postMessage(string id, StandardMessageImplementation message)
+		{
+			post(id, message.Code, message.ToTable());
+		}
+		public static void postMessage(Hash id, StandardMessageImplementation message)
+		{
+			post(id, message.Code, message.ToTable());
+		}
+		public static void postMessage(Url id, StandardMessageImplementation message)
 		{
 			post(id, message.Code, message.ToTable());
 		}
 		
-		public static void postMessage<T>(HashOrStringOrUrl id, T message) where T: CustomMessageImplementation
+		
+		public static void postMessage<T>(Hash id, T message) where T: CustomMessageImplementation
+		{
+			post(id, typeof(T).Name, message.ToTable());
+		}
+
+		public static void postMessage<T>(Url id, T message) where T: CustomMessageImplementation
+		{
+			post(id, typeof(T).Name, message.ToTable());
+		}
+
+		public static void postMessage<T>(string id, T message) where T: CustomMessageImplementation
 		{
 			post(id, typeof(T).Name, message.ToTable());
 		}
 
 
+		/// <summary>
+		/// @CSharpLua.Template = msg.post({0},{1},{2})
+		/// </summary>
+		public static extern void post(string id, string code, ExpandoObject data);
+
+		/// <summary>
+		/// @CSharpLua.Template = msg.post({0},{1},{2})
+		/// </summary>
+		public static extern void post(Hash id, string code, ExpandoObject data);	
 		
 		/// <summary>
 		/// @CSharpLua.Template = msg.post({0},{1},{2})
 		/// </summary>
-		public static extern void post(HashOrStringOrUrl id, string code, ExpandoObject data);
+		public static extern void post(Url id, string code, ExpandoObject data);
 
 
 

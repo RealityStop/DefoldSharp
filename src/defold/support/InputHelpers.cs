@@ -1,4 +1,4 @@
-﻿namespace src2.defold.support
+﻿namespace defold.support
 {
 	/// <summary>
 	/// @CSharpLua.Ignore

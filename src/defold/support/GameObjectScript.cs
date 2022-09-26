@@ -1,6 +1,7 @@
-﻿using src2.defold.types;
+﻿using defold.attributes;
+using defold.types;
 
-namespace src2.defold.support
+namespace defold.support
 {
 	/// <summary>
 	/// Base class for all game object scripts (.script).
