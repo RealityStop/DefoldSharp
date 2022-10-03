@@ -14,62 +14,27 @@ Along with [DefoldCSharpCompiler](https://github.com/RealityStop/DefoldCSharpCom
 Additionally, during the compilation process, DefoldSharp needs to create `.script` files for component scripts.
 
 ### Defold 1-1 API
-DefoldSharp includes a 1-1 api, with static classes for each lua namespace.  By adding `using defold;` you can access the C# version just as you would in lua.  For example, `go.get_position()`, `vmath.matrix4_frustum(...)`.
+DefoldSharp includes a 1-1 api, with static classes for each lua namespace.  You can access the C# version just as you would in lua.  For example, `go.get_position()`, `vmath.matrix4_frustum(...)`.
+
+```C#
+ var newVector = vmath.vector(0,1,0);
+ newVector = newVector * speed * dt;
+ newVector = vmath.normalize(newVector);
+```
 
 ### Defold OOP API
 DefoldSharp also provides a convenience OOP API, such as
 
-> var newVector = new Vector3(0,1,0);
-> newVector *= speed * dt;
-> newVector = newVector.Normalize();
-
+```C#
+ var newVector = new Vector3(0,1,0);
+ newVector *= speed * dt;
+ newVector = newVector.Normalize();
+```
 
 
 ### C# core
-DefoldSharp includes a custom version of CSharp.lua's CoreSystem.lua, which includes lua implementations of 
+DefoldSharp includes a custom version of CSharp.lua's CoreSystem.lua, which includes lua implementations of [System](https://github.com/RealityStop/DefoldSharp/wiki/CoreSystem-system-includes)
 
-> Interfaces
-Exception
-Math
-Number
-Char
-String
-Boolean
-Delegate
-Enum
-TimeSpan
-DateTime
-Collections.EqualityComparer
-Array
-Type
-Collections.List
-Collections.Dictionary
-Collections.Queue
-Collections.Stack
-Collections.HashSet
-Collections.LinkedList
-Collections.SortedSet
-Collections.SortedList
-Collections.SortedDictionary
-Collections.PriorityQueue
-Collections.Linq
-Convert
-Random
-Text.StringBuilder
-Console
-IO.File
-Reflection.Assembly
-Threading.Timer
-Threading.Thread
-Threading.Task
-Utilities
-Globalization.Globalization
-Numerics.HashCodeHelper
-Numerics.Complex
-Numerics.Matrix3x2
-Numerics.Matrix4x4
-Numerics.Plane
-Numerics.Quaternion
-Numerics.Vector2
-Numerics.Vector3
-Numerics.Vector4
+### Script generation
+DefoldSharp's transpiler will detect and create .script and .gui_script files for classes that derive from `GameObjectScript` and `GUIScript` respectively.  For the alpha, these generated Defold scripts are passthrough stubs due to a limitation in the underlying transpiler.  See [Issue 2](https://github.com/RealityStop/DefoldSharp/issues/2) for the technical explanation and progress on working around it.
+
