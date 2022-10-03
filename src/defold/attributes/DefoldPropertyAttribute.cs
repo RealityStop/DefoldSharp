@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 
 namespace defold.attributes
 {
@@ -12,4 +12,4 @@ namespace defold.attributes
 		{
 		}
 	}
-}
+}*/

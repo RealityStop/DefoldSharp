@@ -1,6 +1,6 @@
-using defold.types;
+using types;
 
-namespace defold.support
+namespace support
 {
 	public static class LuaTableSerializableExt
 	{

@@ -1,7 +1,4 @@
-using System;
-using defold;
-
-namespace defold.types
+namespace types
 {
 	/// <summary>
 	/// @CSharpLua.Ignore

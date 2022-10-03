@@ -1,15 +1,22 @@
-﻿using defold.attributes;
-using defold.types;
+﻿using attributes;
+using types;
 
-namespace defold.support
+namespace support
 {
+	public abstract class GameObjectScript : GameObjectScript<AnimatableProperties>
+	{
+		
+	}
+
 	/// <summary>
 	/// Base class for all game object scripts (.script).
 	/// </summary>
 	[GenGOScript]
-	public abstract class GameObjectScript
+	public abstract class GameObjectScript<TProps> where TProps : AnimatableProperties
 	{
 		protected bool IsInputFocusHeld { get; private set; }
+
+		protected TProps Properties { get; private set; }
 
 
 		protected void RequestInput()
@@ -24,6 +31,12 @@ namespace defold.support
 			IsInputFocusHeld = false;
 			InputHelpers.ReleaseInput();
 		}
+
+		protected virtual void AssignProperties(TProps prop)
+		{
+			Properties = prop;
+		}
+		
 
 		/// <summary>
 		/// Called when a script component is initialized.
