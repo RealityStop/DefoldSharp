@@ -4,7 +4,7 @@ using types;
 namespace support
 {
 	[DoNotGenerate]
-	public abstract class GameObjectScript : GameObjectScript<AnimatableProperties>
+	public abstract class GUIScript : GUIScript<AnimatableProperties>
 	{
 		
 	}
@@ -13,23 +13,8 @@ namespace support
 	/// Base class for all game object scripts (.script).
 	/// </summary>
 	[DoNotGenerate]
-	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps> where TProps : AnimatableProperties
+	public abstract class GUIScript<TProps> : ScriptPropertyHost<TProps> where TProps : AnimatableProperties
 	{
-		protected bool IsInputFocusHeld { get; private set; }
-
-		protected void RequestInput()
-		{
-			InputHelpers.RequestInput();
-			IsInputFocusHeld = true;
-		}
-
-
-		protected void ReleaseInput()
-		{
-			IsInputFocusHeld = false;
-			InputHelpers.ReleaseInput();
-		}
-
 		/// <summary>
 		/// Called when a script component is initialized.
 		///
@@ -42,7 +27,7 @@ namespace support
 
 
 		/// <summary>
-		///         Called when a script component is finalized.
+		/// Called when a script component is finalized.
 		/// This is a callback-function, which is called by the engine when a script component is finalized (destroyed). It can
 		/// be used to e.g. take some last action, report the finalization to other game object instances, delete spawned objects
 		/// or release user input focus (see `release_input_focus`).
