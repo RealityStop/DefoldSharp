@@ -29,13 +29,13 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0} + {1}"
 		/// </summary>
-		public static extern Vector2 operator +(Vector2 a, Vector3 b);
+		public static extern Vector3 operator +(Vector2 a, Vector3 b);
 		
 		
 		/// <summary>
 		/// @CSharpLua.Template = "{0} + {1}"
 		/// </summary>
-		public static extern Vector2 operator +(Vector3 a, Vector2 b);
+		public static extern Vector3 operator +(Vector3 a, Vector2 b);
 
 
 		/// <summary>
@@ -47,13 +47,13 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0} - {1}"
 		/// </summary>
-		public static extern Vector2 operator -(Vector2 a, Vector3 b);
+		public static extern Vector3 operator -(Vector2 a, Vector3 b);
 
 
 		/// <summary>
 		/// @CSharpLua.Template = "{0} - {1}"
 		/// </summary>
-		public static extern Vector2 operator -(Vector3 a, Vector2 b);
+		public static extern Vector3 operator -(Vector3 a, Vector2 b);
 		
 		
 		/// <summary>
@@ -83,13 +83,13 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Vector2 operator *(Vector2 a, Vector3 b);
+		public static extern Vector3 operator *(Vector2 a, Vector3 b);
 		
 
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Vector2 operator *(Vector3 a, Vector2 b);
+		public static extern Vector3 operator *(Vector3 a, Vector2 b);
 		
 
 		/// <summary>
@@ -113,7 +113,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.mul_per_elem({this},{0})"
 		/// </summary>
-		public extern Vector2 MultiplyByElement(Vector3 other);
+		public extern Vector3 MultiplyByElement(Vector3 other);
 		
 
 		/// <summary>
