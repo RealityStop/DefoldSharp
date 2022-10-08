@@ -11,9 +11,25 @@ public static class resource
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "resource.material()"
+	/// </summary>
+	public static extern Hash material();
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "resource.material({0})"
 	/// </summary>
 	public static extern Hash material(string path_p1);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "resource.font()"
+	/// </summary>
+	public static extern Hash font();
 		
 		
 	/// <summary>
@@ -27,9 +43,25 @@ public static class resource
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "resource.texture()"
+	/// </summary>
+	public static extern Hash texture();
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "resource.texture({0})"
 	/// </summary>
 	public static extern Hash texture(string path_p1);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "resource.atlas()"
+	/// </summary>
+	public static extern Hash atlas();
 		
 		
 	/// <summary>
@@ -43,9 +75,25 @@ public static class resource
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "resource.buffer()"
+	/// </summary>
+	public static extern Hash buffer();
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "resource.buffer({0})"
 	/// </summary>
 	public static extern Hash buffer(string path_p1);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "resource.tile_source()"
+	/// </summary>
+	public static extern Hash tile_source();
 		
 		
 	/// <summary>
@@ -147,6 +195,14 @@ public static class resource
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "resource.get_text_metrics({0}, {1})"
+	/// </summary>
+	public static extern ILuaTable get_text_metrics(Hash url_p1, string text_p2);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "resource.get_text_metrics({0}, {1}, {2})"
 	/// </summary>
 	public static extern ILuaTable get_text_metrics(Hash url_p1, string text_p2, ILuaTable options_p3);
@@ -174,6 +230,14 @@ public static class resource
 	/// @CSharpLua.Template = "resource.store_manifest({0}, {1})"
 	/// </summary>
 	public static extern void store_manifest(string manifest_buffer_p1, Action<object,ResourceLiveUpdate> callback_p2);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "resource.store_archive({0}, {1})"
+	/// </summary>
+	public static extern void store_archive(string path_p1, Action<object,ResourceLiveUpdate> callback_p2);
 		
 		
 	/// <summary>

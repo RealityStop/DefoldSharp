@@ -11,6 +11,14 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.raycast_async({0}, {1}, {2})"
+	/// </summary>
+	public static extern void raycast_async(Vector3 from_p1, Vector3 to_p2, ILuaTable groups_p3);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.raycast_async({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void raycast_async(Vector3 from_p1, Vector3 to_p2, ILuaTable groups_p3, double request_id_p4);
@@ -27,9 +35,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -43,9 +67,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -59,9 +99,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -75,9 +131,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -91,9 +163,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -107,9 +195,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -123,9 +227,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -139,9 +259,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>
@@ -155,9 +291,25 @@ public static class physics
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
 	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, ILuaTable properties_p7);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6);
 		
 		
 	/// <summary>

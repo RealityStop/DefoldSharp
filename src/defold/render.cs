@@ -59,9 +59,25 @@ public static class render
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "render.draw({0})"
+	/// </summary>
+	public static extern void draw(ILuaTable predicate_p1);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "render.draw({0}, {1})"
 	/// </summary>
 	public static extern void draw(ILuaTable predicate_p1, ILuaTable options_p2);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "render.draw_debug3d()"
+	/// </summary>
+	public static extern void draw_debug3d();
 		
 		
 	/// <summary>

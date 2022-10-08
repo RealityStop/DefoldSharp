@@ -59,6 +59,14 @@ public static class sys
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "sys.open_url({0})"
+	/// </summary>
+	public static extern bool open_url(string url_p1);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "sys.open_url({0}, {1})"
 	/// </summary>
 	public static extern bool open_url(string url_p1, ILuaTable attributes_p2);

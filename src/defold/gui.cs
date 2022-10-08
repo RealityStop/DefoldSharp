@@ -203,9 +203,41 @@ public static class gui
 	/// <summary>
 	/// 
 	/// 
+	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1})"
+	/// </summary>
+	public static extern void play_flipbook(Node node_p1, string animation_p2);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2})"
+	/// </summary>
+	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<object,Node> complete_function_p3);
+		
+		
+	/// <summary>
+	/// 
+	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<object,Node> complete_function_p3, ILuaTable play_properties_p4);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1})"
+	/// </summary>
+	public static extern void play_flipbook(Node node_p1, Hash animation_p2);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2})"
+	/// </summary>
+	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<object,Node> complete_function_p3);
 		
 		
 	/// <summary>
@@ -651,7 +683,7 @@ public static class gui
 	/// <summary>
 	/// 
 	/// 
-	/// @CSharpLua.Template = "gui.move_above({0}, {1})"
+	/// @CSharpLua.Template = "gui.move_above({0})"
 	/// </summary>
 	public static extern void move_above(Node node_p1);
 		
@@ -667,7 +699,7 @@ public static class gui
 	/// <summary>
 	/// 
 	/// 
-	/// @CSharpLua.Template = "gui.move_below({0}, {1})"
+	/// @CSharpLua.Template = "gui.move_below({0})"
 	/// </summary>
 	public static extern void move_below(Node node_p1);
 		
@@ -990,6 +1022,14 @@ public static class gui
 	/// @CSharpLua.Template = "gui.new_particlefx_node({0}, {1})"
 	/// </summary>
 	public static extern Node new_particlefx_node(Vector4 pos_p1, string particlefx_p2);
+		
+		
+	/// <summary>
+	/// 
+	/// 
+	/// @CSharpLua.Template = "gui.play_particlefx({0})"
+	/// </summary>
+	public static extern void play_particlefx(Node node_p1);
 		
 		
 	/// <summary>
