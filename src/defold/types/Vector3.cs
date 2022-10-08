@@ -65,7 +65,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.length({this})"
 		/// </summary>
-		public static extern float Magnitude();
+		public extern float Magnitude();
 
 
 		/// <summary>
