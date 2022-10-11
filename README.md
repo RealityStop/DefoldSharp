@@ -46,7 +46,7 @@ Go to [releases](https://github.com/RealityStop/DefoldSharp/releases) and follow
 
 
 # Alpha
-Alpha 1 has been released.  The goal for this Alpha is the "minimum viable product" of being able to take a project from C# to Defold.  As a benchmark, the War Battles tutorial was used to ensure that a wide variety of requirements were met (messages, properties, user interface, custom message passing).  You can follow the examples link below to see how that was accomplished.
+Alpha 2 has been released.  The goal for this Alpha is the "minimum viable product" of being able to take a project from C# to Defold.  As a benchmark, the War Battles tutorial was used to ensure that a wide variety of requirements were met (messages, properties, user interface, custom message passing).  You can follow the examples link below to see how that was accomplished.
 
 ## Alpha limitations
 
@@ -54,7 +54,6 @@ Alpha 1 has been released.  The goal for this Alpha is the "minimum viable produ
 * Reflection is not supported.
 * For now, single-assembly code is supported.  Importing via dlls/nuget will never be supported, as we aren't decompiling the 3rd party code to generate lua from.  However, 3rd-party assemblies that you have the code for should be supported in the future by allowing you to create a special lua export of your dependencies and import it into your DefoldSharp project.  How to do this will be expanded in the future, and the main Defold api will be moved out this way as well..  In Alpha 1, everything must be in the same project.
 * All C# code is contained in the generated out.lua file, with simple stubs being generated for the `.script` and `.gui_script files`.  See [Issue 2](https://github.com/RealityStop/DefoldSharp/issues/2) for progress on moving the logic to the generated files.
-* Optional parameters aren't handled incredibly gracefully (the existing ones are hand generated).  This should be improved in Alpha 2 or 3.
 * Hot Reload does NOT work.  This is because the logic is contained in secondary scripts (this is required to support inheritance), rather than in the actual .script.  I am unsure if this is something that can be worked around.
 
 
