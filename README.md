@@ -69,8 +69,7 @@ The future of DefoldSharp is planned to be an old school `several alphas -> seve
 Here's a short glimpse into the immediate future  (all are subject to change, and may include features not mentioned here:
 
 ## Upcoming Alphas:
-### Alpha 2
- * ✅ automatic optional parameter handling ([Issue](https://github.com/RealityStop/DefoldSharp/issues/5)).
- * Improved Vector OOP API
+### Alpha 3
+ * ✅ Fixed comments on methods.
 
 
