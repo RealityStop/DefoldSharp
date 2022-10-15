@@ -1,4 +1,5 @@
 using System;
+using types;
 
 /// <summary>
 /// In-app purchases API documentation

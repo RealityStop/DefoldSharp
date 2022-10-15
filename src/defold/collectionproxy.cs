@@ -1,4 +1,5 @@
 using System;
+using types;
 
 /// <summary>
 /// Collection proxy API documentation

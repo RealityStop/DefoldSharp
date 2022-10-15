@@ -1,4 +1,5 @@
 using System;
+using types;
 
 /// <summary>
 /// Inter-app communication API documentation
