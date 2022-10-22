@@ -70,5 +70,6 @@ Here's a short glimpse into the immediate future  (all are subject to change, an
 ## Upcoming Alphas:
 ### Alpha 3
  * ✅ Fixed comments on methods.
-
+ * Component OOP API   (Sprite, Tilemap, etc)
+ * standard messages
 
