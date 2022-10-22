@@ -9,6 +9,62 @@ using types;
 public static class render
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class draw_debug_text_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("draw_debug_text");
+		public Vector3 position;
+		public string text;
+		public Vector4 color;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class draw_line_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("draw_line");
+		public Vector3 start_point;
+		public Vector3 end_point;
+		public Vector4 color;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class window_resized_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("window_resized");
+		public double height;
+		public double width;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class resize_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("resize");
+		public double height;
+		public double width;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class clear_color_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("clear_color");
+		public Vector4 color;
+	}
+	
+	
+	/// <summary>
 	/// Constant buffers are used to set shader program variables and are optionally passed to the <code>render.draw()</code> function.
 	/// The buffer's constant elements can be indexed like an ordinary Lua table, but you can't iterate over them with pairs() or ipairs().
 	/// 

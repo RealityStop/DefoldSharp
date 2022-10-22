@@ -9,6 +9,53 @@ using types;
 public static class go
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class acquire_input_focus_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("acquire_input_focus");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class release_input_focus_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("release_input_focus");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class set_parent_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("set_parent");
+		public Hash parent_id;
+		public double keep_world_transform;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class enable_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("enable");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class disable_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("disable");
+	}
+	
+	
+	/// <summary>
 	/// gets a named property of the specified game object or component
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1})"

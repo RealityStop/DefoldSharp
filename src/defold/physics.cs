@@ -9,6 +9,89 @@ using types;
 public static class physics
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class apply_force_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("apply_force");
+		public Vector3 force;
+		public Vector3 position;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class collision_response_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("collision_response");
+		public Hash other_id;
+		public Vector3 other_position;
+		public Hash other_group;
+		public Hash own_group;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class contact_point_response_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("contact_point_response");
+		public Vector3 position;
+		public Vector3 normal;
+		public Vector3 relative_velocity;
+		public double distance;
+		public double applied_impulse;
+		public double life_time;
+		public double mass;
+		public double other_mass;
+		public Hash other_id;
+		public Vector3 other_position;
+		public Hash other_group;
+		public Hash own_group;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class trigger_response_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("trigger_response");
+		public Hash other_id;
+		public bool enter;
+		public Hash other_group;
+		public Hash own_group;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class ray_cast_response_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("ray_cast_response");
+		public double fraction;
+		public Vector3 position;
+		public Vector3 normal;
+		public Hash id;
+		public Hash group;
+		public double request_id;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class ray_cast_missed_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("ray_cast_missed");
+		public double request_id;
+	}
+	
+	
+	/// <summary>
 	/// Ray casts are used to test for intersections against collision objects in the physics world.
 	/// Collision objects of types kinematic, dynamic and static are tested against. Trigger objects
 	/// do not intersect with ray casts.

@@ -9,6 +9,88 @@ using types;
 public static class sys
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class exit_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("exit");
+		public double code;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class toggle_profile_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("toggle_profile");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class toggle_physics_debug_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("toggle_physics_debug");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class start_record_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("start_record");
+		public string file_name;
+		public double frame_period;
+		public double fps;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class stop_record_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("stop_record");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class reboot_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("reboot");
+		public string arg1;
+		public string arg2;
+		public string arg3;
+		public string arg4;
+		public string arg5;
+		public string arg6;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class set_vsync_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("set_vsync");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class set_update_frequency_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("set_update_frequency");
+	}
+	
+	
+	/// <summary>
 	/// The table can later be loaded by <code>sys.load</code>.
 	/// Use <code>sys.get_save_file</code> to obtain a valid location for the file.
 	/// Internally, this function uses a workspace buffer sized output file sized 512kb.

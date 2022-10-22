@@ -9,6 +9,47 @@ using types;
 public static class sound
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class play_sound_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("play_sound");
+		public double delay;
+		public double gain;
+		public double play_id;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class stop_sound_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("stop_sound");
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class set_gain_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("set_gain");
+		public double gain;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class sound_done_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("sound_done");
+		public double play_id;
+	}
+	
+	
+	/// <summary>
 	/// Checks if background music is playing, e.g. from iTunes.
 	/// <span class="icon-macos"></span><span class="icon-windows"></span><span class="icon-linux"></span><span class="icon-html5"></span> On non mobile platforms,
 	/// this function always return <code>false</code>.

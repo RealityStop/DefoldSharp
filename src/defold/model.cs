@@ -9,6 +9,16 @@ using types;
 public static class model
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class model_animation_done_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("model_animation_done");
+		public Hash animation_id;
+	}
+	
+	
+	/// <summary>
 	/// Cancels all animation on a model component.
 	/// 
 	/// @CSharpLua.Template = "model.cancel({0})"

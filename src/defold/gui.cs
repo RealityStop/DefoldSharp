@@ -9,6 +9,17 @@ using types;
 public static class gui
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class layout_changed_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("layout_changed");
+		public Hash id;
+		public Hash previous_id;
+	}
+	
+	
+	/// <summary>
 	/// Retrieves the node with the specified id.
 	/// 
 	/// @CSharpLua.Template = "gui.get_node({0})"

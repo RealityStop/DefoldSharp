@@ -9,6 +9,27 @@ using types;
 public static class sprite
 {
 	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class play_animation_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("play_animation");
+		public Hash id;
+	}
+	
+	
+	/// <summary>
+	/// @CSharpLua.Ignore
+	/// </summary>
+	public class animation_done_message : StandardMessageImplementation
+	{
+		public override Hash Code { get; } = Defold.hash("animation_done");
+		public double current_tile;
+		public Hash id;
+	}
+	
+	
+	/// <summary>
 	/// Sets horizontal flipping of the provided sprite's animations.
 	/// The sprite is identified by its URL.
 	/// If the currently playing animation is flipped by default, flipping it again will make it appear like the original texture.

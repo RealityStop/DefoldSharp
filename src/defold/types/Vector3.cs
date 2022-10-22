@@ -43,13 +43,13 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Vector3 operator *(Vector3 a, float b);
+		public static extern Vector3 operator *(Vector3 a, double b);
 
 
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Vector3 operator *(float a, Vector3 b);
+		public static extern Vector3 operator *(double a, Vector3 b);
 
 
 		/// <summary>
@@ -61,13 +61,13 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0} / {1}"
 		/// </summary>
-		public static extern Vector3 operator /(Vector3 a, float b);
+		public static extern Vector3 operator /(Vector3 a, double b);
 
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.length({this})"
 		/// </summary>
-		public static extern float Magnitude();
+		public extern double Magnitude();
 
 
 		/// <summary>
@@ -85,7 +85,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.project({this},{0})"
 		/// </summary>
-		public extern float Project(Vector3 v);
+		public extern double Project(Vector3 v);
 
 
 		/// <summary>
