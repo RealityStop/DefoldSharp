@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Label API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class label
+public static class Label
 {
 	/// <summary>
 	/// Sets the text of a label component
@@ -15,7 +14,7 @@ public static class label
 	/// 
 	/// @CSharpLua.Template = "label.set_text({0}, {1})"
 	/// </summary>
-	public static extern void set_text(string url_p1, string text_p2);
+	public static extern void Set_text(string url_p1, string text_p2);
 	
 	
 	/// <summary>
@@ -25,7 +24,7 @@ public static class label
 	/// 
 	/// @CSharpLua.Template = "label.set_text({0}, {1})"
 	/// </summary>
-	public static extern void set_text(Hash url_p1, string text_p2);
+	public static extern void Set_text(Hash url_p1, string text_p2);
 	
 	
 	/// <summary>
@@ -35,7 +34,7 @@ public static class label
 	/// 
 	/// @CSharpLua.Template = "label.set_text({0}, {1})"
 	/// </summary>
-	public static extern void set_text(Url url_p1, string text_p2);
+	public static extern void Set_text(Url url_p1, string text_p2);
 	
 	
 	/// <summary>
@@ -43,7 +42,7 @@ public static class label
 	/// 
 	/// @CSharpLua.Template = "label.get_text({0})"
 	/// </summary>
-	public static extern string get_text(string url_p1);
+	public static extern string Get_text(string url_p1);
 	
 	
 	/// <summary>
@@ -51,7 +50,7 @@ public static class label
 	/// 
 	/// @CSharpLua.Template = "label.get_text({0})"
 	/// </summary>
-	public static extern string get_text(Hash url_p1);
+	public static extern string Get_text(Hash url_p1);
 	
 	
 	/// <summary>
@@ -59,7 +58,7 @@ public static class label
 	/// 
 	/// @CSharpLua.Template = "label.get_text({0})"
 	/// </summary>
-	public static extern string get_text(Url url_p1);
+	public static extern string Get_text(Url url_p1);
 	
 	
 }

@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Crash API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class crash
+public static class Crash
 {
 	/// <summary>
 	/// Performs the same steps as if a crash had just occured but
@@ -15,7 +14,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.write_dump()"
 	/// </summary>
-	public static extern void write_dump();
+	public static extern void Write_dump();
 	
 	
 	/// <summary>
@@ -23,7 +22,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.set_file_path({0})"
 	/// </summary>
-	public static extern void set_file_path(string path_p1);
+	public static extern void Set_file_path(string path_p1);
 	
 	
 	/// <summary>
@@ -32,7 +31,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.load_previous()"
 	/// </summary>
-	public static extern double load_previous();
+	public static extern double Load_previous();
 	
 	
 	/// <summary>
@@ -40,7 +39,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.release({0})"
 	/// </summary>
-	public static extern void release(double handle_p1);
+	public static extern void Release(double handle_p1);
 	
 	
 	/// <summary>
@@ -50,7 +49,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.set_user_field({0}, {1})"
 	/// </summary>
-	public static extern void set_user_field(double index_p1, string value_p2);
+	public static extern void Set_user_field(double index_p1, string value_p2);
 	
 	
 	/// <summary>
@@ -59,7 +58,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_modules({0})"
 	/// </summary>
-	public static extern ILuaTable get_modules(double handle_p1);
+	public static extern ILuaTable Get_modules(double handle_p1);
 	
 	
 	/// <summary>
@@ -67,7 +66,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_user_field({0}, {1})"
 	/// </summary>
-	public static extern string get_user_field(double handle_p1, double index_p2);
+	public static extern string Get_user_field(double handle_p1, double index_p2);
 	
 	
 	/// <summary>
@@ -75,7 +74,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_sys_field({0}, {1})"
 	/// </summary>
-	public static extern string get_sys_field(double handle_p1, double index_p2);
+	public static extern string Get_sys_field(double handle_p1, double index_p2);
 	
 	
 	/// <summary>
@@ -83,7 +82,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_signum({0})"
 	/// </summary>
-	public static extern double get_signum(double handle_p1);
+	public static extern double Get_signum(double handle_p1);
 	
 	
 	/// <summary>
@@ -91,7 +90,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_backtrace({0})"
 	/// </summary>
-	public static extern ILuaTable get_backtrace(double handle_p1);
+	public static extern ILuaTable Get_backtrace(double handle_p1);
 	
 	
 	/// <summary>
@@ -101,7 +100,7 @@ public static class crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_extra_data({0})"
 	/// </summary>
-	public static extern string get_extra_data(double handle_p1);
+	public static extern string Get_extra_data(double handle_p1);
 	
 	
 }

@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Messaging API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class msg
+public static class Msg
 {
 	/// <summary>
 	/// This is equivalent to <code>msg.url(nil)</code> or <code>msg.url("#")</code>, which creates an url to the current
@@ -14,7 +13,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url()"
 	/// </summary>
-	public static extern Url url();
+	public static extern Url Url();
 	
 	
 	/// <summary>
@@ -33,7 +32,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0})"
 	/// </summary>
-	public static extern Url url(string urlstring_p1);
+	public static extern Url Url(string urlstring_p1);
 	
 	
 	/// <summary>
@@ -41,7 +40,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1})"
 	/// </summary>
-	public static extern Url url(string socket_p1, string path_p2);
+	public static extern Url Url(string socket_p1, string path_p2);
 	
 	
 	/// <summary>
@@ -49,7 +48,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(string socket_p1, string path_p2, string fragment_p3);
+	public static extern Url Url(string socket_p1, string path_p2, string fragment_p3);
 	
 	
 	/// <summary>
@@ -57,7 +56,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(string socket_p1, string path_p2, Hash fragment_p3);
+	public static extern Url Url(string socket_p1, string path_p2, Hash fragment_p3);
 	
 	
 	/// <summary>
@@ -65,7 +64,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1})"
 	/// </summary>
-	public static extern Url url(string socket_p1, Hash path_p2);
+	public static extern Url Url(string socket_p1, Hash path_p2);
 	
 	
 	/// <summary>
@@ -73,7 +72,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(string socket_p1, Hash path_p2, string fragment_p3);
+	public static extern Url Url(string socket_p1, Hash path_p2, string fragment_p3);
 	
 	
 	/// <summary>
@@ -81,7 +80,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(string socket_p1, Hash path_p2, Hash fragment_p3);
+	public static extern Url Url(string socket_p1, Hash path_p2, Hash fragment_p3);
 	
 	
 	/// <summary>
@@ -89,7 +88,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1})"
 	/// </summary>
-	public static extern Url url(Hash socket_p1, string path_p2);
+	public static extern Url Url(Hash socket_p1, string path_p2);
 	
 	
 	/// <summary>
@@ -97,7 +96,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(Hash socket_p1, string path_p2, string fragment_p3);
+	public static extern Url Url(Hash socket_p1, string path_p2, string fragment_p3);
 	
 	
 	/// <summary>
@@ -105,7 +104,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(Hash socket_p1, string path_p2, Hash fragment_p3);
+	public static extern Url Url(Hash socket_p1, string path_p2, Hash fragment_p3);
 	
 	
 	/// <summary>
@@ -113,7 +112,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1})"
 	/// </summary>
-	public static extern Url url(Hash socket_p1, Hash path_p2);
+	public static extern Url Url(Hash socket_p1, Hash path_p2);
 	
 	
 	/// <summary>
@@ -121,7 +120,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(Hash socket_p1, Hash path_p2, string fragment_p3);
+	public static extern Url Url(Hash socket_p1, Hash path_p2, string fragment_p3);
 	
 	
 	/// <summary>
@@ -129,7 +128,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
-	public static extern Url url(Hash socket_p1, Hash path_p2, Hash fragment_p3);
+	public static extern Url Url(Hash socket_p1, Hash path_p2, Hash fragment_p3);
 	
 	
 	/// <summary>
@@ -145,7 +144,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1})"
 	/// </summary>
-	public static extern void post(string receiver_p1, string message_id_p2);
+	public static extern void Post(string receiver_p1, string message_id_p2);
 	
 	
 	/// <summary>
@@ -161,7 +160,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(string receiver_p1, string message_id_p2, ILuaTable message_p3);
+	public static extern void Post(string receiver_p1, string message_id_p2, ILuaTable message_p3);
 	
 	
 	/// <summary>
@@ -177,7 +176,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1})"
 	/// </summary>
-	public static extern void post(string receiver_p1, Hash message_id_p2);
+	public static extern void Post(string receiver_p1, Hash message_id_p2);
 	
 	
 	/// <summary>
@@ -193,7 +192,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(string receiver_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void Post(string receiver_p1, Hash message_id_p2, ILuaTable message_p3);
 	
 	
 	/// <summary>
@@ -209,7 +208,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1})"
 	/// </summary>
-	public static extern void post(Url receiver_p1, string message_id_p2);
+	public static extern void Post(Url receiver_p1, string message_id_p2);
 	
 	
 	/// <summary>
@@ -225,7 +224,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Url receiver_p1, string message_id_p2, ILuaTable message_p3);
+	public static extern void Post(Url receiver_p1, string message_id_p2, ILuaTable message_p3);
 	
 	
 	/// <summary>
@@ -241,7 +240,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1})"
 	/// </summary>
-	public static extern void post(Url receiver_p1, Hash message_id_p2);
+	public static extern void Post(Url receiver_p1, Hash message_id_p2);
 	
 	
 	/// <summary>
@@ -257,7 +256,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Url receiver_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void Post(Url receiver_p1, Hash message_id_p2, ILuaTable message_p3);
 	
 	
 	/// <summary>
@@ -273,7 +272,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1})"
 	/// </summary>
-	public static extern void post(Hash receiver_p1, string message_id_p2);
+	public static extern void Post(Hash receiver_p1, string message_id_p2);
 	
 	
 	/// <summary>
@@ -289,7 +288,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Hash receiver_p1, string message_id_p2, ILuaTable message_p3);
+	public static extern void Post(Hash receiver_p1, string message_id_p2, ILuaTable message_p3);
 	
 	
 	/// <summary>
@@ -305,7 +304,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1})"
 	/// </summary>
-	public static extern void post(Hash receiver_p1, Hash message_id_p2);
+	public static extern void Post(Hash receiver_p1, Hash message_id_p2);
 	
 	
 	/// <summary>
@@ -321,7 +320,7 @@ public static class msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Hash receiver_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void Post(Hash receiver_p1, Hash message_id_p2, ILuaTable message_p3);
 	
 	
 }

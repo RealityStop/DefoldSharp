@@ -4,99 +4,108 @@ using types;
 /// <summary>
 /// Collection proxy API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class collectionproxy
+public static class Collectionproxy
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class set_time_step_message : StandardMessageImplementation
+	public class set_time_step_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("set_time_step");
+		public static Hash __CODE__ =  Defold.hash("set_time_step");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double factor;
 		public double mode;
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class load_message : StandardMessageImplementation
+	public class load_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("load");
+		public static Hash __CODE__ =  Defold.hash("load");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class async_load_message : StandardMessageImplementation
+	public class async_load_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("async_load");
+		public static Hash __CODE__ =  Defold.hash("async_load");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class proxy_loaded_message : StandardMessageImplementation
+	public class proxy_loaded_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("proxy_loaded");
+		public static Hash __CODE__ =  Defold.hash("proxy_loaded");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class init_message : StandardMessageImplementation
+	public class init_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("init");
+		public static Hash __CODE__ =  Defold.hash("init");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class enable_message : StandardMessageImplementation
+	public class enable_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("enable");
+		public static Hash __CODE__ =  Defold.hash("enable");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class disable_message : StandardMessageImplementation
+	public class disable_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("disable");
+		public static Hash __CODE__ =  Defold.hash("disable");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class final_message : StandardMessageImplementation
+	public class final_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("final");
+		public static Hash __CODE__ =  Defold.hash("final");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class unload_message : StandardMessageImplementation
+	public class unload_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("unload");
+		public static Hash __CODE__ =  Defold.hash("unload");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class proxy_unloaded_message : StandardMessageImplementation
+	public class proxy_unloaded_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("proxy_unloaded");
+		public static Hash __CODE__ =  Defold.hash("proxy_unloaded");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	

@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Profiler API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class profiler
+public static class Profiler
 {
 	/// <summary>
 	/// Get the amount of memory used (resident/working set) by the application in bytes, as reported by the OS.
@@ -37,7 +36,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.get_memory_usage()"
 	/// </summary>
-	public static extern double get_memory_usage();
+	public static extern double Get_memory_usage();
 	
 	
 	/// <summary>
@@ -50,7 +49,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.get_cpu_usage()"
 	/// </summary>
-	public static extern double get_cpu_usage();
+	public static extern double Get_cpu_usage();
 	
 	
 	/// <summary>
@@ -61,7 +60,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.enable_ui({0})"
 	/// </summary>
-	public static extern void enable_ui(bool enabled_p1);
+	public static extern void Enable_ui(bool enabled_p1);
 	
 	
 	/// <summary>
@@ -69,7 +68,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.set_ui_mode({0})"
 	/// </summary>
-	public static extern void set_ui_mode(ProfilerMode mode_p1);
+	public static extern void Set_ui_mode(ProfilerMode mode_p1);
 	
 	
 	/// <summary>
@@ -77,7 +76,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.set_ui_view_mode({0})"
 	/// </summary>
-	public static extern void set_ui_view_mode(ProfilerViewMode mode_p1);
+	public static extern void Set_ui_view_mode(ProfilerViewMode mode_p1);
 	
 	
 	/// <summary>
@@ -94,7 +93,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.set_ui_vsync_wait_visible({0})"
 	/// </summary>
-	public static extern void set_ui_vsync_wait_visible(bool visible_p1);
+	public static extern void Set_ui_vsync_wait_visible(bool visible_p1);
 	
 	
 	/// <summary>
@@ -102,7 +101,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.recorded_frame_count()"
 	/// </summary>
-	public static extern double recorded_frame_count();
+	public static extern double Recorded_frame_count();
 	
 	
 	/// <summary>
@@ -111,7 +110,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.view_recorded_frame({0})"
 	/// </summary>
-	public static extern void view_recorded_frame(ILuaTable frame_index_p1);
+	public static extern void View_recorded_frame(ILuaTable frame_index_p1);
 	
 	
 	/// <summary>
@@ -119,7 +118,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.log_text({0})"
 	/// </summary>
-	public static extern void log_text(string text_p1);
+	public static extern void Log_text(string text_p1);
 	
 	
 	/// <summary>
@@ -127,7 +126,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.scope_begin({0})"
 	/// </summary>
-	public static extern void scope_begin(string name_p1);
+	public static extern void Scope_begin(string name_p1);
 	
 	
 	/// <summary>
@@ -135,7 +134,7 @@ public static class profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.scope_end()"
 	/// </summary>
-	public static extern void scope_end();
+	public static extern void Scope_end();
 	
 	
 }

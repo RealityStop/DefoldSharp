@@ -63,7 +63,7 @@ public static extern Vector2 operator /(Vector2 a, float b);
 /// <summary>
 /// @CSharpLua.Template = "vmath.length({this})"
 /// </summary>
-public static extern float Magnitude();
+public extern float Magnitude();
 
 
 /// <summary>

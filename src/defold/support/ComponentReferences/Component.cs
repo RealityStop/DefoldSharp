@@ -5,7 +5,7 @@ namespace support
 		public static TComponent At<TComponent>(string locator) where TComponent : INonCacheableComponentReference, new()
 		{
 			var result = new TComponent();
-			result.AssignLocator(msg.url(locator));
+			result.AssignLocator(Msg.Url(locator));
 			return result;
 
 		}

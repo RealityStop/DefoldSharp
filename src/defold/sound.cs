@@ -4,16 +4,16 @@ using types;
 /// <summary>
 /// Sound API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class sound
+public static class Sound
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class play_sound_message : StandardMessageImplementation
+	public class play_sound_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("play_sound");
+		public static Hash __CODE__ =  Defold.hash("play_sound");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double delay;
 		public double gain;
 		public double play_id;
@@ -21,30 +21,33 @@ public static class sound
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class stop_sound_message : StandardMessageImplementation
+	public class stop_sound_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("stop_sound");
+		public static Hash __CODE__ =  Defold.hash("stop_sound");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class set_gain_message : StandardMessageImplementation
+	public class set_gain_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("set_gain");
+		public static Hash __CODE__ =  Defold.hash("set_gain");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double gain;
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class sound_done_message : StandardMessageImplementation
+	public class sound_done_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("sound_done");
+		public static Hash __CODE__ =  Defold.hash("sound_done");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double play_id;
 	}
 	
@@ -67,7 +70,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.is_music_playing()"
 	/// </summary>
-	public static extern bool is_music_playing();
+	public static extern bool Is_music_playing();
 	
 	
 	/// <summary>
@@ -81,7 +84,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_rms({0}, {1})"
 	/// </summary>
-	public static extern double get_rms(string group_p1, double window_p2, out double rms_r_o1);
+	public static extern double Get_rms(string group_p1, double window_p2, out double rms_r_o1);
 	
 	
 	/// <summary>
@@ -95,7 +98,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_rms({0}, {1})"
 	/// </summary>
-	public static extern double get_rms(Hash group_p1, double window_p2, out double rms_r_o1);
+	public static extern double Get_rms(Hash group_p1, double window_p2, out double rms_r_o1);
 	
 	
 	/// <summary>
@@ -109,7 +112,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_peak({0}, {1})"
 	/// </summary>
-	public static extern double get_peak(string group_p1, double window_p2, out double peak_r_o1);
+	public static extern double Get_peak(string group_p1, double window_p2, out double peak_r_o1);
 	
 	
 	/// <summary>
@@ -123,7 +126,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_peak({0}, {1})"
 	/// </summary>
-	public static extern double get_peak(Hash group_p1, double window_p2, out double peak_r_o1);
+	public static extern double Get_peak(Hash group_p1, double window_p2, out double peak_r_o1);
 	
 	
 	/// <summary>
@@ -135,7 +138,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_group_gain({0}, {1})"
 	/// </summary>
-	public static extern void set_group_gain(string group_p1, double gain_p2);
+	public static extern void Set_group_gain(string group_p1, double gain_p2);
 	
 	
 	/// <summary>
@@ -147,7 +150,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_group_gain({0}, {1})"
 	/// </summary>
-	public static extern void set_group_gain(Hash group_p1, double gain_p2);
+	public static extern void Set_group_gain(Hash group_p1, double gain_p2);
 	
 	
 	/// <summary>
@@ -159,7 +162,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_group_gain({0})"
 	/// </summary>
-	public static extern double get_group_gain(string group_p1);
+	public static extern double Get_group_gain(string group_p1);
 	
 	
 	/// <summary>
@@ -171,7 +174,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_group_gain({0})"
 	/// </summary>
-	public static extern double get_group_gain(Hash group_p1);
+	public static extern double Get_group_gain(Hash group_p1);
 	
 	
 	/// <summary>
@@ -179,7 +182,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_groups()"
 	/// </summary>
-	public static extern ILuaTable get_groups();
+	public static extern ILuaTable Get_groups();
 	
 	
 	/// <summary>
@@ -190,7 +193,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_group_name({0})"
 	/// </summary>
-	public static extern string get_group_name(string group_p1);
+	public static extern string Get_group_name(string group_p1);
 	
 	
 	/// <summary>
@@ -201,7 +204,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.get_group_name({0})"
 	/// </summary>
-	public static extern string get_group_name(Hash group_p1);
+	public static extern string Get_group_name(Hash group_p1);
 	
 	
 	/// <summary>
@@ -212,7 +215,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.is_phone_call_active()"
 	/// </summary>
-	public static extern bool is_phone_call_active();
+	public static extern bool Is_phone_call_active();
 	
 	
 	/// <summary>
@@ -225,7 +228,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0})"
 	/// </summary>
-	public static extern double play(string url_p1);
+	public static extern double Play(string url_p1);
 	
 	
 	/// <summary>
@@ -238,7 +241,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(string url_p1, ILuaTable play_properties_p2);
+	public static extern double Play(string url_p1, ILuaTable play_properties_p2);
 	
 	
 	/// <summary>
@@ -251,7 +254,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(string url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern double Play(string url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -264,7 +267,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0})"
 	/// </summary>
-	public static extern double play(Hash url_p1);
+	public static extern double Play(Hash url_p1);
 	
 	
 	/// <summary>
@@ -277,7 +280,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(Hash url_p1, ILuaTable play_properties_p2);
+	public static extern double Play(Hash url_p1, ILuaTable play_properties_p2);
 	
 	
 	/// <summary>
@@ -290,7 +293,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(Hash url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern double Play(Hash url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -303,7 +306,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0})"
 	/// </summary>
-	public static extern double play(Url url_p1);
+	public static extern double Play(Url url_p1);
 	
 	
 	/// <summary>
@@ -316,7 +319,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(Url url_p1, ILuaTable play_properties_p2);
+	public static extern double Play(Url url_p1, ILuaTable play_properties_p2);
 	
 	
 	/// <summary>
@@ -329,7 +332,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(Url url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern double Play(Url url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -337,7 +340,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.stop({0})"
 	/// </summary>
-	public static extern void stop(string url_p1);
+	public static extern void Stop(string url_p1);
 	
 	
 	/// <summary>
@@ -345,7 +348,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.stop({0})"
 	/// </summary>
-	public static extern void stop(Hash url_p1);
+	public static extern void Stop(Hash url_p1);
 	
 	
 	/// <summary>
@@ -353,7 +356,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.stop({0})"
 	/// </summary>
-	public static extern void stop(Url url_p1);
+	public static extern void Stop(Url url_p1);
 	
 	
 	/// <summary>
@@ -361,7 +364,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.pause({0}, {1})"
 	/// </summary>
-	public static extern void pause(string url_p1, bool pause_p2);
+	public static extern void Pause(string url_p1, bool pause_p2);
 	
 	
 	/// <summary>
@@ -369,7 +372,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.pause({0}, {1})"
 	/// </summary>
-	public static extern void pause(Hash url_p1, bool pause_p2);
+	public static extern void Pause(Hash url_p1, bool pause_p2);
 	
 	
 	/// <summary>
@@ -377,7 +380,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.pause({0}, {1})"
 	/// </summary>
-	public static extern void pause(Url url_p1, bool pause_p2);
+	public static extern void Pause(Url url_p1, bool pause_p2);
 	
 	
 	/// <summary>
@@ -389,7 +392,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_gain({0})"
 	/// </summary>
-	public static extern void set_gain(string url_p1);
+	public static extern void Set_gain(string url_p1);
 	
 	
 	/// <summary>
@@ -401,7 +404,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_gain({0}, {1})"
 	/// </summary>
-	public static extern void set_gain(string url_p1, double gain_p2);
+	public static extern void Set_gain(string url_p1, double gain_p2);
 	
 	
 	/// <summary>
@@ -413,7 +416,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_gain({0})"
 	/// </summary>
-	public static extern void set_gain(Hash url_p1);
+	public static extern void Set_gain(Hash url_p1);
 	
 	
 	/// <summary>
@@ -425,7 +428,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_gain({0}, {1})"
 	/// </summary>
-	public static extern void set_gain(Hash url_p1, double gain_p2);
+	public static extern void Set_gain(Hash url_p1, double gain_p2);
 	
 	
 	/// <summary>
@@ -437,7 +440,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_gain({0})"
 	/// </summary>
-	public static extern void set_gain(Url url_p1);
+	public static extern void Set_gain(Url url_p1);
 	
 	
 	/// <summary>
@@ -449,7 +452,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_gain({0}, {1})"
 	/// </summary>
-	public static extern void set_gain(Url url_p1, double gain_p2);
+	public static extern void Set_gain(Url url_p1, double gain_p2);
 	
 	
 	/// <summary>
@@ -458,7 +461,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_pan({0})"
 	/// </summary>
-	public static extern void set_pan(string url_p1);
+	public static extern void Set_pan(string url_p1);
 	
 	
 	/// <summary>
@@ -467,7 +470,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_pan({0}, {1})"
 	/// </summary>
-	public static extern void set_pan(string url_p1, double pan_p2);
+	public static extern void Set_pan(string url_p1, double pan_p2);
 	
 	
 	/// <summary>
@@ -476,7 +479,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_pan({0})"
 	/// </summary>
-	public static extern void set_pan(Hash url_p1);
+	public static extern void Set_pan(Hash url_p1);
 	
 	
 	/// <summary>
@@ -485,7 +488,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_pan({0}, {1})"
 	/// </summary>
-	public static extern void set_pan(Hash url_p1, double pan_p2);
+	public static extern void Set_pan(Hash url_p1, double pan_p2);
 	
 	
 	/// <summary>
@@ -494,7 +497,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_pan({0})"
 	/// </summary>
-	public static extern void set_pan(Url url_p1);
+	public static extern void Set_pan(Url url_p1);
 	
 	
 	/// <summary>
@@ -503,7 +506,7 @@ public static class sound
 	/// 
 	/// @CSharpLua.Template = "sound.set_pan({0}, {1})"
 	/// </summary>
-	public static extern void set_pan(Url url_p1, double pan_p2);
+	public static extern void Set_pan(Url url_p1, double pan_p2);
 	
 	
 }

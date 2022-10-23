@@ -4,16 +4,16 @@ using types;
 /// <summary>
 /// Model API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class model
+public static class Model
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class model_animation_done_message : StandardMessageImplementation
+	public class model_animation_done_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("model_animation_done");
+		public static Hash __CODE__ =  Defold.hash("model_animation_done");
+		public override Hash FetchCode() => __CODE__;
+		
 		public Hash animation_id;
 	}
 	
@@ -23,7 +23,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.cancel({0})"
 	/// </summary>
-	public static extern void cancel(string url_p1);
+	public static extern void Cancel(string url_p1);
 	
 	
 	/// <summary>
@@ -31,7 +31,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.cancel({0})"
 	/// </summary>
-	public static extern void cancel(Hash url_p1);
+	public static extern void Cancel(Hash url_p1);
 	
 	
 	/// <summary>
@@ -39,7 +39,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.cancel({0})"
 	/// </summary>
-	public static extern void cancel(Url url_p1);
+	public static extern void Cancel(Url url_p1);
 	
 	
 	/// <summary>
@@ -50,7 +50,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.get_go({0}, {1})"
 	/// </summary>
-	public static extern Hash get_go(string url_p1, string bone_id_p2);
+	public static extern Hash Get_go(string url_p1, string bone_id_p2);
 	
 	
 	/// <summary>
@@ -61,7 +61,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.get_go({0}, {1})"
 	/// </summary>
-	public static extern Hash get_go(string url_p1, Hash bone_id_p2);
+	public static extern Hash Get_go(string url_p1, Hash bone_id_p2);
 	
 	
 	/// <summary>
@@ -72,7 +72,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.get_go({0}, {1})"
 	/// </summary>
-	public static extern Hash get_go(Hash url_p1, string bone_id_p2);
+	public static extern Hash Get_go(Hash url_p1, string bone_id_p2);
 	
 	
 	/// <summary>
@@ -83,7 +83,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.get_go({0}, {1})"
 	/// </summary>
-	public static extern Hash get_go(Hash url_p1, Hash bone_id_p2);
+	public static extern Hash Get_go(Hash url_p1, Hash bone_id_p2);
 	
 	
 	/// <summary>
@@ -94,7 +94,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.get_go({0}, {1})"
 	/// </summary>
-	public static extern Hash get_go(Url url_p1, string bone_id_p2);
+	public static extern Hash Get_go(Url url_p1, string bone_id_p2);
 	
 	
 	/// <summary>
@@ -105,7 +105,7 @@ public static class model
 	/// 
 	/// @CSharpLua.Template = "model.get_go({0}, {1})"
 	/// </summary>
-	public static extern Hash get_go(Url url_p1, Hash bone_id_p2);
+	public static extern Hash Get_go(Url url_p1, Hash bone_id_p2);
 	
 	
 }

@@ -4,16 +4,16 @@ using types;
 /// <summary>
 /// Camera API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class camera
+public static class Camera
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class set_camera_message : StandardMessageImplementation
+	public class set_camera_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("set_camera");
+		public static Hash __CODE__ =  Defold.hash("set_camera");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double aspect_ratio;
 		public double fov;
 		public double near_z;
@@ -24,20 +24,22 @@ public static class camera
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class acquire_camera_focus_message : StandardMessageImplementation
+	public class acquire_camera_focus_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("acquire_camera_focus");
+		public static Hash __CODE__ =  Defold.hash("acquire_camera_focus");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class release_camera_focus_message : StandardMessageImplementation
+	public class release_camera_focus_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("release_camera_focus");
+		public static Hash __CODE__ =  Defold.hash("release_camera_focus");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	

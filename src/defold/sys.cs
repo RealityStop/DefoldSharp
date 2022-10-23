@@ -4,44 +4,47 @@ using types;
 /// <summary>
 /// System API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class sys
+public static class Sys
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class exit_message : StandardMessageImplementation
+	public class exit_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("exit");
+		public static Hash __CODE__ =  Defold.hash("exit");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double code;
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class toggle_profile_message : StandardMessageImplementation
+	public class toggle_profile_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("toggle_profile");
+		public static Hash __CODE__ =  Defold.hash("toggle_profile");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class toggle_physics_debug_message : StandardMessageImplementation
+	public class toggle_physics_debug_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("toggle_physics_debug");
+		public static Hash __CODE__ =  Defold.hash("toggle_physics_debug");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class start_record_message : StandardMessageImplementation
+	public class start_record_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("start_record");
+		public static Hash __CODE__ =  Defold.hash("start_record");
+		public override Hash FetchCode() => __CODE__;
+		
 		public string file_name;
 		public double frame_period;
 		public double fps;
@@ -49,20 +52,22 @@ public static class sys
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class stop_record_message : StandardMessageImplementation
+	public class stop_record_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("stop_record");
+		public static Hash __CODE__ =  Defold.hash("stop_record");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class reboot_message : StandardMessageImplementation
+	public class reboot_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("reboot");
+		public static Hash __CODE__ =  Defold.hash("reboot");
+		public override Hash FetchCode() => __CODE__;
+		
 		public string arg1;
 		public string arg2;
 		public string arg3;
@@ -73,20 +78,22 @@ public static class sys
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class set_vsync_message : StandardMessageImplementation
+	public class set_vsync_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("set_vsync");
+		public static Hash __CODE__ =  Defold.hash("set_vsync");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class set_update_frequency_message : StandardMessageImplementation
+	public class set_update_frequency_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("set_update_frequency");
+		public static Hash __CODE__ =  Defold.hash("set_update_frequency");
+		public override Hash FetchCode() => __CODE__;
+		
 	}
 	
 	
@@ -102,7 +109,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.save({0}, {1})"
 	/// </summary>
-	public static extern bool save(string filename_p1, ILuaTable table_p2);
+	public static extern bool Save(string filename_p1, ILuaTable table_p2);
 	
 	
 	/// <summary>
@@ -110,7 +117,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.load({0})"
 	/// </summary>
-	public static extern ILuaTable load(string filename_p1);
+	public static extern ILuaTable Load(string filename_p1);
 	
 	
 	/// <summary>
@@ -118,7 +125,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_save_file({0}, {1})"
 	/// </summary>
-	public static extern string get_save_file(string application_id_p1, string file_name_p2);
+	public static extern string Get_save_file(string application_id_p1, string file_name_p2);
 	
 	
 	/// <summary>
@@ -126,7 +133,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_application_path()"
 	/// </summary>
-	public static extern string get_application_path();
+	public static extern string Get_application_path();
 	
 	
 	/// <summary>
@@ -136,7 +143,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_config({0})"
 	/// </summary>
-	public static extern string get_config(string key_p1);
+	public static extern string Get_config(string key_p1);
 	
 	
 	/// <summary>
@@ -144,7 +151,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_config({0}, {1})"
 	/// </summary>
-	public static extern string get_config(string key_p1, string default_value_p2);
+	public static extern string Get_config(string key_p1, string default_value_p2);
 	
 	
 	/// <summary>
@@ -152,7 +159,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.open_url({0})"
 	/// </summary>
-	public static extern bool open_url(string url_p1);
+	public static extern bool Open_url(string url_p1);
 	
 	
 	/// <summary>
@@ -160,7 +167,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.open_url({0}, {1})"
 	/// </summary>
-	public static extern bool open_url(string url_p1, ILuaTable attributes_p2);
+	public static extern bool Open_url(string url_p1, ILuaTable attributes_p2);
 	
 	
 	/// <summary>
@@ -176,7 +183,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.load_resource({0})"
 	/// </summary>
-	public static extern string load_resource(string filename_p1, out string error_o1);
+	public static extern string Load_resource(string filename_p1, out string error_o1);
 	
 	
 	/// <summary>
@@ -184,7 +191,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_sys_info({0})"
 	/// </summary>
-	public static extern ILuaTable get_sys_info(ILuaTable options_p1);
+	public static extern ILuaTable Get_sys_info(ILuaTable options_p1);
 	
 	
 	/// <summary>
@@ -192,7 +199,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_engine_info()"
 	/// </summary>
-	public static extern ILuaTable get_engine_info();
+	public static extern ILuaTable Get_engine_info();
 	
 	
 	/// <summary>
@@ -204,7 +211,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_application_info({0})"
 	/// </summary>
-	public static extern ILuaTable get_application_info(string app_string_p1);
+	public static extern ILuaTable Get_application_info(string app_string_p1);
 	
 	
 	/// <summary>
@@ -212,7 +219,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_ifaddrs()"
 	/// </summary>
-	public static extern ILuaTable get_ifaddrs();
+	public static extern ILuaTable Get_ifaddrs();
 	
 	
 	/// <summary>
@@ -221,7 +228,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.set_error_handler({0})"
 	/// </summary>
-	public static extern void set_error_handler(Action<string,string,string> error_handler_p1);
+	public static extern void Set_error_handler(Action<string,string,string> error_handler_p1);
 	
 	
 	/// <summary>
@@ -229,7 +236,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.set_connectivity_host({0})"
 	/// </summary>
-	public static extern void set_connectivity_host(string host_p1);
+	public static extern void Set_connectivity_host(string host_p1);
 	
 	
 	/// <summary>
@@ -239,7 +246,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_connectivity()"
 	/// </summary>
-	public static extern SysConnectivity get_connectivity();
+	public static extern SysConnectivity Get_connectivity();
 	
 	
 	/// <summary>
@@ -247,7 +254,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.exit({0})"
 	/// </summary>
-	public static extern void exit(double code_p1);
+	public static extern void Exit(double code_p1);
 	
 	
 	/// <summary>
@@ -259,7 +266,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.reboot({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void reboot(string arg1_p1, string arg2_p2, string arg3_p3, string arg4_p4, string arg5_p5, string arg6_p6);
+	public static extern void Reboot(string arg1_p1, string arg2_p2, string arg3_p3, string arg4_p4, string arg5_p5, string arg6_p6);
 	
 	
 	/// <summary>
@@ -275,7 +282,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.set_vsync_swap_interval({0})"
 	/// </summary>
-	public static extern void set_vsync_swap_interval(double swap_interval_p1);
+	public static extern void Set_vsync_swap_interval(double swap_interval_p1);
 	
 	
 	/// <summary>
@@ -287,7 +294,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.set_update_frequency({0})"
 	/// </summary>
-	public static extern void set_update_frequency(double frequency_p1);
+	public static extern void Set_update_frequency(double frequency_p1);
 	
 	
 	/// <summary>
@@ -296,7 +303,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.serialize({0})"
 	/// </summary>
-	public static extern string serialize(ILuaTable table_p1);
+	public static extern string Serialize(ILuaTable table_p1);
 	
 	
 	/// <summary>
@@ -304,7 +311,7 @@ public static class sys
 	/// 
 	/// @CSharpLua.Template = "sys.deserialize({0})"
 	/// </summary>
-	public static extern ILuaTable deserialize(string buffer_p1);
+	public static extern ILuaTable Deserialize(string buffer_p1);
 	
 	
 }

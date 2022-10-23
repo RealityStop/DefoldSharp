@@ -4,26 +4,27 @@ using types;
 /// <summary>
 /// Sprite API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class sprite
+public static class Sprite
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class play_animation_message : StandardMessageImplementation
+	public class play_animation_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("play_animation");
+		public static Hash __CODE__ =  Defold.hash("play_animation");
+		public override Hash FetchCode() => __CODE__;
+		
 		public Hash id;
 	}
 	
 	
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
-	public class animation_done_message : StandardMessageImplementation
+	public class animation_done_message : MessageImplementation
 	{
-		public override Hash Code { get; } = Defold.hash("animation_done");
+		public static Hash __CODE__ =  Defold.hash("animation_done");
+		public override Hash FetchCode() => __CODE__;
+		
 		public double current_tile;
 		public Hash id;
 	}
@@ -36,7 +37,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public static extern void set_hflip(string url_p1, bool flip_p2);
+	public static extern void Set_hflip(string url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -46,7 +47,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public static extern void set_hflip(Hash url_p1, bool flip_p2);
+	public static extern void Set_hflip(Hash url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -56,7 +57,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public static extern void set_hflip(Url url_p1, bool flip_p2);
+	public static extern void Set_hflip(Url url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -66,7 +67,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public static extern void set_vflip(string url_p1, bool flip_p2);
+	public static extern void Set_vflip(string url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -76,7 +77,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public static extern void set_vflip(Hash url_p1, bool flip_p2);
+	public static extern void Set_vflip(Hash url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -86,7 +87,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public static extern void set_vflip(Url url_p1, bool flip_p2);
+	public static extern void Set_vflip(Url url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -97,7 +98,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
 	/// </summary>
-	public static extern void play_flipbook(string url_p1, Hash id_p2);
+	public static extern void Play_flipbook(string url_p1, Hash id_p2);
 	
 	
 	/// <summary>
@@ -108,7 +109,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public static extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern void Play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -119,7 +120,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void Play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	/// <summary>
@@ -130,7 +131,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
 	/// </summary>
-	public static extern void play_flipbook(Hash url_p1, Hash id_p2);
+	public static extern void Play_flipbook(Hash url_p1, Hash id_p2);
 	
 	
 	/// <summary>
@@ -141,7 +142,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public static extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern void Play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -152,7 +153,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void Play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	/// <summary>
@@ -163,7 +164,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
 	/// </summary>
-	public static extern void play_flipbook(Url url_p1, Hash id_p2);
+	public static extern void Play_flipbook(Url url_p1, Hash id_p2);
 	
 	
 	/// <summary>
@@ -174,7 +175,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public static extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern void Play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -185,7 +186,7 @@ public static class sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void Play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 }

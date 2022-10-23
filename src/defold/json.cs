@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// JSON API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class json
+public static class Json
 {
 	/// <summary>
 	/// Decode a string of JSON data into a Lua table.
@@ -14,7 +13,7 @@ public static class json
 	/// 
 	/// @CSharpLua.Template = "json.decode({0})"
 	/// </summary>
-	public static extern ILuaTable decode(string json_p1);
+	public static extern ILuaTable Decode(string json_p1);
 	
 	
 }

@@ -4,8 +4,7 @@ using types;
 /// <summary>
 /// Webview API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class webview
+public static class Webview
 {
 }

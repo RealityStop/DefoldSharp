@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Lua math standard library
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class math
+public static class Math
 {
 	/// <summary>
 	/// This function is an interface to the simple
@@ -24,7 +23,7 @@ public static class math
 	/// 
 	/// @CSharpLua.Template = "math.random()"
 	/// </summary>
-	public static extern void random();
+	public static extern void Random();
 	
 	
 }

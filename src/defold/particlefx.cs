@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Particle effects API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class particlefx
+public static class Particlefx
 {
 	/// <summary>
 	/// Starts playing a particle FX component.
@@ -16,7 +15,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0})"
 	/// </summary>
-	public static extern void play(string url_p1);
+	public static extern void Play(string url_p1);
 	
 	
 	/// <summary>
@@ -27,7 +26,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0}, {1})"
 	/// </summary>
-	public static extern void play(string url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
+	public static extern void Play(string url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>
@@ -38,7 +37,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0})"
 	/// </summary>
-	public static extern void play(Hash url_p1);
+	public static extern void Play(Hash url_p1);
 	
 	
 	/// <summary>
@@ -49,7 +48,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0}, {1})"
 	/// </summary>
-	public static extern void play(Hash url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
+	public static extern void Play(Hash url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>
@@ -60,7 +59,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0})"
 	/// </summary>
-	public static extern void play(Url url_p1);
+	public static extern void Play(Url url_p1);
 	
 	
 	/// <summary>
@@ -71,7 +70,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0}, {1})"
 	/// </summary>
-	public static extern void play(Url url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
+	public static extern void Play(Url url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>
@@ -81,7 +80,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.stop({0}, {1})"
 	/// </summary>
-	public static extern void stop(string url_p1, ILuaTable options_p2);
+	public static extern void Stop(string url_p1, ILuaTable options_p2);
 	
 	
 	/// <summary>
@@ -91,7 +90,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.stop({0}, {1})"
 	/// </summary>
-	public static extern void stop(Hash url_p1, ILuaTable options_p2);
+	public static extern void Stop(Hash url_p1, ILuaTable options_p2);
 	
 	
 	/// <summary>
@@ -101,7 +100,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.stop({0}, {1})"
 	/// </summary>
-	public static extern void stop(Url url_p1, ILuaTable options_p2);
+	public static extern void Stop(Url url_p1, ILuaTable options_p2);
 	
 	
 	/// <summary>
@@ -113,7 +112,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(string url_p1, string emitter_p2, string constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(string url_p1, string emitter_p2, string constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -125,7 +124,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(string url_p1, string emitter_p2, Hash constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(string url_p1, string emitter_p2, Hash constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -137,7 +136,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(string url_p1, Hash emitter_p2, string constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(string url_p1, Hash emitter_p2, string constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -149,7 +148,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(string url_p1, Hash emitter_p2, Hash constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(string url_p1, Hash emitter_p2, Hash constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -161,7 +160,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Hash url_p1, string emitter_p2, string constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Hash url_p1, string emitter_p2, string constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -173,7 +172,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Hash url_p1, string emitter_p2, Hash constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Hash url_p1, string emitter_p2, Hash constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -185,7 +184,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Hash url_p1, Hash emitter_p2, string constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Hash url_p1, Hash emitter_p2, string constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -197,7 +196,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Hash url_p1, Hash emitter_p2, Hash constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Hash url_p1, Hash emitter_p2, Hash constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -209,7 +208,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Url url_p1, string emitter_p2, string constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Url url_p1, string emitter_p2, string constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -221,7 +220,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Url url_p1, string emitter_p2, Hash constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Url url_p1, string emitter_p2, Hash constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -233,7 +232,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Url url_p1, Hash emitter_p2, string constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Url url_p1, Hash emitter_p2, string constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -245,7 +244,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.set_constant({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set_constant(Url url_p1, Hash emitter_p2, Hash constant_p3, Vector4 value_p4);
+	public static extern void Set_constant(Url url_p1, Hash emitter_p2, Hash constant_p3, Vector4 value_p4);
 	
 	
 	/// <summary>
@@ -256,7 +255,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(string url_p1, string emitter_p2, string constant_p3);
+	public static extern void Reset_constant(string url_p1, string emitter_p2, string constant_p3);
 	
 	
 	/// <summary>
@@ -267,7 +266,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(string url_p1, string emitter_p2, Hash constant_p3);
+	public static extern void Reset_constant(string url_p1, string emitter_p2, Hash constant_p3);
 	
 	
 	/// <summary>
@@ -278,7 +277,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(string url_p1, Hash emitter_p2, string constant_p3);
+	public static extern void Reset_constant(string url_p1, Hash emitter_p2, string constant_p3);
 	
 	
 	/// <summary>
@@ -289,7 +288,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(string url_p1, Hash emitter_p2, Hash constant_p3);
+	public static extern void Reset_constant(string url_p1, Hash emitter_p2, Hash constant_p3);
 	
 	
 	/// <summary>
@@ -300,7 +299,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Hash url_p1, string emitter_p2, string constant_p3);
+	public static extern void Reset_constant(Hash url_p1, string emitter_p2, string constant_p3);
 	
 	
 	/// <summary>
@@ -311,7 +310,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Hash url_p1, string emitter_p2, Hash constant_p3);
+	public static extern void Reset_constant(Hash url_p1, string emitter_p2, Hash constant_p3);
 	
 	
 	/// <summary>
@@ -322,7 +321,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Hash url_p1, Hash emitter_p2, string constant_p3);
+	public static extern void Reset_constant(Hash url_p1, Hash emitter_p2, string constant_p3);
 	
 	
 	/// <summary>
@@ -333,7 +332,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Hash url_p1, Hash emitter_p2, Hash constant_p3);
+	public static extern void Reset_constant(Hash url_p1, Hash emitter_p2, Hash constant_p3);
 	
 	
 	/// <summary>
@@ -344,7 +343,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Url url_p1, string emitter_p2, string constant_p3);
+	public static extern void Reset_constant(Url url_p1, string emitter_p2, string constant_p3);
 	
 	
 	/// <summary>
@@ -355,7 +354,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Url url_p1, string emitter_p2, Hash constant_p3);
+	public static extern void Reset_constant(Url url_p1, string emitter_p2, Hash constant_p3);
 	
 	
 	/// <summary>
@@ -366,7 +365,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Url url_p1, Hash emitter_p2, string constant_p3);
+	public static extern void Reset_constant(Url url_p1, Hash emitter_p2, string constant_p3);
 	
 	
 	/// <summary>
@@ -377,7 +376,7 @@ public static class particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.reset_constant({0}, {1}, {2})"
 	/// </summary>
-	public static extern void reset_constant(Url url_p1, Hash emitter_p2, Hash constant_p3);
+	public static extern void Reset_constant(Url url_p1, Hash emitter_p2, Hash constant_p3);
 	
 	
 }

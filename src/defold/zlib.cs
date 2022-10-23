@@ -4,16 +4,15 @@ using types;
 /// <summary>
 /// Zlib compression API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class zlib
+public static class Zlib
 {
 	/// <summary>
 	/// A lua error is raised is on error
 	/// 
 	/// @CSharpLua.Template = "zlib.inflate({0})"
 	/// </summary>
-	public static extern string inflate(string buf_p1);
+	public static extern string Inflate(string buf_p1);
 	
 	
 	/// <summary>
@@ -21,7 +20,7 @@ public static class zlib
 	/// 
 	/// @CSharpLua.Template = "zlib.deflate({0})"
 	/// </summary>
-	public static extern string deflate(string buf_p1);
+	public static extern string Deflate(string buf_p1);
 	
 	
 }

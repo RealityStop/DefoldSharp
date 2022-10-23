@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// Built-ins API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class builtins
+public static class Builtins
 {
 	/// <summary>
 	/// Pretty printing of Lua values. This function prints Lua values
@@ -16,7 +15,7 @@ public static class builtins
 	/// 
 	/// @CSharpLua.Template = "builtins.pprint({0})"
 	/// </summary>
-	public static extern void pprint(LuaType v_p1);
+	public static extern void Pprint(LuaType v_p1);
 	
 	
 	/// <summary>
@@ -25,7 +24,7 @@ public static class builtins
 	/// 
 	/// @CSharpLua.Template = "builtins.hash({0})"
 	/// </summary>
-	public static extern Hash hash(string s_p1);
+	public static extern Hash Hash(string s_p1);
 	
 	
 	/// <summary>
@@ -34,7 +33,7 @@ public static class builtins
 	/// 
 	/// @CSharpLua.Template = "builtins.hash_to_hex({0})"
 	/// </summary>
-	public static extern string hash_to_hex(Hash h_p1);
+	public static extern string Hash_to_hex(Hash h_p1);
 	
 	
 }

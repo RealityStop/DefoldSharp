@@ -4,9 +4,8 @@ using types;
 /// <summary>
 /// HTML5 API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class html5
+public static class Html5
 {
 	/// <summary>
 	/// Executes the supplied string as JavaScript inside the browser.
@@ -15,7 +14,7 @@ public static class html5
 	/// 
 	/// @CSharpLua.Template = "html5.run({0})"
 	/// </summary>
-	public static extern string run(string code_p1);
+	public static extern string Run(string code_p1);
 	
 	
 }

@@ -10,7 +10,7 @@ namespace support
 
 		public Url FetchUrl()
 		{
-			var url = msg.url();
+			var url = Msg.Url();
 			url.path = AbsoluteGOHash;
 			url.fragment = ComponentName;
 			return url;
@@ -23,7 +23,7 @@ namespace support
 		/// <param name="componentName"></param>
 		public ComponentLocator(string componentName)
 		{
-			AbsoluteGOHash = go.get_id();
+			AbsoluteGOHash = Go.Get_id();
 			ComponentName = componentName;
 		}
 
@@ -35,7 +35,7 @@ namespace support
 		/// <param name="componentName"></param>
 		public ComponentLocator(string gameobjectPath, string componentName)
 		{
-			AbsoluteGOHash = go.get_id(gameobjectPath);
+			AbsoluteGOHash = Go.Get_id(gameobjectPath);
 			ComponentName = componentName;
 		}
 	}
