@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Runtime.CompilerServices;
 using support;
 using types;
 
 public static class Message
 {
+	private static readonly Dictionary<Type, Hash> typeToHashLookup = new Dictionary<Type, Hash>();
 	///// <summary>
 	///// @CSharpLua.Template = "msg.post({0},{1})"
 	///// </summary>
@@ -16,86 +16,96 @@ public static class Message
 	///// @CSharpLua.Template = "msg.post({0},{1},{2})"
 	///// </summary>
 	//public static extern void post<T>(HashOrStringOrUrl receiver, Message<T> message_id, T message_data);
-		
-		
+
+
 	///// <summary>
 	///// @CSharpLua.Template = "msg.post({0},{1},{2})"
 	///// </summary>
 	//public static extern void post(HashOrStringOrUrl receiver, HashOrString message_id, object message_data);
 
 
-		
-			
 	/// <summary>
-	/// @CSharpLua.Template = msg.post({0},{1})
+	///     @CSharpLua.Template = msg.post({0},{1})
 	/// </summary>
 	public static extern void post(string id, string message);
+
+
 	public static extern void post(Url id, string message);
 	public static extern void post(Hash id, string message);
 
 
 	/// <summary>
-	/// @CSharpLua.Template = msg.post({0},{1},{2})
+	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
 	public static extern void post(string id, string code, ILuaTable data);
+
+
 	public static extern void post(Url id, string code, ILuaTable data);
 	public static extern void post(Hash id, string code, ILuaTable data);
 
-		
+
 	public static void postMessage(string id, string code, ILuaTableSerializable data)
 	{
 		post(id, code, data.ToTable());
 	}
-		
+
+
 	public static void postMessage(Url id, string code, ILuaTableSerializable data)
 	{
 		post(id, code, data.ToTable());
 	}
 
+
 	public static void postMessage(Hash id, string code, ILuaTableSerializable data)
 	{
 		post(id, code, data.ToTable());
 	}
-		
-		
+
+
 	public static void postMessage(string id, MessageImplementation message)
 	{
 		post(id, message.FetchCode(), message.ToTable());
 	}
+
+
 	public static void postMessage(Hash id, MessageImplementation message)
 	{
 		post(id, message.FetchCode(), message.ToTable());
 	}
+
+
 	public static void postMessage(Url id, MessageImplementation message)
 	{
 		post(id, message.FetchCode(), message.ToTable());
 	}
-		
 
-	public static void postMessage<T>(string id, T message) where T: MessageImplementation
+
+	public static void postMessage<T>(string id, T message) where T : MessageImplementation
 	{
 		post(id, typeof(T).Name, message.ToTable());
 	}
 
 
 	/// <summary>
-	/// @CSharpLua.Template = msg.post({0},{1},{2})
+	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
 	public static extern void post(string id, string code, ExpandoObject data);
 
+
 	/// <summary>
-	/// @CSharpLua.Template = msg.post({0},{1},{2})
+	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
-	public static extern void post(Hash id, string code, ExpandoObject data);	
-		
+	public static extern void post(Hash id, string code, ExpandoObject data);
+
+
 	/// <summary>
-	/// @CSharpLua.Template = msg.post({0},{1},{2})
+	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
 	public static extern void post(Url id, string code, ExpandoObject data);
 
 
-
-	public static bool IsMessage<T>(Hash message_id, dynamic message,  Hash expectedCode, out T messageImpl) where T : MessageImplementation
+	public static bool IsMessage<T>(Hash message_id, dynamic message, Hash expectedCode, out T messageImpl)
+		where T : MessageImplementation
 	{
 		if (message_id == expectedCode)
 		{
@@ -103,13 +113,10 @@ public static class Message
 			return true;
 		}
 
-			
+
 		messageImpl = message;
 		return false;
 	}
-
-
-	private static Dictionary<Type, Hash> typeToHashLookup = new Dictionary<Type, Hash>();
 
 
 	public static bool IsMessage<T>(Hash message_id, dynamic message, out T messageImpl,
@@ -127,23 +134,24 @@ public static class Message
 			if (reconstructMetadata)
 				messageImpl = LuaTableSerializableExt.DefaultTableDeserialization<T>(message);
 			else
-				messageImpl = (dynamic)message;
+				messageImpl = message;
 
 			return true;
 		}
 
 
-		messageImpl = (dynamic)message;
+		messageImpl = message;
 		return false;
 	}
 }
 
 public abstract class MessageImplementation : ILuaTableSerializable
 {
-	public abstract Hash FetchCode();
-	
 	public ILuaTable ToTable()
 	{
 		return this.DefaultTableSerialization();
 	}
+
+
+	public abstract Hash FetchCode();
 }

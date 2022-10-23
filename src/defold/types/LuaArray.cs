@@ -1,15 +1,13 @@
-using System;
-
 namespace types
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
+	///     @CSharpLua.Ignore
 	/// </summary>
 	public class LuaArray : LuaTableOf<int, LuaType>
 	{
 		/// <summary>
-/// @CSharpLua.Template = "{}"
-/// </summary> 
-public extern LuaArray();
+		///     @CSharpLua.Template = "{}"
+		/// </summary>
+		public extern LuaArray();
 	}
 }

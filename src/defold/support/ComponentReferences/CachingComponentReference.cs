@@ -3,28 +3,16 @@ using types;
 
 namespace support
 {
-	public abstract class CachingComponentReference<TData> : ComponentReference, ICacheableComponentReference where TData : new()
+	public abstract class CachingComponentReference<TData> : ComponentReference, ICacheableComponentReference
+		where TData : new()
 	{
-		private static Dictionary<Url, TData> CachedDataByLocator = new Dictionary<Url, TData>();
-		
-		
-		public bool IsCachingInternals { get; private set; }
+		private static readonly Dictionary<Url, TData> CachedDataByLocator = new Dictionary<Url, TData>();
 		private TData _cachedData;
 
 
-		protected bool TryGetCacheData(out TData cachedData)
-		{
-			if (IsCachingInternals)
-			{
-				cachedData = _cachedData;
-				return true;
-			}
+		public bool IsCachingInternals { get; private set; }
 
-			cachedData = default;
-			return false;
-		}
-		
-		
+
 		public void AssignLocator(Url locator, bool enableCaching)
 		{
 			AssignLocatorInternal(locator);
@@ -40,6 +28,19 @@ namespace support
 
 				_cachedData = data;
 			}
+		}
+
+
+		protected bool TryGetCacheData(out TData cachedData)
+		{
+			if (IsCachingInternals)
+			{
+				cachedData = _cachedData;
+				return true;
+			}
+
+			cachedData = default;
+			return false;
 		}
 	}
 }

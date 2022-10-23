@@ -1,9 +1,5 @@
-using System;
-using types;
-
 /// <summary>
-/// Webview API documentation
-/// 
+///     Webview API documentation
 /// </summary>
 public static class Webview
 {

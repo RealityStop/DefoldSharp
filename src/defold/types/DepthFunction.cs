@@ -1,9 +1,7 @@
-using System;
-
 namespace types
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
+	///     @CSharpLua.Ignore
 	/// </summary>
 	public enum DepthFunction
 	{
@@ -14,6 +12,6 @@ namespace types
 		COMPARE_FUNC_GEQUAL = 4,
 		COMPARE_FUNC_EQUAL = 5,
 		COMPARE_FUNC_NOTEQUAL = 6,
-		COMPARE_FUNC_ALWAYS = 7,
+		COMPARE_FUNC_ALWAYS = 7
 	}
 }
