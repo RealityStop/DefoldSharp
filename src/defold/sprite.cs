@@ -1,11 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 ///     Sprite API documentation
 /// </summary>
-public static class Sprite
+public class Sprite : BuiltInComponentBase
 {
+	#region Defold API
+	
 	/// <summary>
 	///     Sets horizontal flipping of the provided sprite's animations.
 	///     The sprite is identified by its URL.
@@ -192,5 +195,98 @@ public static class Sprite
 		{
 			return __CODE__;
 		}
+	}
+	
+	#endregion Defold API
+	
+	
+	//Cacheables
+	private bool _cachedFlipHorizontal;
+	private bool _cachedFlipVertical;
+	
+
+	public bool FlipHorizontal
+	{
+		get
+		{
+			if (IsCachingEnabled)
+				return _cachedFlipHorizontal;
+
+			throw new NotImplementedException("defold API does not provide for querying a sprite's flip state");
+		}
+		set
+		{
+			if (IsCachingEnabled)
+				_cachedFlipHorizontal = value;
+
+			Set_hflip(this, value);
+		}
+	}
+
+
+	public bool FlipVertical
+	{
+		get
+		{
+			if (IsCachingEnabled)
+				return _cachedFlipVertical;
+
+			throw new NotImplementedException("defold API does not provide for querying a sprite's flip state");
+		}
+		set
+		{
+			if (IsCachingEnabled)
+				_cachedFlipVertical = value;
+
+			Set_vflip(this, value);
+		}
+	}
+	
+	
+	
+	public Vector2 Size => (dynamic)Go.Get(this, "size");
+
+	public Vector2 Scale
+	{
+		get => (dynamic)Go.Get(this, "scale");
+		set => Go.Set(this, "scale", (LuaType) value);
+	}
+
+	public Hash Image
+	{
+		get => (dynamic)Go.Get(this, "image");
+		set => Go.Set(this, "image", value);
+	}
+
+	public Hash Material
+	{
+		get => (dynamic)Go.Get(this, "material");
+		set => Go.Set(this, "material", value);
+	}
+		
+	public double Cursor
+	{
+		get => (dynamic)Go.Get(this, "cursor");
+		set => Go.Set(this, "cursor", value);
+	}
+				
+	public double PlaybackRate
+	{
+		get => (dynamic)Go.Get(this, "playback_rate");
+		set => Go.Set(this, "playback_rate", value);
+	}
+
+	public Hash Animation => (dynamic)Go.Get(this, "animation");
+
+
+	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, ILuaTable, Url> onComplete = null,
+		ILuaTable playProperties = null)
+	{
+		void callback(object target, Hash hash, ILuaTable table, Url url)
+		{
+			onComplete(this, hash, table, url);
+		}
+			
+		Play_flipbook(this, animation, callback, playProperties);
 	}
 }
