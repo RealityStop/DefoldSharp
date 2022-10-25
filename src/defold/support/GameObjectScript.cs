@@ -11,9 +11,17 @@ namespace support
 	///     Base class for all game object scripts (.script).
 	/// </summary>
 	[DoNotGenerate]
-	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps> where TProps : AnimatableProperties
+	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
+		public Url Locator { get; }
 		protected bool IsInputFocusHeld { get; private set; }
+
+
+		protected GameObjectScript()
+		{
+			Locator = Msg.Url();
+			Component.Register(Locator, this);
+		}
 
 
 		protected void RequestInput()

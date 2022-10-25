@@ -4,14 +4,25 @@ namespace support
 {
 	public class ComponentLocator
 	{
+		private readonly Url _url;
+
+
+		public ComponentLocator(Url url)
+		{
+			_url = url;
+		}
+		
+
 		/// <summary>
 		///     Resolves the component relative to the current game object.
 		/// </summary>
 		/// <param name="componentName"></param>
 		public ComponentLocator(string componentName)
 		{
-			AbsoluteGOHash = Go.Get_id();
-			ComponentName = componentName;
+			var url = Msg.Url();
+			url.path = Go.Get_id();;
+			url.fragment = componentName;
+			_url = url;
 		}
 
 
@@ -22,21 +33,16 @@ namespace support
 		/// <param name="componentName"></param>
 		public ComponentLocator(string gameobjectPath, string componentName)
 		{
-			AbsoluteGOHash = Go.Get_id(gameobjectPath);
-			ComponentName = componentName;
+			var url = Msg.Url();
+			url.path = Go.Get_id(gameobjectPath);;
+			url.fragment = componentName;
+			_url = url;
 		}
-
-
-		public Hash AbsoluteGOHash { get; }
-		public string ComponentName { get; }
 
 
 		public Url FetchUrl()
 		{
-			var url = Msg.Url();
-			url.path = AbsoluteGOHash;
-			url.fragment = ComponentName;
-			return url;
+			return _url;
 		}
 	}
 }
