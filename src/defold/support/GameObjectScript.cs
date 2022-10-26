@@ -11,9 +11,16 @@ namespace support
 	///     Base class for all game object scripts (.script).
 	/// </summary>
 	[DoNotGenerate]
-	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps> where TProps : AnimatableProperties
+	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
+		public Url Locator { get; }
 		protected bool IsInputFocusHeld { get; private set; }
+		
+		
+		protected GameObjectScript()
+		{
+			Locator = Msg.url();
+		}
 
 
 		protected void RequestInput()
@@ -61,8 +68,8 @@ namespace support
 		protected virtual void update(float dt)
 		{
 		}
-
-
+		
+		
 		/// <summary>
 		///     Called every frame to update the script component.
 		///     Frame-rate independent update. dt contains the delta time since the last update.

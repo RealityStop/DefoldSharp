@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Buffer API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class buffer
+public static class Buffer
 {
+	#region Defold API
 	/// <summary>
 	/// Create a new data buffer containing a specified set of streams. A data buffer
 	/// can contain one or more streams with typed data. This is useful for managing
@@ -64,4 +65,5 @@ public static class buffer
 	public static extern string get_bytes(DataBuffer buffer_p1, Hash stream_name_p2);
 	
 	
+	#endregion Defold API
 }

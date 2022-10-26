@@ -1,13 +1,25 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Model API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class model
+public static class Model
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class model_animation_done_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("model_animation_done");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Hash animation_id;
+	}
+	
+	
 	/// <summary>
 	/// Cancels all animation on a model component.
 	/// 
@@ -98,4 +110,5 @@ public static class model
 	public static extern Hash get_go(Url url_p1, Hash bone_id_p2);
 	
 	
+	#endregion Defold API
 }

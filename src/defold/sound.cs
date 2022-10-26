@@ -1,13 +1,59 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Sound API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class sound
+public static class Sound
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class play_sound_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("play_sound");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double delay;
+		public double gain;
+		public double play_id;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class stop_sound_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("stop_sound");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class set_gain_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("set_gain");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double gain;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class sound_done_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("sound_done");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double play_id;
+	}
+	
+	
 	/// <summary>
 	/// Checks if background music is playing, e.g. from iTunes.
 	/// <span class="icon-macos"></span><span class="icon-windows"></span><span class="icon-linux"></span><span class="icon-html5"></span> On non mobile platforms,
@@ -465,4 +511,5 @@ public static class sound
 	public static extern void set_pan(Url url_p1, double pan_p2);
 	
 	
+	#endregion Defold API
 }

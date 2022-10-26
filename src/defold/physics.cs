@@ -1,13 +1,103 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Collision object physics API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class physics
+public static class Physics
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class apply_force_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("apply_force");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Vector3 force;
+		public Vector3 position;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class collision_response_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("collision_response");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Hash other_id;
+		public Vector3 other_position;
+		public Hash other_group;
+		public Hash own_group;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class contact_point_response_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("contact_point_response");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Vector3 position;
+		public Vector3 normal;
+		public Vector3 relative_velocity;
+		public double distance;
+		public double applied_impulse;
+		public double life_time;
+		public double mass;
+		public double other_mass;
+		public Hash other_id;
+		public Vector3 other_position;
+		public Hash other_group;
+		public Hash own_group;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class trigger_response_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("trigger_response");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Hash other_id;
+		public bool enter;
+		public Hash other_group;
+		public Hash own_group;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class ray_cast_response_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("ray_cast_response");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double fraction;
+		public Vector3 position;
+		public Vector3 normal;
+		public Hash id;
+		public Hash group;
+		public double request_id;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class ray_cast_missed_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("ray_cast_missed");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double request_id;
+	}
+	
+	
 	/// <summary>
 	/// Ray casts are used to test for intersections against collision objects in the physics world.
 	/// Collision objects of types kinematic, dynamic and static are tested against. Trigger objects
@@ -878,4 +968,5 @@ public static class physics
 	public static extern bool get_maskbit(Url url_p1, string group_p2);
 	
 	
+	#endregion Defold API
 }

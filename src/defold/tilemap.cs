@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Tilemap API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class tilemap
+public class Tilemap : BuiltInComponentBase
 {
+	#region Defold API
 	/// <summary>
 	/// Replace a tile in a tile map with a new tile.
 	/// The coordinates of the tiles are indexed so that the "first" tile just
@@ -500,4 +501,95 @@ public static class tilemap
 	public static extern void set_visible(Url url_p1, Hash layer_p2, bool visible_p3);
 	
 	
+	#endregion Defold API
+	
+	
+	
+	
+	//Cacheables
+	private Rect _cachedBounds;
+	
+	/// <summary>
+	/// Gets the bounds for the tilemap.  
+	/// </summary>
+	/// <returns></returns>
+	public Rect Bounds
+	{
+	   get
+	   {
+	      if (IsCachingEnabled)
+	         if (_cachedBounds != null)
+	            return _cachedBounds;
+	
+	
+	      var x = get_bounds(this, out var y, out var w, out var h);
+	      var returnVal = new Rect(x, y, w, h);
+	
+	      if (IsCachingEnabled)
+	         _cachedBounds = returnVal;
+	
+	      return returnVal;
+	   }
+	}
+	
+	
+	
+	public int GetTile(int x, int y, string layer)
+	{
+	   return (int)get_tile(this, layer, x, y);
+	}
+	   
+	public int GetTile(int x, int y, Hash layer)
+	{
+	   return (int)get_tile(this, layer, x, y);
+	}
+	
+	
+	public void SetTile(int x, int y, int tile, string layer)
+	{
+	   ValidateCachedBounds(x, y);
+	   set_tile(this, layer, x, y, tile);
+	}
+	public void SetTile(int x, int y, int tile, string layer, TilemapTransforms transformBitmask)
+	{
+	   ValidateCachedBounds(x, y);
+	   set_tile(this, layer, x, y, tile, (int)transformBitmask);
+	}
+	   
+	public void SetTile(int x, int y, int tile, Hash layer)
+	{
+	   ValidateCachedBounds(x, y);
+	   set_tile(this, layer, x, y, tile);
+	}
+	public void SetTile(int x, int y, int tile, Hash layer, TilemapTransforms transformBitmask)
+	{
+	   ValidateCachedBounds(x, y);
+	   set_tile(this, layer, x, y, tile, (int)transformBitmask);
+	}
+	   
+	
+	private void ValidateCachedBounds(int x, int y)
+	{
+	   if (IsCachingEnabled)
+	      if (_cachedBounds != null)
+	      {
+	         //If we're setting a tile outside the cached boundaries,
+	         //clear the cache so the next request will re-fetch.
+	         if (!_cachedBounds.InRect(x, y))
+	            _cachedBounds = null;
+	      }
+	}
+	   
+	   
+	   
+	
+	public void SetLayerVisible(string layer, bool visible = true)
+	{
+	   set_visible(this, layer, visible);
+	}
+	   
+	public void SetLayerVisible(Hash layer, bool visible = true)
+	{
+	   set_visible(this, layer, visible);
+	}
 }

@@ -1,13 +1,26 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// GUI API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class gui
+public static class Gui
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class layout_changed_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("layout_changed");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Hash id;
+		public Hash previous_id;
+	}
+	
+	
 	/// <summary>
 	/// Retrieves the node with the specified id.
 	/// 
@@ -1480,4 +1493,5 @@ public static class gui
 	public static extern void on_reload(object self_p1);
 	
 	
+	#endregion Defold API
 }

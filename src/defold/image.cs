@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Image API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class image
+public static class Image
 {
+	#region Defold API
 	/// <summary>
 	/// Load image (PNG or JPEG) from buffer.
 	/// 
@@ -24,4 +25,5 @@ public static class image
 	public static extern ILuaTable load(string buffer_p1, bool premult_p2);
 	
 	
+	#endregion Defold API
 }

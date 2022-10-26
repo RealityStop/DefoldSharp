@@ -1,11 +1,13 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Push notifications API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class push
+public static class Push
 {
+	#region Defold API
+	#endregion Defold API
 }

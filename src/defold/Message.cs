@@ -1,9 +1,12 @@
-﻿using System.Dynamic;
+﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
 using support;
 using types;
 
 public static class Message
 {
+	private static readonly Dictionary<Type, Hash> typeToHashLookup = new Dictionary<Type, Hash>();
 	///// <summary>
 	///// @CSharpLua.Template = "msg.post({0},{1})"
 	///// </summary>
@@ -59,37 +62,25 @@ public static class Message
 	}
 
 
-	public static void postMessage(string id, StandardMessageImplementation message)
+	public static void postMessage(string id, MessageImplementation message)
 	{
-		post(id, message.Code, message.ToTable());
+		post(id, message.FetchCode(), message.ToTable());
 	}
 
 
-	public static void postMessage(Hash id, StandardMessageImplementation message)
+	public static void postMessage(Hash id, MessageImplementation message)
 	{
-		post(id, message.Code, message.ToTable());
+		post(id, message.FetchCode(), message.ToTable());
 	}
 
 
-	public static void postMessage(Url id, StandardMessageImplementation message)
+	public static void postMessage(Url id, MessageImplementation message)
 	{
-		post(id, message.Code, message.ToTable());
+		post(id, message.FetchCode(), message.ToTable());
 	}
 
 
-	public static void postMessage<T>(Hash id, T message) where T : CustomMessageImplementation
-	{
-		post(id, typeof(T).Name, message.ToTable());
-	}
-
-
-	public static void postMessage<T>(Url id, T message) where T : CustomMessageImplementation
-	{
-		post(id, typeof(T).Name, message.ToTable());
-	}
-
-
-	public static void postMessage<T>(string id, T message) where T : CustomMessageImplementation
+	public static void postMessage<T>(string id, T message) where T : MessageImplementation
 	{
 		post(id, typeof(T).Name, message.ToTable());
 	}
@@ -114,7 +105,7 @@ public static class Message
 
 
 	public static bool IsMessage<T>(Hash message_id, dynamic message, Hash expectedCode, out T messageImpl)
-		where T : StandardMessageImplementation
+		where T : MessageImplementation
 	{
 		if (message_id == expectedCode)
 		{
@@ -129,9 +120,16 @@ public static class Message
 
 
 	public static bool IsMessage<T>(Hash message_id, dynamic message, out T messageImpl,
-		bool reconstructMetadata = false) where T : CustomMessageImplementation, new()
+		bool reconstructMetadata = false) where T : MessageImplementation, new()
 	{
-		if (message_id == Defold.hash(typeof(T).Name))
+		if (!typeToHashLookup.TryGetValue(typeof(T), out var hash))
+		{
+			var dummy = new T();
+			hash = dummy.FetchCode();
+			typeToHashLookup.Add(typeof(T), hash);
+		}
+
+		if (hash == message_id)
 		{
 			if (reconstructMetadata)
 				messageImpl = LuaTableSerializableExt.DefaultTableDeserialization<T>(message);
@@ -147,21 +145,13 @@ public static class Message
 	}
 }
 
-public abstract class StandardMessageImplementation : ILuaTableSerializable
-{
-	public abstract Hash Code { get; }
-
-
-	public ILuaTable ToTable()
-	{
-		return this.DefaultTableSerialization();
-	}
-}
-
-public abstract class CustomMessageImplementation : ILuaTableSerializable
+public abstract class MessageImplementation : ILuaTableSerializable
 {
 	public ILuaTable ToTable()
 	{
 		return this.DefaultTableSerialization();
 	}
+
+
+	public abstract Hash FetchCode();
 }

@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Profiler API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class profiler
+public static class Profiler
 {
+	#region Defold API
 	/// <summary>
 	/// Get the amount of memory used (resident/working set) by the application in bytes, as reported by the OS.
 	/// <span class="icon-attention"></span> This function is not available on <span class="icon-html5"></span> HTML5.
@@ -138,4 +139,5 @@ public static class profiler
 	public static extern void scope_end();
 	
 	
+	#endregion Defold API
 }

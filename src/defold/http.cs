@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// HTTP API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class http
+public static class Http
 {
+	#region Defold API
 	/// <summary>
 	/// Perform a HTTP/HTTPS request.
 	/// <span class="icon-attention"></span> If no timeout value is passed, the configuration value "network.http_timeout" is used. If that is not set, the timeout value is <code>0</code> (which blocks indefinitely).
@@ -44,4 +45,5 @@ public static class http
 	public static extern void request(string url_p1, string method_p2, Action<object,Hash,ILuaTable> callback_p3, ILuaTable headers_p4, string post_data_p5, ILuaTable options_p6);
 	
 	
+	#endregion Defold API
 }

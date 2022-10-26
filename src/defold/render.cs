@@ -1,13 +1,75 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Rendering API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class render
+public static class Render
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class draw_debug_text_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("draw_debug_text");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Vector3 position;
+		public string text;
+		public Vector4 color;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class draw_line_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("draw_line");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Vector3 start_point;
+		public Vector3 end_point;
+		public Vector4 color;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class window_resized_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("window_resized");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double height;
+		public double width;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class resize_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("resize");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double height;
+		public double width;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class clear_color_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("clear_color");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Vector4 color;
+	}
+	
+	
 	/// <summary>
 	/// Constant buffers are used to set shader program variables and are optionally passed to the <code>render.draw()</code> function.
 	/// The buffer's constant elements can be indexed like an ordinary Lua table, but you can't iterate over them with pairs() or ipairs().
@@ -448,4 +510,5 @@ public static class render
 	public static extern void disable_material();
 	
 	
+	#endregion Defold API
 }

@@ -1,19 +1,88 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Game object API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class go
+public static class Go
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class acquire_input_focus_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("acquire_input_focus");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class release_input_focus_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("release_input_focus");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class set_parent_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("set_parent");
+		public override Hash FetchCode() => __CODE__;
+		
+		public Hash parent_id;
+		public double keep_world_transform;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class enable_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("enable");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class disable_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("disable");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// gets a named property of the specified game object or component
+	/// 
+	/// @CSharpLua.Template = "go.get({0}, {1})"
+	/// </summary>
+	public static extern LuaType get(string url_p1, string property_p2);
+	
+	
 	/// <summary>
 	/// gets a named property of the specified game object or component
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
 	public static extern LuaType get(string url_p1, string property_p2, ILuaTable options_p3);
+	
+	
+	/// <summary>
+	/// gets a named property of the specified game object or component
+	/// 
+	/// @CSharpLua.Template = "go.get({0}, {1})"
+	/// </summary>
+	public static extern LuaType get(string url_p1, Hash property_p2);
 	
 	
 	/// <summary>
@@ -27,9 +96,25 @@ public static class go
 	/// <summary>
 	/// gets a named property of the specified game object or component
 	/// 
+	/// @CSharpLua.Template = "go.get({0}, {1})"
+	/// </summary>
+	public static extern LuaType get(Hash url_p1, string property_p2);
+	
+	
+	/// <summary>
+	/// gets a named property of the specified game object or component
+	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
 	public static extern LuaType get(Hash url_p1, string property_p2, ILuaTable options_p3);
+	
+	
+	/// <summary>
+	/// gets a named property of the specified game object or component
+	/// 
+	/// @CSharpLua.Template = "go.get({0}, {1})"
+	/// </summary>
+	public static extern LuaType get(Hash url_p1, Hash property_p2);
 	
 	
 	/// <summary>
@@ -43,9 +128,25 @@ public static class go
 	/// <summary>
 	/// gets a named property of the specified game object or component
 	/// 
+	/// @CSharpLua.Template = "go.get({0}, {1})"
+	/// </summary>
+	public static extern LuaType get(Url url_p1, string property_p2);
+	
+	
+	/// <summary>
+	/// gets a named property of the specified game object or component
+	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
 	public static extern LuaType get(Url url_p1, string property_p2, ILuaTable options_p3);
+	
+	
+	/// <summary>
+	/// gets a named property of the specified game object or component
+	/// 
+	/// @CSharpLua.Template = "go.get({0}, {1})"
+	/// </summary>
+	public static extern LuaType get(Url url_p1, Hash property_p2);
 	
 	
 	/// <summary>
@@ -59,9 +160,25 @@ public static class go
 	/// <summary>
 	/// sets a named property of the specified game object or component, or a material constant
 	/// 
+	/// @CSharpLua.Template = "go.set({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set(string url_p1, string property_p2, LuaType value_p3);
+	
+	
+	/// <summary>
+	/// sets a named property of the specified game object or component, or a material constant
+	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void set(string url_p1, string property_p2, LuaType value_p3, ILuaTable options_p4);
+	
+	
+	/// <summary>
+	/// sets a named property of the specified game object or component, or a material constant
+	/// 
+	/// @CSharpLua.Template = "go.set({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set(string url_p1, Hash property_p2, LuaType value_p3);
 	
 	
 	/// <summary>
@@ -75,9 +192,25 @@ public static class go
 	/// <summary>
 	/// sets a named property of the specified game object or component, or a material constant
 	/// 
+	/// @CSharpLua.Template = "go.set({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set(Hash url_p1, string property_p2, LuaType value_p3);
+	
+	
+	/// <summary>
+	/// sets a named property of the specified game object or component, or a material constant
+	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void set(Hash url_p1, string property_p2, LuaType value_p3, ILuaTable options_p4);
+	
+	
+	/// <summary>
+	/// sets a named property of the specified game object or component, or a material constant
+	/// 
+	/// @CSharpLua.Template = "go.set({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set(Hash url_p1, Hash property_p2, LuaType value_p3);
 	
 	
 	/// <summary>
@@ -91,9 +224,25 @@ public static class go
 	/// <summary>
 	/// sets a named property of the specified game object or component, or a material constant
 	/// 
+	/// @CSharpLua.Template = "go.set({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set(Url url_p1, string property_p2, LuaType value_p3);
+	
+	
+	/// <summary>
+	/// sets a named property of the specified game object or component, or a material constant
+	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void set(Url url_p1, string property_p2, LuaType value_p3, ILuaTable options_p4);
+	
+	
+	/// <summary>
+	/// sets a named property of the specified game object or component, or a material constant
+	/// 
+	/// @CSharpLua.Template = "go.set({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set(Url url_p1, Hash property_p2, LuaType value_p3);
 	
 	
 	/// <summary>
@@ -1347,4 +1496,5 @@ public static class go
 	public static extern void on_reload(object self_p1);
 	
 	
+	#endregion Defold API
 }

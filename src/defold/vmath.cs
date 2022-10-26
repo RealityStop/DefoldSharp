@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Vector math API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class vmath
+public static class Vmath
 {
+	#region Defold API
 	/// <summary>
 	/// Creates a new zero vector with all components set to 0.
 	/// 
@@ -618,4 +619,5 @@ public static class vmath
 	public static extern Vector4 mul_per_elem(Vector4 v1_p1, Vector4 v2_p2);
 	
 	
+	#endregion Defold API
 }

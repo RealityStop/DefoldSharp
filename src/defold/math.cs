@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Lua math standard library
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class math
+public static class Math
 {
+	#region Defold API
 	/// <summary>
 	/// This function is an interface to the simple
 	/// pseudo-random generator function rand provided by ANSI C.
@@ -27,4 +28,5 @@ public static class math
 	public static extern void random();
 	
 	
+	#endregion Defold API
 }

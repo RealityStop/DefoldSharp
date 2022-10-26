@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Resource API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class resource
+public static class Resource
 {
+	#region Defold API
 	/// <summary>
 	/// Constructor-like function with two purposes:
 	/// <ul>
@@ -333,4 +334,5 @@ public static class resource
 	public static extern bool is_using_liveupdate_data();
 	
 	
+	#endregion Defold API
 }

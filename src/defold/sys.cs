@@ -1,13 +1,104 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// System API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class sys
+public static class Sys
 {
+	#region Defold API
+	/// <summary>
+	/// </summary>
+	public class exit_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("exit");
+		public override Hash FetchCode() => __CODE__;
+		
+		public double code;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class toggle_profile_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("toggle_profile");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class toggle_physics_debug_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("toggle_physics_debug");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class start_record_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("start_record");
+		public override Hash FetchCode() => __CODE__;
+		
+		public string file_name;
+		public double frame_period;
+		public double fps;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class stop_record_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("stop_record");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class reboot_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("reboot");
+		public override Hash FetchCode() => __CODE__;
+		
+		public string arg1;
+		public string arg2;
+		public string arg3;
+		public string arg4;
+		public string arg5;
+		public string arg6;
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class set_vsync_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("set_vsync");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
+	/// <summary>
+	/// </summary>
+	public class set_update_frequency_message : MessageImplementation
+	{
+		public static Hash __CODE__ = Defold.hash("set_update_frequency");
+		public override Hash FetchCode() => __CODE__;
+		
+	}
+	
+	
 	/// <summary>
 	/// The table can later be loaded by <code>sys.load</code>.
 	/// Use <code>sys.get_save_file</code> to obtain a valid location for the file.
@@ -225,4 +316,5 @@ public static class sys
 	public static extern ILuaTable deserialize(string buffer_p1);
 	
 	
+	#endregion Defold API
 }

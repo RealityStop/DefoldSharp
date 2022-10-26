@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Messaging API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class msg
+public static class Msg
 {
+	#region Defold API
 	/// <summary>
 	/// This is equivalent to <code>msg.url(nil)</code> or <code>msg.url("#")</code>, which creates an url to the current
 	/// script component.
@@ -324,4 +325,5 @@ public static class msg
 	public static extern void post(Hash receiver_p1, Hash message_id_p2, ILuaTable message_p3);
 	
 	
+	#endregion Defold API
 }

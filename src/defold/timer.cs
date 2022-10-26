@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Timer API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class timer
+public static class Timer
 {
+	#region Defold API
 	/// <summary>
 	/// Adds a timer and returns a unique handle
 	/// You may create more timers from inside a timer callback.
@@ -38,4 +39,5 @@ public static class timer
 	public static extern bool trigger(Hash handle_p1);
 	
 	
+	#endregion Defold API
 }

@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Window API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class window
+public static class Window
 {
+	#region Defold API
 	/// <summary>
 	/// Sets a window event listener.
 	/// 
@@ -44,4 +45,5 @@ public static class window
 	public static extern double get_size(out double height_o1);
 	
 	
+	#endregion Defold API
 }

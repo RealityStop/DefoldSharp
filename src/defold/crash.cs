@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Crash API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class crash
+public static class Crash
 {
+	#region Defold API
 	/// <summary>
 	/// Performs the same steps as if a crash had just occured but
 	/// allows the program to continue.
@@ -104,4 +105,5 @@ public static class crash
 	public static extern string get_extra_data(double handle_p1);
 	
 	
+	#endregion Defold API
 }

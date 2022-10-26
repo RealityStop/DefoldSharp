@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Label API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class label
+public static class Label
 {
+	#region Defold API
 	/// <summary>
 	/// Sets the text of a label component
 	/// <span class="icon-attention"></span> This method uses the message passing that means the value will be set after <code>dispatch messages</code> step.
@@ -62,4 +63,5 @@ public static class label
 	public static extern string get_text(Url url_p1);
 	
 	
+	#endregion Defold API
 }

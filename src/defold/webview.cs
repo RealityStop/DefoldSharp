@@ -1,11 +1,13 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Webview API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class webview
+public static class Webview
 {
+	#region Defold API
+	#endregion Defold API
 }

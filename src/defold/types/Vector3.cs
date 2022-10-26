@@ -3,11 +3,10 @@ using System;
 namespace types
 {
 	/// <summary>
-	/// @CSharpLua.Ignore
 	/// </summary>
 	public class Vector3
 	{
-		public float x, y, z;
+		public double x, y, z;
 
 /// <summary>
 /// @CSharpLua.Template = "vmath.vector3()"
@@ -17,7 +16,7 @@ public extern Vector3();
 /// <summary>
 /// @CSharpLua.Template = "vmath.vector3({0},{1},{2})"
 /// </summary>
-public extern Vector3(float x, float y, float z);
+public extern Vector3(double x, double y, double z);
 
 
 /// <summary>
@@ -40,12 +39,12 @@ public static extern Vector3 neg(Vector3 a);
 /// <summary>
 /// @CSharpLua.Template = "{0} * {1}"
 /// </summary>
-public static extern Vector3 operator *(Vector3 a, float b);
+public static extern Vector3 operator *(Vector3 a, double b);
 
 /// <summary>
 /// @CSharpLua.Template = "{0} * {1}"
 /// </summary>
-public static extern Vector3 operator *(float a, Vector3 b);
+public static extern Vector3 operator *(double a, Vector3 b);
 
 /// <summary>
 /// @CSharpLua.Template = "{0} * {1}"
@@ -56,13 +55,13 @@ public static extern Vector3 operator *(Vector3 a, Vector3 b);
 /// <summary>
 /// @CSharpLua.Template = "{0} / {1}"
 /// </summary>
-public static extern Vector3 operator /(Vector3 a, float b);
+public static extern Vector3 operator /(Vector3 a, double b);
 
 
 /// <summary>
 /// @CSharpLua.Template = "vmath.length({this})"
 /// </summary>
-public static extern float Magnitude();
+public extern double Magnitude();
 
 
 /// <summary>
@@ -80,7 +79,7 @@ public extern Vector3 Normalize();
 /// <summary>
 /// @CSharpLua.Template = "vmath.project({this},{0})"
 /// </summary>
-public extern float Project(Vector3 v);
+public extern double Project(Vector3 v);
 
 
 /// <summary>

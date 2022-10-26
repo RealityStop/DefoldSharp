@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Particle effects API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class particlefx
+public static class Particlefx
 {
+	#region Defold API
 	/// <summary>
 	/// Starts playing a particle FX component.
 	/// Particle FX started this way need to be manually stopped through <code>particlefx.stop()</code>.
@@ -380,4 +381,5 @@ public static class particlefx
 	public static extern void reset_constant(Url url_p1, Hash emitter_p2, Hash constant_p3);
 	
 	
+	#endregion Defold API
 }

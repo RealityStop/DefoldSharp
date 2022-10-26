@@ -1,11 +1,13 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Facebook API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class facebook
+public static class Facebook
 {
+	#region Defold API
+	#endregion Defold API
 }

@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Collection factory API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class collectionfactory
+public class CollectionFactory : BuiltInComponentBase
 {
+	#region Defold API
 	/// <summary>
 	/// This returns status of the collection factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns COMP_COLLECTION_FACTORY_STATUS_LOADED.
@@ -458,4 +459,44 @@ public static class collectionfactory
 	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
 	
 	
+	#endregion Defold API
+	
+	
+	
+	
+	public struct CollectionFactoryCreateResult
+	{
+	   public readonly Hash RelativeHash;
+	   public readonly Hash UniqueHash;
+	
+	
+	   public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)
+	   {
+	      RelativeHash = relativeHash;
+	      UniqueHash = uniqueHash;
+	   }
+	}
+	
+	public FactoryStatus Status => get_status(this);
+	
+	
+	public LuaTableOf<Hash, Hash> Create()
+	{
+	   return (dynamic)create(this);
+	}
+	   
+	public LuaTableOf<Hash, Hash> Create(Vector3 position)
+	{
+	   return (dynamic)create(this, position);
+	}
+	   
+	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation)
+	{
+	   return (dynamic)create(this, position, rotation);
+	}
+	   
+	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, ILuaTable properties)
+	{
+	   return (dynamic)create(this, position, rotation, properties);
+	}
 }

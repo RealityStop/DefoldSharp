@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Built-ins API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class builtins
+public static class Builtins
 {
+	#region Defold API
 	/// <summary>
 	/// Pretty printing of Lua values. This function prints Lua values
 	/// in a manner similar to +print()+, but will also recurse into tables
@@ -37,4 +38,5 @@ public static class builtins
 	public static extern string hash_to_hex(Hash h_p1);
 	
 	
+	#endregion Defold API
 }

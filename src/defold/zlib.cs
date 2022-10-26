@@ -1,13 +1,14 @@
 using System;
+using support;
 using types;
 
 /// <summary>
 /// Zlib compression API documentation
 /// 
-/// @CSharpLua.Ignore
 /// </summary>
-public static class zlib
+public static class Zlib
 {
+	#region Defold API
 	/// <summary>
 	/// A lua error is raised is on error
 	/// 
@@ -24,4 +25,5 @@ public static class zlib
 	public static extern string deflate(string buf_p1);
 	
 	
+	#endregion Defold API
 }
