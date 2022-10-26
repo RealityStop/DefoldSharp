@@ -31,7 +31,8 @@ namespace support
 
 		public static void Register<TComponent>(Url locator, TComponent data) where TComponent : IComponent
 		{
-			throw new NotImplementedException();
+			var newRecord = new ComponentRecord(typeof(TComponent), data);
+			ComponentsByLocator.Add(locator, newRecord);
 		}
 		
 		
@@ -78,8 +79,7 @@ namespace support
 				{
 					var newComponent = new TComponent();
 					newComponent.AssignLocator(locator);
-					existingRecord = new ComponentRecord(typeof(TComponent), newComponent);
-					ComponentsByLocator.Add(url, existingRecord);
+					Register<TComponent>(url, newComponent);
 					if (cacheInternals)
 						newComponent.EnableCaching();
 					return newComponent;
