@@ -1,7 +1,8 @@
+using System;
+
 namespace types
 {
 	/// <summary>
-	///     @CSharpLua.Ignore
 	/// </summary>
 	public enum BlendFunction
 	{
@@ -19,6 +20,6 @@ namespace types
 		BLEND_CONSTANT_COLOR = 11,
 		BLEND_ONE_MINUS_CONSTANT_COLOR = 12,
 		BLEND_CONSTANT_ALPHA = 13,
-		BLEND_ONE_MINUS_CONSTANT_ALPHA = 14
+		BLEND_ONE_MINUS_CONSTANT_ALPHA = 14,
 	}
 }

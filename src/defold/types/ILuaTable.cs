@@ -1,7 +1,9 @@
+using System;
+
 namespace types
 {
 	/// <summary>
-	///     @CSharpLua.Ignore
+	/// @CSharpLua.Ignore
 	/// </summary>
 	public interface ILuaTable
 	{

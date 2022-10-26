@@ -1,7 +1,8 @@
+using System;
+
 namespace types
 {
 	/// <summary>
-	///     @CSharpLua.Ignore
 	/// </summary>
 	public enum StencilOperator
 	{
@@ -12,6 +13,6 @@ namespace types
 		STENCIL_OP_INCR_WRAP = 4,
 		STENCIL_OP_DECR = 5,
 		STENCIL_OP_DECR_WRAP = 6,
-		STENCIL_OP_INVERT = 7
+		STENCIL_OP_INVERT = 7,
 	}
 }

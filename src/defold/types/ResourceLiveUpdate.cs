@@ -1,7 +1,8 @@
+using System;
+
 namespace types
 {
 	/// <summary>
-	///     @CSharpLua.Ignore
 	/// </summary>
 	public enum ResourceLiveUpdate
 	{
@@ -11,6 +12,6 @@ namespace types
 		LIVEUPATE_ENGINE_VERSION_MISMATCH = 3,
 		LIVEUPATE_SIGNATURE_MISMATCH = 4,
 		LIVEUPDATE_BUNDLED_RESOURCE_MISMATCH = 5,
-		LIVEUPDATE_FORMAT_ERROR = 6
+		LIVEUPDATE_FORMAT_ERROR = 6,
 	}
 }
