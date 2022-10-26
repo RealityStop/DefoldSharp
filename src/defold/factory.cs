@@ -6,7 +6,7 @@ using types;
 /// Factory API documentation
 /// 
 /// </summary>
-public static class Factory
+public class Factory : BuiltInComponentBase
 {
 	#region Defold API
 	/// <summary>
@@ -383,4 +383,65 @@ public static class Factory
 	
 	
 	#endregion Defold API
+	
+	/// <summary>
+	/// Calling this function when the factory is not marked as dynamic loading always returns
+	/// factory.STATUS_LOADED.
+	/// </summary>
+	public FactoryStatus Status => get_status(this);
+	
+	
+	/// <summary>
+	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
+	/// Calling this function when the factory is not marked as dynamic loading does nothing.
+	/// </summary>
+	public void Unload() => unload(this);
+	
+	
+	/// <summary>
+	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
+	/// Calling this function when the factory is not marked as dynamic loading does nothing.
+	/// </summary>
+	public void Load() => load(this);
+	
+	
+	public void Load(Action<object, Factory, bool> callback)
+	{
+	   void IntermediateCallback(object obj, Url url, bool b)
+	   {
+	      callback(obj, this, b);
+	   }
+	
+	   load(this, IntermediateCallback);
+	}
+	
+	
+	public Hash Create()
+	{
+	   return (dynamic)create(this);
+	}
+	
+	
+	public Hash Create(Vector3 position)
+	{
+	   return (dynamic)create(this, position);
+	}
+	
+	
+	public Hash Create(Vector3 position, Quaternion rotation)
+	{
+	   return (dynamic)create(this, position, rotation);
+	}
+	
+	
+	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties)
+	{
+	   return (dynamic)create(this, position, rotation, properties);
+	}
+	
+	
+	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties, double scale)
+	{
+	   return (dynamic)create(this, position, rotation, properties, scale);
+	}
 }

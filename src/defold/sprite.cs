@@ -39,7 +39,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public extern void set_hflip(string url_p1, bool flip_p2);
+	public static extern void set_hflip(string url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -49,7 +49,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public extern void set_hflip(Hash url_p1, bool flip_p2);
+	public static extern void set_hflip(Hash url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -59,7 +59,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public extern void set_hflip(Url url_p1, bool flip_p2);
+	public static extern void set_hflip(Url url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -69,7 +69,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public extern void set_vflip(string url_p1, bool flip_p2);
+	public static extern void set_vflip(string url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -79,7 +79,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public extern void set_vflip(Hash url_p1, bool flip_p2);
+	public static extern void set_vflip(Hash url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -89,7 +89,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public extern void set_vflip(Url url_p1, bool flip_p2);
+	public static extern void set_vflip(Url url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -100,7 +100,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
 	/// </summary>
-	public extern void play_flipbook(string url_p1, Hash id_p2);
+	public static extern void play_flipbook(string url_p1, Hash id_p2);
 	
 	
 	/// <summary>
@@ -111,7 +111,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -122,7 +122,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	/// <summary>
@@ -133,7 +133,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
 	/// </summary>
-	public extern void play_flipbook(Hash url_p1, Hash id_p2);
+	public static extern void play_flipbook(Hash url_p1, Hash id_p2);
 	
 	
 	/// <summary>
@@ -144,7 +144,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -155,7 +155,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	/// <summary>
@@ -166,7 +166,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
 	/// </summary>
-	public extern void play_flipbook(Url url_p1, Hash id_p2);
+	public static extern void play_flipbook(Url url_p1, Hash id_p2);
 	
 	
 	/// <summary>
@@ -177,7 +177,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
 	
 	
 	/// <summary>
@@ -188,7 +188,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	#endregion Defold API
@@ -273,8 +273,24 @@ public class Sprite : BuiltInComponentBase
 	public Hash Animation => (dynamic)Go.get(this, "animation");
 	
 	
-	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, ILuaTable, Url> onComplete = null,
-	   ILuaTable playProperties = null)
+	public void PlayFlipbook(Hash animation)
+	{
+	   play_flipbook(this, animation);
+	}
+	
+	
+	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, ILuaTable, Url> onComplete)
+	{
+	   void callback(object target, Hash hash, ILuaTable table, Url url)
+	   {
+	      onComplete(this, hash, table, url);
+	   }
+	      
+	   play_flipbook(this, animation, callback);
+	}
+	
+	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, ILuaTable, Url> onComplete,
+	   ILuaTable playProperties)
 	{
 	   void callback(object target, Hash hash, ILuaTable table, Url url)
 	   {

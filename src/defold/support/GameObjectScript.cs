@@ -15,12 +15,11 @@ namespace support
 	{
 		public Url Locator { get; }
 		protected bool IsInputFocusHeld { get; private set; }
-
-
+		
+		
 		protected GameObjectScript()
 		{
 			Locator = Msg.url();
-			Component.Register(Locator, this);
 		}
 
 
@@ -69,8 +68,8 @@ namespace support
 		protected virtual void update(float dt)
 		{
 		}
-
-
+		
+		
 		/// <summary>
 		///     Called every frame to update the script component.
 		///     Frame-rate independent update. dt contains the delta time since the last update.

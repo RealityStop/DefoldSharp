@@ -11,8 +11,17 @@ namespace support
 	///     Base class for all game object scripts (.script).
 	/// </summary>
 	[DoNotGenerate]
-	public abstract class GUIScript<TProps> : ScriptPropertyHost<TProps> where TProps : AnimatableProperties
+	public abstract class GUIScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
+		public Url Locator { get; }
+
+
+		protected GUIScript()
+		{
+			Locator = Msg.url();
+		}
+
+
 		/// <summary>
 		///     Called when a script component is initialized.
 		///     This is a callback-function, which is called by the engine when a script component is initialized. It can be used
