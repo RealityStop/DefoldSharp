@@ -19,7 +19,7 @@ public static class Timer
 	/// 
 	/// @CSharpLua.Template = "timer.delay({0}, {1}, {2})"
 	/// </summary>
-	public static extern Hash delay(double delay_p1, bool repeat_p2, Action<> callback_p3);
+	public static extern Hash delay(double delay_p1, bool repeat_p2, Action<object,Hash,double> callback_p3);
 	
 	
 	/// <summary>

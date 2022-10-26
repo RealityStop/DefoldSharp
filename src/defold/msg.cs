@@ -40,22 +40,6 @@ public static class Msg
 	/// <summary>
 	/// creates a new URL from separate arguments
 	/// 
-	/// @CSharpLua.Template = "msg.url()"
-	/// </summary>
-	public static extern Url url();
-	
-	
-	/// <summary>
-	/// creates a new URL from separate arguments
-	/// 
-	/// @CSharpLua.Template = "msg.url({0})"
-	/// </summary>
-	public static extern Url url(string socket_p1);
-	
-	
-	/// <summary>
-	/// creates a new URL from separate arguments
-	/// 
 	/// @CSharpLua.Template = "msg.url({0}, {1})"
 	/// </summary>
 	public static extern Url url(string socket_p1, string path_p2);
@@ -99,14 +83,6 @@ public static class Msg
 	/// @CSharpLua.Template = "msg.url({0}, {1}, {2})"
 	/// </summary>
 	public static extern Url url(string socket_p1, Hash path_p2, Hash fragment_p3);
-	
-	
-	/// <summary>
-	/// creates a new URL from separate arguments
-	/// 
-	/// @CSharpLua.Template = "msg.url({0})"
-	/// </summary>
-	public static extern Url url(Hash socket_p1);
 	
 	
 	/// <summary>

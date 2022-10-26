@@ -19,7 +19,7 @@ namespace support
 
 		protected GameObjectScript()
 		{
-			Locator = Msg.Url();
+			Locator = Msg.url();
 			Component.Register(Locator, this);
 		}
 

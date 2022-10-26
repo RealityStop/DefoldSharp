@@ -283,7 +283,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.store_resource({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void store_resource(double manifest_reference_p1, string data_p2, string hexdigest_p3, Action<> callback_p4);
+	public static extern void store_resource(double manifest_reference_p1, string data_p2, string hexdigest_p3, Action<object,string,bool> callback_p4);
 	
 	
 	/// <summary>
@@ -298,7 +298,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.store_manifest({0}, {1})"
 	/// </summary>
-	public static extern void store_manifest(string manifest_buffer_p1, Action<> callback_p2);
+	public static extern void store_manifest(string manifest_buffer_p1, Action<object,ResourceLiveUpdate> callback_p2);
 	
 	
 	/// <summary>
@@ -310,7 +310,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.store_archive({0}, {1})"
 	/// </summary>
-	public static extern void store_archive(string path_p1, Action<> callback_p2);
+	public static extern void store_archive(string path_p1, Action<object,ResourceLiveUpdate> callback_p2);
 	
 	
 	/// <summary>
@@ -322,7 +322,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.store_archive({0}, {1}, {2})"
 	/// </summary>
-	public static extern void store_archive(string path_p1, Action<> callback_p2, ILuaTable options_p3);
+	public static extern void store_archive(string path_p1, Action<object,ResourceLiveUpdate> callback_p2, ILuaTable options_p3);
 	
 	
 	/// <summary>

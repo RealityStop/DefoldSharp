@@ -10,6 +10,46 @@ public static class Factory
 {
 	#region Defold API
 	/// <summary>
+	/// This returns status of the factory.
+	/// Calling this function when the factory is not marked as dynamic loading always returns
+	/// factory.STATUS_LOADED.
+	/// 
+	/// @CSharpLua.Template = "factory.get_status()"
+	/// </summary>
+	public static extern FactoryStatus get_status();
+	
+	
+	/// <summary>
+	/// This returns status of the factory.
+	/// Calling this function when the factory is not marked as dynamic loading always returns
+	/// factory.STATUS_LOADED.
+	/// 
+	/// @CSharpLua.Template = "factory.get_status({0})"
+	/// </summary>
+	public static extern FactoryStatus get_status(string url_p1);
+	
+	
+	/// <summary>
+	/// This returns status of the factory.
+	/// Calling this function when the factory is not marked as dynamic loading always returns
+	/// factory.STATUS_LOADED.
+	/// 
+	/// @CSharpLua.Template = "factory.get_status({0})"
+	/// </summary>
+	public static extern FactoryStatus get_status(Hash url_p1);
+	
+	
+	/// <summary>
+	/// This returns status of the factory.
+	/// Calling this function when the factory is not marked as dynamic loading always returns
+	/// factory.STATUS_LOADED.
+	/// 
+	/// @CSharpLua.Template = "factory.get_status({0})"
+	/// </summary>
+	public static extern FactoryStatus get_status(Url url_p1);
+	
+	
+	/// <summary>
 	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
 	/// 
@@ -69,7 +109,7 @@ public static class Factory
 	/// 
 	/// @CSharpLua.Template = "factory.load({0}, {1})"
 	/// </summary>
-	public static extern void load(string url_p1, Action<> complete_function_p2);
+	public static extern void load(string url_p1, Action<object,Url,bool> complete_function_p2);
 	
 	
 	/// <summary>
@@ -87,7 +127,7 @@ public static class Factory
 	/// 
 	/// @CSharpLua.Template = "factory.load({0}, {1})"
 	/// </summary>
-	public static extern void load(Hash url_p1, Action<> complete_function_p2);
+	public static extern void load(Hash url_p1, Action<object,Url,bool> complete_function_p2);
 	
 	
 	/// <summary>
@@ -105,7 +145,7 @@ public static class Factory
 	/// 
 	/// @CSharpLua.Template = "factory.load({0}, {1})"
 	/// </summary>
-	public static extern void load(Url url_p1, Action<> complete_function_p2);
+	public static extern void load(Url url_p1, Action<object,Url,bool> complete_function_p2);
 	
 	
 	/// <summary>

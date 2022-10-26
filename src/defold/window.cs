@@ -14,7 +14,27 @@ public static class Window
 	/// 
 	/// @CSharpLua.Template = "window.set_listener({0})"
 	/// </summary>
-	public static extern void set_listener(Action<> callback_p1);
+	public static extern void set_listener(Action<object,WindowEvent,ILuaTable> callback_p1);
+	
+	
+	/// <summary>
+	/// <span class="icon-ios"></span> <span class="icon-android"></span> Sets the dimming mode on a mobile device.
+	/// The dimming mode specifies whether or not a mobile device should dim the screen after a period without user interaction. The dimming mode will only affect the mobile device while the game is in focus on the device, but not when the game is running in the background.
+	/// This function has no effect on platforms that does not support dimming.
+	/// 
+	/// @CSharpLua.Template = "window.set_dim_mode({0})"
+	/// </summary>
+	public static extern void set_dim_mode(WindowDimming mode_p1);
+	
+	
+	/// <summary>
+	/// <span class="icon-ios"></span> <span class="icon-android"></span> Returns the current dimming mode set on a mobile device.
+	/// The dimming mode specifies whether or not a mobile device should dim the screen after a period without user interaction.
+	/// On platforms that does not support dimming, <code>window.DIMMING_UNKNOWN</code> is always returned.
+	/// 
+	/// @CSharpLua.Template = "window.get_dim_mode()"
+	/// </summary>
+	public static extern WindowDimming get_dim_mode();
 	
 	
 	/// <summary>

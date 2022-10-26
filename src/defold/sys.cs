@@ -230,7 +230,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.set_error_handler({0})"
 	/// </summary>
-	public static extern void set_error_handler(Action<> error_handler_p1);
+	public static extern void set_error_handler(Action<string,string,string> error_handler_p1);
 	
 	
 	/// <summary>
@@ -239,6 +239,16 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.set_connectivity_host({0})"
 	/// </summary>
 	public static extern void set_connectivity_host(string host_p1);
+	
+	
+	/// <summary>
+	/// <span class="icon-ios"></span> <span class="icon-android"></span> Returns the current network connectivity status
+	/// on mobile platforms.
+	/// On desktop, this function always return <code>sys.NETWORK_CONNECTED</code>.
+	/// 
+	/// @CSharpLua.Template = "sys.get_connectivity()"
+	/// </summary>
+	public static extern SysConnectivity get_connectivity();
 	
 	
 	/// <summary>

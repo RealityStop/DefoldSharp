@@ -6,7 +6,7 @@ using types;
 /// Sprite API documentation
 /// 
 /// </summary>
-public static class Sprite
+public class Sprite : BuiltInComponentBase
 {
 	#region Defold API
 	/// <summary>
@@ -39,7 +39,7 @@ public static class Sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public static extern void set_hflip(string url_p1, bool flip_p2);
+	public extern void set_hflip(string url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -49,7 +49,7 @@ public static class Sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public static extern void set_hflip(Hash url_p1, bool flip_p2);
+	public extern void set_hflip(Hash url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -59,7 +59,7 @@ public static class Sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_hflip({0}, {1})"
 	/// </summary>
-	public static extern void set_hflip(Url url_p1, bool flip_p2);
+	public extern void set_hflip(Url url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -69,7 +69,7 @@ public static class Sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public static extern void set_vflip(string url_p1, bool flip_p2);
+	public extern void set_vflip(string url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -79,7 +79,7 @@ public static class Sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public static extern void set_vflip(Hash url_p1, bool flip_p2);
+	public extern void set_vflip(Hash url_p1, bool flip_p2);
 	
 	
 	/// <summary>
@@ -89,7 +89,106 @@ public static class Sprite
 	/// 
 	/// @CSharpLua.Template = "sprite.set_vflip({0}, {1})"
 	/// </summary>
-	public static extern void set_vflip(Url url_p1, bool flip_p2);
+	public extern void set_vflip(Url url_p1, bool flip_p2);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
+	/// </summary>
+	public extern void play_flipbook(string url_p1, Hash id_p2);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
+	/// </summary>
+	public extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
+	/// </summary>
+	public extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
+	/// </summary>
+	public extern void play_flipbook(Hash url_p1, Hash id_p2);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
+	/// </summary>
+	public extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
+	/// </summary>
+	public extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1})"
+	/// </summary>
+	public extern void play_flipbook(Url url_p1, Hash id_p2);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2})"
+	/// </summary>
+	public extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	
+	
+	/// <summary>
+	/// Play an animation on a sprite component from its tile set
+	/// An optional completion callback function can be provided that will be called when
+	/// the animation has completed playing. If no function is provided,
+	/// a <a href="#animation_done">animation_done</a> message is sent to the script that started the animation.
+	/// 
+	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
+	/// </summary>
+	public extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	#endregion Defold API
@@ -114,7 +213,7 @@ public static class Sprite
 	      if (IsCachingEnabled)
 	         _cachedFlipHorizontal = value;
 	
-	      Set_hflip(this, value);
+	      set_hflip(this, value);
 	   }
 	}
 	
@@ -133,45 +232,45 @@ public static class Sprite
 	      if (IsCachingEnabled)
 	         _cachedFlipVertical = value;
 	
-	      Set_vflip(this, value);
+	      set_vflip(this, value);
 	   }
 	}
 	
 	
 	
-	public Vector2 Size => (dynamic)Go.Get(this, "size");
+	public Vector2 Size => (dynamic)Go.get(this, "size");
 	
 	public Vector2 Scale
 	{
-	   get => (dynamic)Go.Get(this, "scale");
-	   set => Go.Set(this, "scale", (LuaType) value);
+	   get => (dynamic)Go.get(this, "scale");
+	   set => Go.set(this, "scale", (LuaType) value);
 	}
 	
 	public Hash Image
 	{
-	   get => (dynamic)Go.Get(this, "image");
-	   set => Go.Set(this, "image", value);
+	   get => (dynamic)Go.get(this, "image");
+	   set => Go.set(this, "image", value);
 	}
 	
 	public Hash Material
 	{
-	   get => (dynamic)Go.Get(this, "material");
-	   set => Go.Set(this, "material", value);
+	   get => (dynamic)Go.get(this, "material");
+	   set => Go.set(this, "material", value);
 	}
 	   
 	public double Cursor
 	{
-	   get => (dynamic)Go.Get(this, "cursor");
-	   set => Go.Set(this, "cursor", value);
+	   get => (dynamic)Go.get(this, "cursor");
+	   set => Go.set(this, "cursor", value);
 	}
 	         
 	public double PlaybackRate
 	{
-	   get => (dynamic)Go.Get(this, "playback_rate");
-	   set => Go.Set(this, "playback_rate", value);
+	   get => (dynamic)Go.get(this, "playback_rate");
+	   set => Go.set(this, "playback_rate", value);
 	}
 	
-	public Hash Animation => (dynamic)Go.Get(this, "animation");
+	public Hash Animation => (dynamic)Go.get(this, "animation");
 	
 	
 	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, ILuaTable, Url> onComplete = null,
@@ -182,6 +281,6 @@ public static class Sprite
 	      onComplete(this, hash, table, url);
 	   }
 	      
-	   Play_flipbook(this, animation, callback, playProperties);
+	   play_flipbook(this, animation, callback, playProperties);
 	}
 }

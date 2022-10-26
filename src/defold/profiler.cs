@@ -66,6 +66,22 @@ public static class Profiler
 	
 	
 	/// <summary>
+	/// Set the on-screen profile mode - run, pause, record or show peak frame
+	/// 
+	/// @CSharpLua.Template = "profiler.set_ui_mode({0})"
+	/// </summary>
+	public static extern void set_ui_mode(ProfilerMode mode_p1);
+	
+	
+	/// <summary>
+	/// Set the on-screen profile view mode - minimized or expanded
+	/// 
+	/// @CSharpLua.Template = "profiler.set_ui_view_mode({0})"
+	/// </summary>
+	public static extern void set_ui_view_mode(ProfilerViewMode mode_p1);
+	
+	
+	/// <summary>
 	/// Shows or hides the time the engine waits for vsync in the on-screen profiler
 	/// Each frame the engine waits for vsync and depending on your vsync settings and how much time
 	/// your game logic takes this time can dwarf the time in the game logic making it hard to

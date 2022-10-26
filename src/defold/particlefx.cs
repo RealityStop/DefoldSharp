@@ -28,7 +28,7 @@ public static class Particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0}, {1})"
 	/// </summary>
-	public static extern void play(string url_p1, Action<> emitter_state_function_p2);
+	public static extern void play(string url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>
@@ -50,7 +50,7 @@ public static class Particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0}, {1})"
 	/// </summary>
-	public static extern void play(Hash url_p1, Action<> emitter_state_function_p2);
+	public static extern void play(Hash url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>
@@ -72,7 +72,7 @@ public static class Particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.play({0}, {1})"
 	/// </summary>
-	public static extern void play(Url url_p1, Action<> emitter_state_function_p2);
+	public static extern void play(Url url_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>

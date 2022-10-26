@@ -80,6 +80,22 @@ public static class Render
 	
 	
 	/// <summary>
+	/// Enables a particular render state. The state will be enabled until disabled.
+	/// 
+	/// @CSharpLua.Template = "render.enable_state({0})"
+	/// </summary>
+	public static extern void enable_state(RenderState state_p1);
+	
+	
+	/// <summary>
+	/// Disables a render state.
+	/// 
+	/// @CSharpLua.Template = "render.disable_state({0})"
+	/// </summary>
+	public static extern void disable_state(RenderState state_p1);
+	
+	
+	/// <summary>
 	/// Set the render viewport to the specified rectangle.
 	/// 
 	/// @CSharpLua.Template = "render.set_viewport({0}, {1}, {2}, {3})"
@@ -159,6 +175,107 @@ public static class Render
 	
 	
 	/// <summary>
+	/// Specifies the arithmetic used when computing pixel values that are written to the frame
+	/// buffer. In RGBA mode, pixels can be drawn using a function that blends the source RGBA
+	/// pixel values with the destination pixel values already in the frame buffer.
+	/// Blending is initially disabled.
+	/// <code>source_factor</code> specifies which method is used to scale the source color components.
+	/// <code>destination_factor</code> specifies which method is used to scale the destination color
+	/// components.
+	/// Source color components are referred to as (R<sub>s</sub>,G<sub>s</sub>,B<sub>s</sub>,A<sub>s</sub>).
+	/// Destination color components are referred to as (R<sub>d</sub>,G<sub>d</sub>,B<sub>d</sub>,A<sub>d</sub>).
+	/// The color specified by setting the blendcolor is referred to as (R<sub>c</sub>,G<sub>c</sub>,B<sub>c</sub>,A<sub>c</sub>).
+	/// The source scale factor is referred to as (s<sub>R</sub>,s<sub>G</sub>,s<sub>B</sub>,s<sub>A</sub>).
+	/// The destination scale factor is referred to as (d<sub>R</sub>,d<sub>G</sub>,d<sub>B</sub>,d<sub>A</sub>).
+	/// The color values have integer values between 0 and (k<sub>R</sub>,k<sub>G</sub>,k<sub>B</sub>,k<sub>A</sub>), where k<sub>c</sub> = 2<sup>m<sub>c</sub></sup> - 1 and m<sub>c</sub> is the number of bitplanes for that color. I.e for 8 bit color depth, color values are between <code>0</code> and <code>255</code>.
+	/// Available factor constants and corresponding scale factors:
+	/// <table>
+	/// <thead>
+	/// <tr>
+	/// <th>Factor constant</th>
+	/// <th>Scale factor (f<sub>R</sub>,f<sub>G</sub>,f<sub>B</sub>,f<sub>A</sub>)</th>
+	/// </tr>
+	/// </thead>
+	/// <tbody>
+	/// <tr>
+	/// <td><code>render.BLEND_ZERO</code></td>
+	/// <td>(0,0,0,0)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE</code></td>
+	/// <td>(1,1,1,1)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_SRC_COLOR</code></td>
+	/// <td>(R<sub>s</sub>/k<sub>R</sub>,G<sub>s</sub>/k<sub>G</sub>,B<sub>s</sub>/k<sub>B</sub>,A<sub>s</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE_MINUS_SRC_COLOR</code></td>
+	/// <td>(1,1,1,1) - (R<sub>s</sub>/k<sub>R</sub>,G<sub>s</sub>/k<sub>G</sub>,B<sub>s</sub>/k<sub>B</sub>,A<sub>s</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_DST_COLOR</code></td>
+	/// <td>(R<sub>d</sub>/k<sub>R</sub>,G<sub>d</sub>/k<sub>G</sub>,B<sub>d</sub>/k<sub>B</sub>,A<sub>d</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE_MINUS_DST_COLOR</code></td>
+	/// <td>(1,1,1,1) - (R<sub>d</sub>/k<sub>R</sub>,G<sub>d</sub>/k<sub>G</sub>,B<sub>d</sub>/k<sub>B</sub>,A<sub>d</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_SRC_ALPHA</code></td>
+	/// <td>(A<sub>s</sub>/k<sub>A</sub>,A<sub>s</sub>/k<sub>A</sub>,A<sub>s</sub>/k<sub>A</sub>,A<sub>s</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE_MINUS_SRC_ALPHA</code></td>
+	/// <td>(1,1,1,1) - (A<sub>s</sub>/k<sub>A</sub>,A<sub>s</sub>/k<sub>A</sub>,A<sub>s</sub>/k<sub>A</sub>,A<sub>s</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_DST_ALPHA</code></td>
+	/// <td>(A<sub>d</sub>/k<sub>A</sub>,A<sub>d</sub>/k<sub>A</sub>,A<sub>d</sub>/k<sub>A</sub>,A<sub>d</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE_MINUS_DST_ALPHA</code></td>
+	/// <td>(1,1,1,1) - (A<sub>d</sub>/k<sub>A</sub>,A<sub>d</sub>/k<sub>A</sub>,A<sub>d</sub>/k<sub>A</sub>,A<sub>d</sub>/k<sub>A</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_CONSTANT_COLOR</code></td>
+	/// <td>(R<sub>c</sub>,G<sub>c</sub>,B<sub>c</sub>,A<sub>c</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE_MINUS_CONSTANT_COLOR</code></td>
+	/// <td>(1,1,1,1) - (R<sub>c</sub>,G<sub>c</sub>,B<sub>c</sub>,A<sub>c</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_CONSTANT_ALPHA</code></td>
+	/// <td>(A<sub>c</sub>,A<sub>c</sub>,A<sub>c</sub>,A<sub>c</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_ONE_MINUS_CONSTANT_ALPHA</code></td>
+	/// <td>(1,1,1,1) - (A<sub>c</sub>,A<sub>c</sub>,A<sub>c</sub>,A<sub>c</sub>)</td>
+	/// </tr>
+	/// <tr>
+	/// <td><code>render.BLEND_SRC_ALPHA_SATURATE</code></td>
+	/// <td>(i,i,i,1) where i = min(A<sub>s</sub>, k<sub>A</sub> - A<sub>d</sub>) /k<sub>A</sub></td>
+	/// </tr>
+	/// </tbody>
+	/// </table>
+	/// The blended RGBA values of a pixel comes from the following equations:
+	/// <ul>
+	/// <li>R<sub>d</sub> = min(k<sub>R</sub>, R<sub>s</sub> * s<sub>R</sub> + R<sub>d</sub> * d<sub>R</sub>)</li>
+	/// <li>G<sub>d</sub> = min(k<sub>G</sub>, G<sub>s</sub> * s<sub>G</sub> + G<sub>d</sub> * d<sub>G</sub>)</li>
+	/// <li>B<sub>d</sub> = min(k<sub>B</sub>, B<sub>s</sub> * s<sub>B</sub> + B<sub>d</sub> * d<sub>B</sub>)</li>
+	/// <li>A<sub>d</sub> = min(k<sub>A</sub>, A<sub>s</sub> * s<sub>A</sub> + A<sub>d</sub> * d<sub>A</sub>)</li>
+	/// </ul>
+	/// Blend function <code>(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)</code> is useful for
+	/// drawing with transparency when the drawn objects are sorted from farthest to nearest.
+	/// It is also useful for drawing antialiased points and lines in arbitrary order.
+	/// 
+	/// @CSharpLua.Template = "render.set_blend_func({0}, {1})"
+	/// </summary>
+	public static extern void set_blend_func(BlendFunction source_factor_p1, BlendFunction destination_factor_p2);
+	
+	
+	/// <summary>
 	/// Specifies whether the individual color components in the frame buffer is enabled for writing (<code>true</code>) or disabled (<code>false</code>). For example, if <code>blue</code> is <code>false</code>, nothing is written to the blue component of any pixel in any of the color buffers, regardless of the drawing operation attempted. Note that writing are either enabled or disabled for entire color components, not the individual bits of a component.
 	/// The component masks are all initially <code>true</code>.
 	/// 
@@ -189,6 +306,100 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_stencil_mask({0})"
 	/// </summary>
 	public static extern void set_stencil_mask(double mask_p1);
+	
+	
+	/// <summary>
+	/// Specifies the function that should be used to compare each incoming pixel
+	/// depth value with the value present in the depth buffer.
+	/// The comparison is performed only if depth testing is enabled and specifies
+	/// the conditions under which a pixel will be drawn.
+	/// Function constants:
+	/// <ul>
+	/// <li><code>render.COMPARE_FUNC_NEVER</code> (never passes)</li>
+	/// <li><code>render.COMPARE_FUNC_LESS</code> (passes if the incoming depth value is less than the stored value)</li>
+	/// <li><code>render.COMPARE_FUNC_LEQUAL</code> (passes if the incoming depth value is less than or equal to the stored value)</li>
+	/// <li><code>render.COMPARE_FUNC_GREATER</code> (passes if the incoming depth value is greater than the stored value)</li>
+	/// <li><code>render.COMPARE_FUNC_GEQUAL</code> (passes if the incoming depth value is greater than or equal to the stored value)</li>
+	/// <li><code>render.COMPARE_FUNC_EQUAL</code> (passes if the incoming depth value is equal to the stored value)</li>
+	/// <li><code>render.COMPARE_FUNC_NOTEQUAL</code> (passes if the incoming depth value is not equal to the stored value)</li>
+	/// <li><code>render.COMPARE_FUNC_ALWAYS</code> (always passes)</li>
+	/// </ul>
+	/// The depth function is initially set to <code>render.COMPARE_FUNC_LESS</code>.
+	/// 
+	/// @CSharpLua.Template = "render.set_depth_func({0})"
+	/// </summary>
+	public static extern void set_depth_func(DepthFunction func_p1);
+	
+	
+	/// <summary>
+	/// Stenciling is similar to depth-buffering as it enables and disables drawing on a
+	/// per-pixel basis. First, GL drawing primitives are drawn into the stencil planes.
+	/// Second, geometry and images are rendered but using the stencil planes to mask out
+	/// where to draw.
+	/// The stencil test discards a pixel based on the outcome of a comparison between the
+	/// reference value <code>ref</code> and the corresponding value in the stencil buffer.
+	/// <code>func</code> specifies the comparison function. See the table below for values.
+	/// The initial value is <code>render.COMPARE_FUNC_ALWAYS</code>.
+	/// <code>ref</code> specifies the reference value for the stencil test. The value is clamped to
+	/// the range [0, 2<sup>n</sup>-1], where n is the number of bitplanes in the stencil buffer.
+	/// The initial value is <code>0</code>.
+	/// <code>mask</code> is ANDed with both the reference value and the stored stencil value when the test
+	/// is done. The initial value is all <code>1</code>'s.
+	/// Function constant:
+	/// <ul>
+	/// <li><code>render.COMPARE_FUNC_NEVER</code> (never passes)</li>
+	/// <li><code>render.COMPARE_FUNC_LESS</code> (passes if (ref &amp; mask) &lt; (stencil &amp; mask))</li>
+	/// <li><code>render.COMPARE_FUNC_LEQUAL</code> (passes if (ref &amp; mask) &lt;= (stencil &amp; mask))</li>
+	/// <li><code>render.COMPARE_FUNC_GREATER</code> (passes if (ref &amp; mask) &gt; (stencil &amp; mask))</li>
+	/// <li><code>render.COMPARE_FUNC_GEQUAL</code> (passes if (ref &amp; mask) &gt;= (stencil &amp; mask))</li>
+	/// <li><code>render.COMPARE_FUNC_EQUAL</code> (passes if (ref &amp; mask) = (stencil &amp; mask))</li>
+	/// <li><code>render.COMPARE_FUNC_NOTEQUAL</code> (passes if (ref &amp; mask) != (stencil &amp; mask))</li>
+	/// <li><code>render.COMPARE_FUNC_ALWAYS</code> (always passes)</li>
+	/// </ul>
+	/// 
+	/// @CSharpLua.Template = "render.set_stencil_func({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set_stencil_func(DepthFunction func_p1, double ref_p2, double mask_p3);
+	
+	
+	/// <summary>
+	/// The stencil test discards a pixel based on the outcome of a comparison between the
+	/// reference value <code>ref</code> and the corresponding value in the stencil buffer.
+	/// To control the test, call <a href="/ref/render#render.set_stencil_func">render.set_stencil_func</a>.
+	/// This function takes three arguments that control what happens to the stored stencil
+	/// value while stenciling is enabled. If the stencil test fails, no change is made to the
+	/// pixel's color or depth buffers, and <code>sfail</code> specifies what happens to the stencil buffer
+	/// contents.
+	/// Operator constants:
+	/// <ul>
+	/// <li><code>render.STENCIL_OP_KEEP</code> (keeps the current value)</li>
+	/// <li><code>render.STENCIL_OP_ZERO</code> (sets the stencil buffer value to 0)</li>
+	/// <li><code>render.STENCIL_OP_REPLACE</code> (sets the stencil buffer value to <code>ref</code>, as specified by <a href="/ref/render#render.set_stencil_func">render.set_stencil_func</a>)</li>
+	/// <li><code>render.STENCIL_OP_INCR</code> (increments the stencil buffer value and clamp to the maximum representable unsigned value)</li>
+	/// <li><code>render.STENCIL_OP_INCR_WRAP</code> (increments the stencil buffer value and wrap to zero when incrementing the maximum representable unsigned value)</li>
+	/// <li><code>render.STENCIL_OP_DECR</code> (decrements the current stencil buffer value and clamp to 0)</li>
+	/// <li><code>render.STENCIL_OP_DECR_WRAP</code> (decrements the current stencil buffer value and wrap to the maximum representable unsigned value when decrementing zero)</li>
+	/// <li><code>render.STENCIL_OP_INVERT</code> (bitwise inverts the current stencil buffer value)</li>
+	/// </ul>
+	/// <code>dppass</code> and <code>dpfail</code> specify the stencil buffer actions depending on whether subsequent
+	/// depth buffer tests succeed (dppass) or fail (dpfail).
+	/// The initial value for all operators is <code>render.STENCIL_OP_KEEP</code>.
+	/// 
+	/// @CSharpLua.Template = "render.set_stencil_op({0}, {1}, {2})"
+	/// </summary>
+	public static extern void set_stencil_op(StencilOperator sfail_p1, StencilOperator dpfail_p2, StencilOperator dppass_p3);
+	
+	
+	/// <summary>
+	/// Specifies whether front- or back-facing polygons can be culled
+	/// when polygon culling is enabled. Polygon culling is initially disabled.
+	/// If mode is <code>render.FACE_FRONT_AND_BACK</code>, no polygons are drawn, but other
+	/// primitives such as points and lines are drawn. The initial value for
+	/// <code>face_type</code> is <code>render.FACE_BACK</code>.
+	/// 
+	/// @CSharpLua.Template = "render.set_cull_face({0})"
+	/// </summary>
+	public static extern void set_cull_face(FaceType face_type_p1);
 	
 	
 	/// <summary>

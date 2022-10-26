@@ -19,8 +19,8 @@ namespace support
 		/// <param name="componentName"></param>
 		public ComponentLocator(string componentName)
 		{
-			var url = Msg.Url();
-			url.path = Go.Get_id();;
+			var url = Msg.url();
+			url.path = Go.get_id();;
 			url.fragment = componentName;
 			_url = url;
 		}
@@ -33,8 +33,8 @@ namespace support
 		/// <param name="componentName"></param>
 		public ComponentLocator(string gameobjectPath, string componentName)
 		{
-			var url = Msg.Url();
-			url.path = Go.Get_id(gameobjectPath);;
+			var url = Msg.url();
+			url.path = Go.get_id(gameobjectPath);;
 			url.fragment = componentName;
 			_url = url;
 		}

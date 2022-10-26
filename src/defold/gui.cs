@@ -181,6 +181,24 @@ public static class Gui
 	
 	
 	/// <summary>
+	/// Returns the blend mode of a node.
+	/// Blend mode defines how the node will be blended with the background.
+	/// 
+	/// @CSharpLua.Template = "gui.get_blend_mode()"
+	/// </summary>
+	public static extern BlendMode get_blend_mode();
+	
+	
+	/// <summary>
+	/// Set the blend mode of a node.
+	/// Blend mode defines how the node will be blended with the background.
+	/// 
+	/// @CSharpLua.Template = "gui.set_blend_mode({0}, {1})"
+	/// </summary>
+	public static extern void set_blend_mode(Node node_p1, BlendMode blend_mode_p2);
+	
+	
+	/// <summary>
 	/// Returns the texture of a node.
 	/// This is currently only useful for box or pie nodes.
 	/// The texture must be mapped to the gui scene in the gui editor.
@@ -241,7 +259,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<> complete_function_p3);
+	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<object,Node> complete_function_p3);
 	
 	
 	/// <summary>
@@ -251,7 +269,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<object,Node> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	/// <summary>
@@ -271,7 +289,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2})"
 	/// </summary>
-	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<> complete_function_p3);
+	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<object,Node> complete_function_p3);
 	
 	
 	/// <summary>
@@ -281,7 +299,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<object,Node> complete_function_p3, ILuaTable play_properties_p4);
 	
 	
 	/// <summary>
@@ -297,7 +315,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_texture({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern bool new_texture(string texture_p1, double width_p2, double height_p3, string type_p4, string buffer_p5, bool flip_p6, out double code_o1);
+	public static extern bool new_texture(string texture_p1, double width_p2, double height_p3, GuiTextureType type_p4, string buffer_p5, bool flip_p6, out double code_o1);
 	
 	
 	/// <summary>
@@ -305,7 +323,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_texture({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern bool new_texture(Hash texture_p1, double width_p2, double height_p3, string type_p4, string buffer_p5, bool flip_p6, out double code_o1);
+	public static extern bool new_texture(Hash texture_p1, double width_p2, double height_p3, GuiTextureType type_p4, string buffer_p5, bool flip_p6, out double code_o1);
 	
 	
 	/// <summary>
@@ -329,7 +347,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_texture_data({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern bool set_texture_data(string texture_p1, double width_p2, double height_p3, string type_p4, string buffer_p5, bool flip_p6);
+	public static extern bool set_texture_data(string texture_p1, double width_p2, double height_p3, GuiTextureType type_p4, string buffer_p5, bool flip_p6);
 	
 	
 	/// <summary>
@@ -337,7 +355,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_texture_data({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern bool set_texture_data(Hash texture_p1, double width_p2, double height_p3, string type_p4, string buffer_p5, bool flip_p6);
+	public static extern bool set_texture_data(Hash texture_p1, double width_p2, double height_p3, GuiTextureType type_p4, string buffer_p5, bool flip_p6);
 	
 	
 	/// <summary>
@@ -415,6 +433,22 @@ public static class Gui
 	
 	
 	/// <summary>
+	/// Clipping mode defines how the node will clip it's children nodes
+	/// 
+	/// @CSharpLua.Template = "gui.get_clipping_mode()"
+	/// </summary>
+	public static extern ClippingMode get_clipping_mode();
+	
+	
+	/// <summary>
+	/// Clipping mode defines how the node will clip it's children nodes
+	/// 
+	/// @CSharpLua.Template = "gui.set_clipping_mode({0}, {1})"
+	/// </summary>
+	public static extern void set_clipping_mode(Node node_p1, ClippingMode clipping_mode_p2);
+	
+	
+	/// <summary>
 	/// If node is set as visible clipping node, it will be shown as well as clipping. Otherwise, it will only clip but not show visually.
 	/// 
 	/// @CSharpLua.Template = "gui.get_clipping_visible({0})"
@@ -444,6 +478,54 @@ public static class Gui
 	/// @CSharpLua.Template = "gui.set_clipping_inverted({0}, {1})"
 	/// </summary>
 	public static extern void set_clipping_inverted(Node node_p1, bool inverted_p2);
+	
+	
+	/// <summary>
+	/// The x-anchor specifies how the node is moved when the game is run in a different resolution.
+	/// 
+	/// @CSharpLua.Template = "gui.get_xanchor()"
+	/// </summary>
+	public static extern GuiAnchor get_xanchor();
+	
+	
+	/// <summary>
+	/// The x-anchor specifies how the node is moved when the game is run in a different resolution.
+	/// 
+	/// @CSharpLua.Template = "gui.set_xanchor({0}, {1})"
+	/// </summary>
+	public static extern void set_xanchor(Node node_p1, GuiAnchor anchor_p2);
+	
+	
+	/// <summary>
+	/// The y-anchor specifies how the node is moved when the game is run in a different resolution.
+	/// 
+	/// @CSharpLua.Template = "gui.get_yanchor()"
+	/// </summary>
+	public static extern GuiAnchor get_yanchor();
+	
+	
+	/// <summary>
+	/// The y-anchor specifies how the node is moved when the game is run in a different resolution.
+	/// 
+	/// @CSharpLua.Template = "gui.set_yanchor({0}, {1})"
+	/// </summary>
+	public static extern void set_yanchor(Node node_p1, GuiAnchor anchor_p2);
+	
+	
+	/// <summary>
+	/// The pivot specifies how the node is drawn and rotated from its position.
+	/// 
+	/// @CSharpLua.Template = "gui.get_pivot()"
+	/// </summary>
+	public static extern Node get_pivot(out GuiPivot pivot_o1);
+	
+	
+	/// <summary>
+	/// The pivot specifies how the node is drawn and rotated from its position.
+	/// 
+	/// @CSharpLua.Template = "gui.set_pivot({0}, {1})"
+	/// </summary>
+	public static extern void set_pivot(Node node_p1, GuiPivot pivot_p2);
 	
 	
 	/// <summary>
@@ -530,6 +612,22 @@ public static class Gui
 	
 	
 	/// <summary>
+	/// Sets the outer bounds mode for a pie node.
+	/// 
+	/// @CSharpLua.Template = "gui.set_outer_bounds({0}, {1})"
+	/// </summary>
+	public static extern void set_outer_bounds(Node node_p1, PieBounds bounds_mode_p2);
+	
+	
+	/// <summary>
+	/// Returns the outer bounds mode for a pie node.
+	/// 
+	/// @CSharpLua.Template = "gui.get_outer_bounds({0})"
+	/// </summary>
+	public static extern PieBounds get_outer_bounds(Node node_p1);
+	
+	
+	/// <summary>
 	/// Sets the leading value for a text node. This value is used to
 	/// scale the line spacing of text.
 	/// 
@@ -605,6 +703,52 @@ public static class Gui
 	/// @CSharpLua.Template = "gui.set_visible({0}, {1})"
 	/// </summary>
 	public static extern void set_visible(Node node_p1, bool visible_p2);
+	
+	
+	/// <summary>
+	/// Returns the adjust mode of a node.
+	/// The adjust mode defines how the node will adjust itself to screen
+	/// resolutions that differs from the one in the project settings.
+	/// 
+	/// @CSharpLua.Template = "gui.get_adjust_mode({0})"
+	/// </summary>
+	public static extern AdjustMode get_adjust_mode(Node node_p1);
+	
+	
+	/// <summary>
+	/// Sets the adjust mode on a node.
+	/// The adjust mode defines how the node will adjust itself to screen
+	/// resolutions that differs from the one in the project settings.
+	/// 
+	/// @CSharpLua.Template = "gui.set_adjust_mode({0}, {1})"
+	/// </summary>
+	public static extern void set_adjust_mode(Node node_p1, AdjustMode adjust_mode_p2);
+	
+	
+	/// <summary>
+	/// Returns the size of a node.
+	/// The size mode defines how the node will adjust itself in size. Automatic
+	/// size mode alters the node size based on the node's content. Automatic size
+	/// mode works for Box nodes and Pie nodes which will both adjust their size
+	/// to match the assigned image. Particle fx and Text nodes will ignore
+	/// any size mode setting.
+	/// 
+	/// @CSharpLua.Template = "gui.get_size_mode({0})"
+	/// </summary>
+	public static extern SizeMode get_size_mode(Node node_p1);
+	
+	
+	/// <summary>
+	/// Sets the size mode of a node.
+	/// The size mode defines how the node will adjust itself in size. Automatic
+	/// size mode alters the node size based on the node's content. Automatic size
+	/// mode works for Box nodes and Pie nodes which will both adjust their size
+	/// to match the assigned image. Particle fx and Text nodes will ignore
+	/// any size mode setting.
+	/// 
+	/// @CSharpLua.Template = "gui.set_size_mode({0}, {1})"
+	/// </summary>
+	public static extern void set_size_mode(Node node_p1, SizeMode size_mode_p2);
 	
 	
 	/// <summary>
@@ -703,6 +847,17 @@ public static class Gui
 	/// @CSharpLua.Template = "gui.set_render_order({0})"
 	/// </summary>
 	public static extern void set_render_order(double order_p1);
+	
+	
+	/// <summary>
+	/// Shows the on-display touch keyboard.
+	/// The specified type of keyboard is displayed if it is available on
+	/// the device.
+	/// This function is only available on iOS and Android. <span class="icon-ios"></span> <span class="icon-android"></span>.
+	/// 
+	/// @CSharpLua.Template = "gui.show_keyboard({0}, {1})"
+	/// </summary>
+	public static extern void show_keyboard(KeyboardType type_p1, bool autoclose_p2);
 	
 	
 	/// <summary>
@@ -1076,7 +1231,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_particlefx({0}, {1})"
 	/// </summary>
-	public static extern void play_particlefx(Node node_p1, Action<> emitter_state_function_p2);
+	public static extern void play_particlefx(Node node_p1, Action<object,Hash,Hash,ParticleEmitterState> emitter_state_function_p2);
 	
 	
 	/// <summary>

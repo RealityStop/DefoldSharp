@@ -447,73 +447,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.normalize({0})"
 	/// </summary>
-	public static extern Vector3 normalize(Vector4 v1_p1);
-	
-	
-	/// <summary>
-	/// Normalizes a vector, i.e. returns a new vector with the same
-	/// direction as the input vector, but with length 1.
-	/// <span class="icon-attention"></span> The length of the vector must be above 0, otherwise a
-	/// division-by-zero will occur.
-	/// 
-	/// @CSharpLua.Template = "vmath.normalize({0})"
-	/// </summary>
-	public static extern Vector3 normalize(Quaternion v1_p1);
-	
-	
-	/// <summary>
-	/// Normalizes a vector, i.e. returns a new vector with the same
-	/// direction as the input vector, but with length 1.
-	/// <span class="icon-attention"></span> The length of the vector must be above 0, otherwise a
-	/// division-by-zero will occur.
-	/// 
-	/// @CSharpLua.Template = "vmath.normalize({0})"
-	/// </summary>
-	public static extern Vector4 normalize(Vector3 v1_p1);
-	
-	
-	/// <summary>
-	/// Normalizes a vector, i.e. returns a new vector with the same
-	/// direction as the input vector, but with length 1.
-	/// <span class="icon-attention"></span> The length of the vector must be above 0, otherwise a
-	/// division-by-zero will occur.
-	/// 
-	/// @CSharpLua.Template = "vmath.normalize({0})"
-	/// </summary>
 	public static extern Vector4 normalize(Vector4 v1_p1);
-	
-	
-	/// <summary>
-	/// Normalizes a vector, i.e. returns a new vector with the same
-	/// direction as the input vector, but with length 1.
-	/// <span class="icon-attention"></span> The length of the vector must be above 0, otherwise a
-	/// division-by-zero will occur.
-	/// 
-	/// @CSharpLua.Template = "vmath.normalize({0})"
-	/// </summary>
-	public static extern Vector4 normalize(Quaternion v1_p1);
-	
-	
-	/// <summary>
-	/// Normalizes a vector, i.e. returns a new vector with the same
-	/// direction as the input vector, but with length 1.
-	/// <span class="icon-attention"></span> The length of the vector must be above 0, otherwise a
-	/// division-by-zero will occur.
-	/// 
-	/// @CSharpLua.Template = "vmath.normalize({0})"
-	/// </summary>
-	public static extern Quaternion normalize(Vector3 v1_p1);
-	
-	
-	/// <summary>
-	/// Normalizes a vector, i.e. returns a new vector with the same
-	/// direction as the input vector, but with length 1.
-	/// <span class="icon-attention"></span> The length of the vector must be above 0, otherwise a
-	/// division-by-zero will occur.
-	/// 
-	/// @CSharpLua.Template = "vmath.normalize({0})"
-	/// </summary>
-	public static extern Quaternion normalize(Vector4 v1_p1);
 	
 	
 	/// <summary>
@@ -561,101 +495,31 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector3 lerp(double t_p1, Vector3 v1_p2, Vector4 v2_p3);
-	
-	
-	/// <summary>
-	/// Linearly interpolate between two vectors. The function
-	/// treats the vectors as positions and interpolates between
-	/// the positions in a straight line. Lerp is useful to describe
-	/// transitions from one place to another over time.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector3 lerp(double t_p1, Vector4 v1_p2, Vector3 v2_p3);
-	
-	
-	/// <summary>
-	/// Linearly interpolate between two vectors. The function
-	/// treats the vectors as positions and interpolates between
-	/// the positions in a straight line. Lerp is useful to describe
-	/// transitions from one place to another over time.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector3 lerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
-	
-	
-	/// <summary>
-	/// Linearly interpolate between two vectors. The function
-	/// treats the vectors as positions and interpolates between
-	/// the positions in a straight line. Lerp is useful to describe
-	/// transitions from one place to another over time.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector4 lerp(double t_p1, Vector3 v1_p2, Vector3 v2_p3);
-	
-	
-	/// <summary>
-	/// Linearly interpolate between two vectors. The function
-	/// treats the vectors as positions and interpolates between
-	/// the positions in a straight line. Lerp is useful to describe
-	/// transitions from one place to another over time.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector4 lerp(double t_p1, Vector3 v1_p2, Vector4 v2_p3);
-	
-	
-	/// <summary>
-	/// Linearly interpolate between two vectors. The function
-	/// treats the vectors as positions and interpolates between
-	/// the positions in a straight line. Lerp is useful to describe
-	/// transitions from one place to another over time.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector4 lerp(double t_p1, Vector4 v1_p2, Vector3 v2_p3);
-	
-	
-	/// <summary>
-	/// Linearly interpolate between two vectors. The function
-	/// treats the vectors as positions and interpolates between
-	/// the positions in a straight line. Lerp is useful to describe
-	/// transitions from one place to another over time.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
-	/// </summary>
 	public static extern Vector4 lerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
 	
 	
 	/// <summary>
-	/// Linearly interpolate between two quaternions. Linear
-	/// interpolation of rotations are only useful for small
-	/// rotations. For interpolations of arbitrary rotations,
-	/// <a href="/ref/vmath#vmath.slerp">vmath.slerp</a> yields much better results.
+	/// Linearly interpolate between two vectors. The function
+	/// treats the vectors as positions and interpolates between
+	/// the positions in a straight line. Lerp is useful to describe
+	/// transitions from one place to another over time.
 	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
 	/// 
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Quaternion lerp(double t_p1, Quaternion q1_p2, Quaternion q2_p3);
+	public static extern Quaternion lerp(double t_p1, Quaternion v1_p2, Quaternion v2_p3);
 	
 	
 	/// <summary>
-	/// Linearly interpolate between two values. Lerp is useful
-	/// to describe transitions from one value to another over time.
+	/// Linearly interpolate between two vectors. The function
+	/// treats the vectors as positions and interpolates between
+	/// the positions in a straight line. Lerp is useful to describe
+	/// transitions from one place to another over time.
 	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
 	/// 
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern double lerp(double t_p1, double n1_p2, double n2_p3);
+	public static extern double lerp(double t_p1, double v1_p2, double v2_p3);
 	
 	
 	/// <summary>
@@ -685,111 +549,22 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector3 slerp(double t_p1, Vector3 v1_p2, Vector4 v2_p3);
-	
-	
-	/// <summary>
-	/// Spherically interpolates between two vectors. The difference to
-	/// lerp is that slerp treats the vectors as directions instead of
-	/// positions in space.
-	/// The direction of the returned vector is interpolated by the angle
-	/// and the magnitude is interpolated between the magnitudes of the
-	/// from and to vectors.
-	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
-	/// The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector3 slerp(double t_p1, Vector4 v1_p2, Vector3 v2_p3);
-	
-	
-	/// <summary>
-	/// Spherically interpolates between two vectors. The difference to
-	/// lerp is that slerp treats the vectors as directions instead of
-	/// positions in space.
-	/// The direction of the returned vector is interpolated by the angle
-	/// and the magnitude is interpolated between the magnitudes of the
-	/// from and to vectors.
-	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
-	/// The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector3 slerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
-	
-	
-	/// <summary>
-	/// Spherically interpolates between two vectors. The difference to
-	/// lerp is that slerp treats the vectors as directions instead of
-	/// positions in space.
-	/// The direction of the returned vector is interpolated by the angle
-	/// and the magnitude is interpolated between the magnitudes of the
-	/// from and to vectors.
-	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
-	/// The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector4 slerp(double t_p1, Vector3 v1_p2, Vector3 v2_p3);
-	
-	
-	/// <summary>
-	/// Spherically interpolates between two vectors. The difference to
-	/// lerp is that slerp treats the vectors as directions instead of
-	/// positions in space.
-	/// The direction of the returned vector is interpolated by the angle
-	/// and the magnitude is interpolated between the magnitudes of the
-	/// from and to vectors.
-	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
-	/// The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector4 slerp(double t_p1, Vector3 v1_p2, Vector4 v2_p3);
-	
-	
-	/// <summary>
-	/// Spherically interpolates between two vectors. The difference to
-	/// lerp is that slerp treats the vectors as directions instead of
-	/// positions in space.
-	/// The direction of the returned vector is interpolated by the angle
-	/// and the magnitude is interpolated between the magnitudes of the
-	/// from and to vectors.
-	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
-	/// The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
-	/// </summary>
-	public static extern Vector4 slerp(double t_p1, Vector4 v1_p2, Vector3 v2_p3);
-	
-	
-	/// <summary>
-	/// Spherically interpolates between two vectors. The difference to
-	/// lerp is that slerp treats the vectors as directions instead of
-	/// positions in space.
-	/// The direction of the returned vector is interpolated by the angle
-	/// and the magnitude is interpolated between the magnitudes of the
-	/// from and to vectors.
-	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
-	/// The function does not clamp t between 0 and 1.
-	/// 
-	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
-	/// </summary>
 	public static extern Vector4 slerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
 	
 	
 	/// <summary>
-	/// Slerp travels the torque-minimal path maintaining constant
-	/// velocity, which means it travels along the straightest path along
-	/// the rounded surface of a sphere. Slerp is useful for interpolation
-	/// of rotations.
-	/// Slerp travels the torque-minimal path, which means it travels
-	/// along the straightest path the rounded surface of a sphere.
-	/// <span class="icon-attention"></span> The function does not clamp t between 0 and 1.
+	/// Spherically interpolates between two vectors. The difference to
+	/// lerp is that slerp treats the vectors as directions instead of
+	/// positions in space.
+	/// The direction of the returned vector is interpolated by the angle
+	/// and the magnitude is interpolated between the magnitudes of the
+	/// from and to vectors.
+	/// <span class="icon-attention"></span> Slerp is computationally more expensive than lerp.
+	/// The function does not clamp t between 0 and 1.
 	/// 
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Quaternion slerp(double t_p1, Quaternion q1_p2, Quaternion q2_p3);
+	public static extern Quaternion slerp(double t_p1, Quaternion v1_p2, Quaternion v2_p3);
 	
 	
 	/// <summary>
@@ -832,66 +607,6 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
 	/// </summary>
 	public static extern Vector3 mul_per_elem(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
-	/// <summary>
-	/// Performs an element wise multiplication between two vectors of the same type
-	/// The returned value is a vector defined as (e.g. for a vector3):
-	/// <code>v = vmath.mul_per_elem(a, b) = vmath.vector3(a.x * b.x, a.y * b.y, a.z * b.z)</code>
-	/// 
-	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
-	/// </summary>
-	public static extern Vector3 mul_per_elem(Vector3 v1_p1, Vector4 v2_p2);
-	
-	
-	/// <summary>
-	/// Performs an element wise multiplication between two vectors of the same type
-	/// The returned value is a vector defined as (e.g. for a vector3):
-	/// <code>v = vmath.mul_per_elem(a, b) = vmath.vector3(a.x * b.x, a.y * b.y, a.z * b.z)</code>
-	/// 
-	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
-	/// </summary>
-	public static extern Vector3 mul_per_elem(Vector4 v1_p1, Vector3 v2_p2);
-	
-	
-	/// <summary>
-	/// Performs an element wise multiplication between two vectors of the same type
-	/// The returned value is a vector defined as (e.g. for a vector3):
-	/// <code>v = vmath.mul_per_elem(a, b) = vmath.vector3(a.x * b.x, a.y * b.y, a.z * b.z)</code>
-	/// 
-	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
-	/// </summary>
-	public static extern Vector3 mul_per_elem(Vector4 v1_p1, Vector4 v2_p2);
-	
-	
-	/// <summary>
-	/// Performs an element wise multiplication between two vectors of the same type
-	/// The returned value is a vector defined as (e.g. for a vector3):
-	/// <code>v = vmath.mul_per_elem(a, b) = vmath.vector3(a.x * b.x, a.y * b.y, a.z * b.z)</code>
-	/// 
-	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
-	/// </summary>
-	public static extern Vector4 mul_per_elem(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
-	/// <summary>
-	/// Performs an element wise multiplication between two vectors of the same type
-	/// The returned value is a vector defined as (e.g. for a vector3):
-	/// <code>v = vmath.mul_per_elem(a, b) = vmath.vector3(a.x * b.x, a.y * b.y, a.z * b.z)</code>
-	/// 
-	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
-	/// </summary>
-	public static extern Vector4 mul_per_elem(Vector3 v1_p1, Vector4 v2_p2);
-	
-	
-	/// <summary>
-	/// Performs an element wise multiplication between two vectors of the same type
-	/// The returned value is a vector defined as (e.g. for a vector3):
-	/// <code>v = vmath.mul_per_elem(a, b) = vmath.vector3(a.x * b.x, a.y * b.y, a.z * b.z)</code>
-	/// 
-	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
-	/// </summary>
-	public static extern Vector4 mul_per_elem(Vector4 v1_p1, Vector3 v2_p2);
 	
 	
 	/// <summary>
