@@ -68,8 +68,7 @@ The future of DefoldSharp is planned to be an old school `several alphas -> seve
 Here's a short glimpse into the immediate future  (all are subject to change, and may include features not mentioned here:
 
 ## Upcoming Alphas:
-### Alpha 3
- * ✅ Fixed comments on methods.
- * Component OOP API   (Sprite, Tilemap, etc)
- * standard messages
+### Alpha 4
+ * Adjust OOP reference tracking
+ * Additional Component OOP API
 
