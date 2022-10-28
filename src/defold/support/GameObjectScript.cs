@@ -56,6 +56,7 @@ namespace support
 		/// </summary>
 		protected virtual void final()
 		{
+			Component.Unregister(Locator);
 		}
 
 
