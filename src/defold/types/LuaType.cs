@@ -2,6 +2,12 @@ using System;
 
 namespace types
 {
+   //Flags a type as directly passable in lua tables.
+   public interface ILuaType
+   {
+      
+   }
+   
 	/// <summary>
 	/// </summary>
 	public class LuaType

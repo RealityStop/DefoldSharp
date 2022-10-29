@@ -4,7 +4,7 @@ namespace types
 {
 	/// <summary>
 	/// </summary>
-	public class Vector2
+	public class Vector2 : ILuaType
 	{
 		public float x, y;
 

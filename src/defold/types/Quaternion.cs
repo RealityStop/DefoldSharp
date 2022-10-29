@@ -4,7 +4,7 @@ namespace types
 {
 	/// <summary>
 	/// </summary>
-	public class Quaternion
+	public class Quaternion : ILuaType
 	{
 		private float x, y, z, w;
 

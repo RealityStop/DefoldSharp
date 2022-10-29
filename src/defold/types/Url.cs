@@ -4,9 +4,9 @@ namespace types
 {
 	/// <summary>
 	/// </summary>
-	public class Url
+	public class Url : ILuaType
 	{
-		public int socket;
+		public Hash socket;
    public Hash path;
    public Hash fragment;
 

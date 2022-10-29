@@ -13,8 +13,26 @@ namespace support
 	[DoNotGenerate]
 	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
+		private readonly Url _gameObjectUrl;
 		public Url Locator { get; }
 		protected bool IsInputFocusHeld { get; private set; }
+
+
+		private GameObjectReference _gameObjectReference;
+		public GameObjectReference Gameobject
+		{
+			get
+			{
+				if (_gameObjectReference == null)
+				{
+					_gameObjectReference = new GameObjectReference(Msg.url(Locator.socket, Locator.path));
+				}
+
+				return _gameObjectReference;
+			}
+		}
+		
+		
 		
 		
 		protected GameObjectScript()
