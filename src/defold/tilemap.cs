@@ -502,23 +502,23 @@ public class Tilemap : BuiltInComponentBase
 	
 	
 	#endregion Defold API
-
-
+	
+	
 	/// <summary>
-	/// Gets the bounds for the tilemap.  
+	///     Gets the bounds for the tilemap.  Allocates memory, so use sparingly.
 	/// </summary>
 	/// <returns></returns>
 	public Rect Bounds
 	{
-		get
-		{
-			var x = get_bounds(this, out var y, out var w, out var h);
-			var returnVal = new Rect(x, y, w, h);
-			return returnVal;
-		}
+	   get
+	   {
+	      var x = get_bounds(this, out var y, out var w, out var h);
+	      var returnVal = new Rect(x, y, w, h);
+	      return returnVal;
+	   }
 	}
-
-
+	
+	
 	/// <summary>
 	/// Fetches the bounds without allocating memory
 	/// </summary>
@@ -528,54 +528,54 @@ public class Tilemap : BuiltInComponentBase
 	/// <param name="height"></param>
 	public void GetBounds(out double x, out double y, out double width, out double height)
 	{
-		x = get_bounds(this, out y, out width, out height);
+	   x = get_bounds(this, out y, out width, out height);
 	}
-
-
+	
+	
 	public int GetTile(int x, int y, string layer)
 	{
-		return (int)get_tile(this, layer, x, y);
+	   return (int)get_tile(this, layer, x, y);
 	}
-
-
+	
+	
 	public int GetTile(int x, int y, Hash layer)
 	{
-		return (int)get_tile(this, layer, x, y);
+	   return (int)get_tile(this, layer, x, y);
 	}
-
-
+	
+	
 	public void SetTile(int x, int y, int tile, string layer)
 	{
-		set_tile(this, layer, x, y, tile);
+	   set_tile(this, layer, x, y, tile);
 	}
-
-
+	
+	
 	public void SetTile(int x, int y, int tile, string layer, TilemapTransforms transformBitmask)
 	{
-		set_tile(this, layer, x, y, tile, (int)transformBitmask);
+	   set_tile(this, layer, x, y, tile, (int)transformBitmask);
 	}
-
-
+	
+	
 	public void SetTile(int x, int y, int tile, Hash layer)
 	{
-		set_tile(this, layer, x, y, tile);
+	   set_tile(this, layer, x, y, tile);
 	}
-
-
+	
+	
 	public void SetTile(int x, int y, int tile, Hash layer, TilemapTransforms transformBitmask)
 	{
-		set_tile(this, layer, x, y, tile, (int)transformBitmask);
+	   set_tile(this, layer, x, y, tile, (int)transformBitmask);
 	}
-
-
+	
+	
 	public void SetLayerVisible(string layer, bool visible = true)
 	{
-		set_visible(this, layer, visible);
+	   set_visible(this, layer, visible);
 	}
-
-
+	
+	
 	public void SetLayerVisible(Hash layer, bool visible = true)
 	{
-		set_visible(this, layer, visible);
+	   set_visible(this, layer, visible);
 	}
 }

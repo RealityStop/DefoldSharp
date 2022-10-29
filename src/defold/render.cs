@@ -9,6 +9,7 @@ using types;
 public static class Render
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class draw_debug_text_message : MessageImplementation
@@ -68,6 +69,9 @@ public static class Render
 		
 		public Vector4 color;
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>

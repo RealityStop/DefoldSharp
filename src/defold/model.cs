@@ -9,6 +9,7 @@ using types;
 public static class Model
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class model_animation_done_message : MessageImplementation
@@ -18,6 +19,9 @@ public static class Model
 		
 		public Hash animation_id;
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>

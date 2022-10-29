@@ -9,6 +9,7 @@ using types;
 public static class Physics
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class apply_force_message : MessageImplementation
@@ -96,6 +97,9 @@ public static class Physics
 		
 		public double request_id;
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>

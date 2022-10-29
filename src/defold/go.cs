@@ -9,6 +9,7 @@ using types;
 public static class Go
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class acquire_input_focus_message : MessageImplementation
@@ -59,6 +60,9 @@ public static class Go
 		public override Hash FetchCode() => __CODE__;
 		
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>
@@ -1301,199 +1305,6 @@ public static class Go
 	/// @CSharpLua.Template = "go.property({0}, {1})"
 	/// </summary>
 	public static extern void property(string name_p1, Quaternion value_p2);
-	
-	
-	/// <summary>
-	/// This is a callback-function, which is called by the engine when a script component is initialized. It can be used
-	/// to set the initial state of the script.
-	/// 
-	/// @CSharpLua.Template = "go.init({0})"
-	/// </summary>
-	public static extern void init(object self_p1);
-	
-	
-	/// <summary>
-	/// This is a callback-function, which is called by the engine when a script component is finalized (destroyed). It can
-	/// be used to e.g. take some last action, report the finalization to other game object instances, delete spawned objects
-	/// or release user input focus (see <a href="#release_input_focus">release_input_focus</a>).
-	/// 
-	/// @CSharpLua.Template = "go.final({0})"
-	/// </summary>
-	public static extern void final(object self_p1);
-	
-	
-	/// <summary>
-	/// This is a callback-function, which is called by the engine every frame to update the state of a script component.
-	/// It can be used to perform any kind of game related tasks, e.g. moving the game object instance.
-	/// 
-	/// @CSharpLua.Template = "go.update({0}, {1})"
-	/// </summary>
-	public static extern void update(object self_p1, double dt_p2);
-	
-	
-	/// <summary>
-	/// This is a callback-function, which is called by the engine whenever a message has been sent to the script component.
-	/// It can be used to take action on the message, e.g. send a response back to the sender of the message.
-	/// The <code>message</code> parameter is a table containing the message data. If the message is sent from the engine, the
-	/// documentation of the message specifies which data is supplied.
-	/// 
-	/// @CSharpLua.Template = "go.on_message({0}, {1}, {2}, {3})"
-	/// </summary>
-	public static extern void on_message(object self_p1, Hash message_id_p2, ILuaTable message_p3, Url sender_p4);
-	
-	
-	/// <summary>
-	/// This is a callback-function, which is called by the engine when user input is sent to the game object instance of the script.
-	/// It can be used to take action on the input, e.g. move the instance according to the input.
-	/// For an instance to obtain user input, it must first acquire input focus
-	/// through the message <code>acquire_input_focus</code>.
-	/// Any instance that has obtained input will be put on top of an
-	/// input stack. Input is sent to all listeners on the stack until the
-	/// end of stack is reached, or a listener returns <code>true</code>
-	/// to signal that it wants input to be consumed.
-	/// See the documentation of <a href="#acquire_input_focus">acquire_input_focus</a> for more
-	/// information.
-	/// The <code>action</code> parameter is a table containing data about the input mapped to the
-	/// <code>action_id</code>.
-	/// For mapped actions it specifies the value of the input and if it was just pressed or released.
-	/// Actions are mapped to input in an input_binding-file.
-	/// Mouse movement is specifically handled and uses <code>nil</code> as its <code>action_id</code>.
-	/// The <code>action</code> only contains positional parameters in this case, such as x and y of the pointer.
-	/// Here is a brief description of the available table fields:
-	/// <table>
-	/// <thead>
-	/// <tr>
-	/// <th>Field</th>
-	/// <th>Description</th>
-	/// </tr>
-	/// </thead>
-	/// <tbody>
-	/// <tr>
-	/// <td><code>value</code></td>
-	/// <td>The amount of input given by the user. This is usually 1 for buttons and 0-1 for analogue inputs. This is not present for mouse movement.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>pressed</code></td>
-	/// <td>If the input was pressed this frame. This is not present for mouse movement.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>released</code></td>
-	/// <td>If the input was released this frame. This is not present for mouse movement.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>repeated</code></td>
-	/// <td>If the input was repeated this frame. This is similar to how a key on a keyboard is repeated when you hold it down. This is not present for mouse movement.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>x</code></td>
-	/// <td>The x value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>y</code></td>
-	/// <td>The y value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>screen_x</code></td>
-	/// <td>The screen space x value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>screen_y</code></td>
-	/// <td>The screen space y value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>dx</code></td>
-	/// <td>The change in x value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>dy</code></td>
-	/// <td>The change in y value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>screen_dx</code></td>
-	/// <td>The change in screen space x value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>screen_dy</code></td>
-	/// <td>The change in screen space y value of a pointer device, if present.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>gamepad</code></td>
-	/// <td>The index of the gamepad device that provided the input.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>touch</code></td>
-	/// <td>List of touch input, one element per finger, if present. See table below about touch input</td>
-	/// </tr>
-	/// </tbody>
-	/// </table>
-	/// Touch input table:
-	/// <table>
-	/// <thead>
-	/// <tr>
-	/// <th>Field</th>
-	/// <th>Description</th>
-	/// </tr>
-	/// </thead>
-	/// <tbody>
-	/// <tr>
-	/// <td><code>id</code></td>
-	/// <td>A number identifying the touch input during its duration.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>pressed</code></td>
-	/// <td>True if the finger was pressed this frame.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>released</code></td>
-	/// <td>True if the finger was released this frame.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>tap_count</code></td>
-	/// <td>Number of taps, one for single, two for double-tap, etc</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>x</code></td>
-	/// <td>The x touch location.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>y</code></td>
-	/// <td>The y touch location.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>dx</code></td>
-	/// <td>The change in x value.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>dy</code></td>
-	/// <td>The change in y value.</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>acc_x</code></td>
-	/// <td>Accelerometer x value (if present).</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>acc_y</code></td>
-	/// <td>Accelerometer y value (if present).</td>
-	/// </tr>
-	/// <tr>
-	/// <td><code>acc_z</code></td>
-	/// <td>Accelerometer z value (if present).</td>
-	/// </tr>
-	/// </tbody>
-	/// </table>
-	/// 
-	/// @CSharpLua.Template = "go.on_input({0}, {1}, {2})"
-	/// </summary>
-	public static extern bool on_input(object self_p1, Hash action_id_p2, ILuaTable action_p3);
-	
-	
-	/// <summary>
-	/// This is a callback-function, which is called by the engine when the script component is reloaded, e.g. from the editor.
-	/// It can be used for live development, e.g. to tweak constants or set up the state properly for the instance.
-	/// 
-	/// @CSharpLua.Template = "go.on_reload({0})"
-	/// </summary>
-	public static extern void on_reload(object self_p1);
 	
 	
 	#endregion Defold API

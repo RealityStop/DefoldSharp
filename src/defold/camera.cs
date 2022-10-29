@@ -9,6 +9,7 @@ using types;
 public static class Camera
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class set_camera_message : MessageImplementation
@@ -43,6 +44,9 @@ public static class Camera
 		public override Hash FetchCode() => __CODE__;
 		
 	}
+	
+	
+	#endregion Messages
 	
 	
 	#endregion Defold API

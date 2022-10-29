@@ -9,6 +9,7 @@ using types;
 public static class Gui
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class layout_changed_message : MessageImplementation
@@ -19,6 +20,9 @@ public static class Gui
 		public Hash id;
 		public Hash previous_id;
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>

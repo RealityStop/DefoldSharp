@@ -9,6 +9,7 @@ using types;
 public static class Collectionproxy
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class set_time_step_message : MessageImplementation
@@ -109,6 +110,9 @@ public static class Collectionproxy
 		public override Hash FetchCode() => __CODE__;
 		
 	}
+	
+	
+	#endregion Messages
 	
 	
 	#endregion Defold API

@@ -9,6 +9,7 @@ using types;
 public static class Sys
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class exit_message : MessageImplementation
@@ -97,6 +98,9 @@ public static class Sys
 		public override Hash FetchCode() => __CODE__;
 		
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>

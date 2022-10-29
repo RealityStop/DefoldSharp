@@ -6,9 +6,10 @@ using types;
 /// Sound API documentation
 /// 
 /// </summary>
-public  class Sound : BuiltInComponentBase
+public static class Sound
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class play_sound_message : MessageImplementation
@@ -52,6 +53,9 @@ public  class Sound : BuiltInComponentBase
 		
 		public double play_id;
 	}
+	
+	
+	#endregion Messages
 	
 	
 	/// <summary>
@@ -512,132 +516,132 @@ public  class Sound : BuiltInComponentBase
 	
 	
 	#endregion Defold API
-
 	
-
+	
+	
 	public int Play(string sound)
 	{
-		return (int)play(sound);
+	   return (int)play(sound);
 	}
-
-
+	
+	
 	public int Play(Hash sound)
 	{
-		return (int)play(sound);
+	   return (int)play(sound);
 	}
-
-
+	
+	
 	public int Play(Url sound)
 	{
-		return (int)play(sound);
+	   return (int)play(sound);
 	}
-
-
+	
+	
 	public int Play(string sound,
-		double delay = 0,
-		double gain = 1,
-		double pan = 0,
-		double speed = 1,
-		Action<Sound, Hash, int, Url> onCompleteCallback = null)
+	   double delay = 0,
+	   double gain = 1,
+	   double pan = 0,
+	   double speed = 1,
+	   Action<Sound, Hash, int, Url> onCompleteCallback = null)
 	{
-		LuaTable table = new LuaTable();
-		table.Add("delay", delay);
-		table.Add("gain", gain);
-		table.Add("pan", pan);
-		table.Add("speed", speed);
-
-		if (onCompleteCallback != null)
-		{
-			void callback(object o, Hash hash, dynamic arg3, Url arg4)
-			{
-				onCompleteCallback(this, hash, arg3["play_id"], arg4);
-			}
-
-			return (int)play(sound, table, callback);
-		}
-		else
-			return (int)play(sound, table);
+	   LuaTable table = new LuaTable();
+	   table.Add("delay", delay);
+	   table.Add("gain", gain);
+	   table.Add("pan", pan);
+	   table.Add("speed", speed);
+	
+	   if (onCompleteCallback != null)
+	   {
+	      void callback(object o, Hash hash, dynamic arg3, Url arg4)
+	      {
+	         onCompleteCallback(this, hash, arg3["play_id"], arg4);
+	      }
+	
+	      return (int)play(sound, table, callback);
+	   }
+	   else
+	      return (int)play(sound, table);
 	}
 	
 	public int Play(Hash sound,
-		double delay = 0,
-		double gain = 1,
-		double pan = 0,
-		double speed = 1,
-		Action<Sound, Hash, int, Url> onCompleteCallback = null)
+	   double delay = 0,
+	   double gain = 1,
+	   double pan = 0,
+	   double speed = 1,
+	   Action<Sound, Hash, int, Url> onCompleteCallback = null)
 	{
-		LuaTable table = new LuaTable();
-		table.Add("delay", delay);
-		table.Add("gain", gain);
-		table.Add("pan", pan);
-		table.Add("speed", speed);
-
-		if (onCompleteCallback != null)
-		{
-			void callback(object o, Hash hash, dynamic arg3, Url arg4)
-			{
-				onCompleteCallback(this, hash, arg3["play_id"], arg4);
-			}
-
-			return (int)play(sound, table, callback);
-		}
-		else
-			return (int)play(sound, table);
+	   LuaTable table = new LuaTable();
+	   table.Add("delay", delay);
+	   table.Add("gain", gain);
+	   table.Add("pan", pan);
+	   table.Add("speed", speed);
+	
+	   if (onCompleteCallback != null)
+	   {
+	      void callback(object o, Hash hash, dynamic arg3, Url arg4)
+	      {
+	         onCompleteCallback(this, hash, arg3["play_id"], arg4);
+	      }
+	
+	      return (int)play(sound, table, callback);
+	   }
+	   else
+	      return (int)play(sound, table);
 	}
 	
 	public int Play(Url sound,
-		double delay = 0,
-		double gain = 1,
-		double pan = 0,
-		double speed = 1,
-		Action<Sound, Hash, int, Url> onCompleteCallback = null)
+	   double delay = 0,
+	   double gain = 1,
+	   double pan = 0,
+	   double speed = 1,
+	   Action<Sound, Hash, int, Url> onCompleteCallback = null)
 	{
-		LuaTable table = new LuaTable();
-		table.Add("delay", delay);
-		table.Add("gain", gain);
-		table.Add("pan", pan);
-		table.Add("speed", speed);
-
-		if (onCompleteCallback != null)
-		{
-			void callback(object o, Hash hash, dynamic arg3, Url arg4)
-			{
-				onCompleteCallback(this, hash, arg3["play_id"], arg4);
-			}
-
-			return (int)play(sound, table, callback);
-		}
-		else
-			return (int)play(sound, table);
+	   LuaTable table = new LuaTable();
+	   table.Add("delay", delay);
+	   table.Add("gain", gain);
+	   table.Add("pan", pan);
+	   table.Add("speed", speed);
+	
+	   if (onCompleteCallback != null)
+	   {
+	      void callback(object o, Hash hash, dynamic arg3, Url arg4)
+	      {
+	         onCompleteCallback(this, hash, arg3["play_id"], arg4);
+	      }
+	
+	      return (int)play(sound, table, callback);
+	   }
+	   else
+	      return (int)play(sound, table);
 	}
-
-
+	
+	
 	public void Stop()
 	{
-		stop(this);
+	   stop(this);
 	}
-
-
+	
+	
 	public void Pause(bool shouldPause = true)
 	{
-		pause(this, shouldPause);
+	   pause(this, shouldPause);
 	}
-
-
+	
+	
 	public void Unpause()
 	{
-		pause(this, false);
+	   pause(this, false);
 	}
-
-
+	
+	
 	public void SetGain(double gain)
 	{
-		set_gain(this, gain);
+	   set_gain(this, gain);
 	}
-
-
+	
+	
 	public void SetPan(double pan)
 	{
-		set_pan(this, pan);
+	   set_pan(this, pan);
 	}
 }
