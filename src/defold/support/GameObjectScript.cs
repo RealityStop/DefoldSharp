@@ -25,7 +25,7 @@ namespace support
 			{
 				if (_gameObjectReference == null)
 				{
-					_gameObjectReference = new GameObjectReference(Msg.url(LocatorUrl.socket, LocatorUrl.path));
+					_gameObjectReference = new GameObjectReference(Msg.url(LocatorUrl.socket, LocatorUrl.path, ""));
 				}
 
 				return _gameObjectReference;

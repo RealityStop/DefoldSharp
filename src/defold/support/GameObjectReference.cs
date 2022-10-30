@@ -151,7 +151,7 @@ namespace support
 		/// <param name="hash"></param>
 		/// <typeparam name="T"></typeparam>
 		/// <returns></returns>
-		public T Component<T>(string hash) where T : IComponent, new()
+		public T Component<T>(Hash hash) where T : IComponent, new()
 		{
 			var targetUrl = new Url();
 			targetUrl.socket = LocatorUrl.socket;

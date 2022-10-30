@@ -6,14 +6,6 @@ namespace types
 	/// </summary>
 	public class Hash
 	{
-		    /// <summary>
-		   /// @CSharpLua.Template = "hash({0})"
-		   /// </summary>
-		   public Hash(string v)
-		   {
-		   }
-
-
 		   /// <summary>
 		   /// @CSharpLua.Template = "hash({0})"
 		   /// </summary>
@@ -49,14 +41,7 @@ namespace types
 		/// </summary>
 		public class __Hash2
 		{
-		   /// <summary>
-		   /// @CSharpLua.Template = "hash({0})"
-		   /// </summary>
-		   public __Hash2(string v)
-		   {
-		   }
-		   
-		   /// <summary>
+			/// <summary>
 		   /// @CSharpLua.Ignore
 		   /// </summary>
 		   public static implicit operator __Hash2(Hash v)
@@ -91,14 +76,7 @@ namespace types
 		/// </summary>
 		public class __Hash3
 		{
-		   /// <summary>
-		   /// @CSharpLua.Template = "hash({0})"
-		   /// </summary>
-		   public __Hash3(string v)
-		   {
-		   }
-		   
-		   /// <summary>
+			/// <summary>
 		   /// @CSharpLua.Ignore
 		   /// </summary>
 		   public static implicit operator __Hash3(Hash v)
@@ -106,8 +84,8 @@ namespace types
 		      //Doesn't actually get called.  Instead the template is injected.  But we can't extern operators.
 		      return (dynamic)null;
 		   }
-		   
-
+			
+			
 		   /// <summary>
 		   /// @CSharpLua.Template = "hash({0})"
 		   /// </summary>
