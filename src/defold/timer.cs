@@ -20,8 +20,8 @@ public static class Timer
 	/// @CSharpLua.Template = "timer.delay({0}, {1}, {2})"
 	/// </summary>
 	public static extern Hash delay(double delay_p1, bool repeat_p2, Action<object,Hash,double> callback_p3);
-	
-	
+
+
 	/// <summary>
 	/// You may cancel a timer from inside a timer callback.
 	/// Cancelling a timer that is already executed or cancelled is safe.
@@ -29,15 +29,15 @@ public static class Timer
 	/// @CSharpLua.Template = "timer.cancel({0})"
 	/// </summary>
 	public static extern bool cancel(Hash handle_p1);
-	
-	
+
+
 	/// <summary>
 	/// Manual triggering a callback for a timer.
 	/// 
 	/// @CSharpLua.Template = "timer.trigger({0})"
 	/// </summary>
 	public static extern bool trigger(Hash handle_p1);
-	
-	
+
+
 	#endregion Defold API
 }

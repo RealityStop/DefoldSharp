@@ -16,61 +16,61 @@ public static class Sys
 	{
 		public static Hash __CODE__ = Defold.hash("exit");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public double code;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class toggle_profile_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("toggle_profile");
 		public override Hash FetchCode() => __CODE__;
-		
+
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class toggle_physics_debug_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("toggle_physics_debug");
 		public override Hash FetchCode() => __CODE__;
-		
+
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class start_record_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("start_record");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public string file_name;
 		public double frame_period;
 		public double fps;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class stop_record_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("stop_record");
 		public override Hash FetchCode() => __CODE__;
-		
+
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class reboot_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("reboot");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public string arg1;
 		public string arg2;
 		public string arg3;
@@ -78,31 +78,31 @@ public static class Sys
 		public string arg5;
 		public string arg6;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class set_vsync_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("set_vsync");
 		public override Hash FetchCode() => __CODE__;
-		
+
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class set_update_frequency_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("set_update_frequency");
 		public override Hash FetchCode() => __CODE__;
-		
+
 	}
-	
-	
+
+
 	#endregion Messages
-	
-	
+
+
 	/// <summary>
 	/// The table can later be loaded by <code>sys.load</code>.
 	/// Use <code>sys.get_save_file</code> to obtain a valid location for the file.
@@ -116,32 +116,32 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.save({0}, {1})"
 	/// </summary>
 	public static extern bool save(string filename_p1, ILuaTable table_p2);
-	
-	
+
+
 	/// <summary>
 	/// If the file exists, it must have been created by <code>sys.save</code> to be loaded.
 	/// 
 	/// @CSharpLua.Template = "sys.load({0})"
 	/// </summary>
 	public static extern ILuaTable load(string filename_p1);
-	
-	
+
+
 	/// <summary>
 	/// The save-file path is operating system specific and is typically located under the user's home directory.
 	/// 
 	/// @CSharpLua.Template = "sys.get_save_file({0}, {1})"
 	/// </summary>
 	public static extern string get_save_file(string application_id_p1, string file_name_p2);
-	
-	
+
+
 	/// <summary>
 	/// The path from which the application is run.
 	/// 
 	/// @CSharpLua.Template = "sys.get_application_path()"
 	/// </summary>
 	public static extern string get_application_path();
-	
-	
+
+
 	/// <summary>
 	/// Get config value from the game.project configuration file.
 	/// In addition to the project file, configuration values can also be passed
@@ -150,32 +150,32 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.get_config({0})"
 	/// </summary>
 	public static extern string get_config(string key_p1);
-	
-	
+
+
 	/// <summary>
 	/// Get config value from the game.project configuration file with default value
 	/// 
 	/// @CSharpLua.Template = "sys.get_config({0}, {1})"
 	/// </summary>
 	public static extern string get_config(string key_p1, string default_value_p2);
-	
-	
+
+
 	/// <summary>
 	/// Open URL in default application, typically a browser
 	/// 
 	/// @CSharpLua.Template = "sys.open_url({0})"
 	/// </summary>
 	public static extern bool open_url(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Open URL in default application, typically a browser
 	/// 
 	/// @CSharpLua.Template = "sys.open_url({0}, {1})"
 	/// </summary>
 	public static extern bool open_url(string url_p1, ILuaTable attributes_p2);
-	
-	
+
+
 	/// <summary>
 	/// Loads a custom resource. Specify the full filename of the resource that you want
 	/// to load. When loaded, the file data is returned as a string.
@@ -190,24 +190,24 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.load_resource({0})"
 	/// </summary>
 	public static extern string load_resource(string filename_p1, out string error_o1);
-	
-	
+
+
 	/// <summary>
 	/// Returns a table with system information.
 	/// 
 	/// @CSharpLua.Template = "sys.get_sys_info({0})"
 	/// </summary>
 	public static extern ILuaTable get_sys_info(ILuaTable options_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns a table with engine information.
 	/// 
 	/// @CSharpLua.Template = "sys.get_engine_info()"
 	/// </summary>
 	public static extern ILuaTable get_engine_info();
-	
-	
+
+
 	/// <summary>
 	/// Returns a table with application information for the requested app.
 	/// <span class="icon-ios"></span> On iOS, the <code>app_string</code> is an url scheme for the app that is queried. Your
@@ -218,16 +218,16 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.get_application_info({0})"
 	/// </summary>
 	public static extern ILuaTable get_application_info(string app_string_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns an array of tables with information on network interfaces.
 	/// 
 	/// @CSharpLua.Template = "sys.get_ifaddrs()"
 	/// </summary>
 	public static extern ILuaTable get_ifaddrs();
-	
-	
+
+
 	/// <summary>
 	/// Set the Lua error handler function.
 	/// The error handler is a function which is called whenever a lua runtime error occurs.
@@ -235,16 +235,16 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.set_error_handler({0})"
 	/// </summary>
 	public static extern void set_error_handler(Action<string,string,string> error_handler_p1);
-	
-	
+
+
 	/// <summary>
 	/// Sets the host that is used to check for network connectivity against.
 	/// 
 	/// @CSharpLua.Template = "sys.set_connectivity_host({0})"
 	/// </summary>
 	public static extern void set_connectivity_host(string host_p1);
-	
-	
+
+
 	/// <summary>
 	/// <span class="icon-ios"></span> <span class="icon-android"></span> Returns the current network connectivity status
 	/// on mobile platforms.
@@ -253,16 +253,16 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.get_connectivity()"
 	/// </summary>
 	public static extern SysConnectivity get_connectivity();
-	
-	
+
+
 	/// <summary>
 	/// Terminates the game application and reports the specified <code>code</code> to the OS.
 	/// 
 	/// @CSharpLua.Template = "sys.exit({0})"
 	/// </summary>
 	public static extern void exit(double code_p1);
-	
-	
+
+
 	/// <summary>
 	/// Reboots the game engine with a specified set of arguments.
 	/// Arguments will be translated into command line arguments. Calling reboot
@@ -273,8 +273,8 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.reboot({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
 	public static extern void reboot(string arg1_p1, string arg2_p2, string arg3_p3, string arg4_p4, string arg5_p5, string arg6_p6);
-	
-	
+
+
 	/// <summary>
 	/// Set the vsync swap interval. The interval with which to swap the front and back buffers
 	/// in sync with vertical blanks (v-blank), the hardware event where the screen image is updated
@@ -289,8 +289,8 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.set_vsync_swap_interval({0})"
 	/// </summary>
 	public static extern void set_vsync_swap_interval(double swap_interval_p1);
-	
-	
+
+
 	/// <summary>
 	/// Set game update-frequency (frame cap). This option is equivalent to <code>display.update_frequency</code> in
 	/// the "game.project" settings but set in run-time. If <code>Vsync</code> checked in "game.project", the rate will
@@ -301,8 +301,8 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.set_update_frequency({0})"
 	/// </summary>
 	public static extern void set_update_frequency(double frequency_p1);
-	
-	
+
+
 	/// <summary>
 	/// The buffer can later deserialized by <code>sys.deserialize</code>.
 	/// This method has all the same limitations as <code>sys.save</code>.
@@ -310,15 +310,15 @@ public static class Sys
 	/// @CSharpLua.Template = "sys.serialize({0})"
 	/// </summary>
 	public static extern string serialize(ILuaTable table_p1);
-	
-	
+
+
 	/// <summary>
 	/// deserializes buffer into a lua table
 	/// 
 	/// @CSharpLua.Template = "sys.deserialize({0})"
 	/// </summary>
 	public static extern ILuaTable deserialize(string buffer_p1);
-	
-	
+
+
 	#endregion Defold API
 }

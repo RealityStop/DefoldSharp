@@ -26,7 +26,7 @@ public static class Math
 	/// @CSharpLua.Template = "math.random()"
 	/// </summary>
 	public static extern void random();
-	
-	
+
+
 	#endregion Defold API
 }

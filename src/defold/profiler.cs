@@ -39,8 +39,8 @@ public static class Profiler
 	/// @CSharpLua.Template = "profiler.get_memory_usage()"
 	/// </summary>
 	public static extern double get_memory_usage();
-	
-	
+
+
 	/// <summary>
 	/// Get the percent of CPU usage by the application, as reported by the OS.
 	/// <span class="icon-attention"></span> This function is not available on <span class="icon-html5"></span> HTML5.
@@ -52,8 +52,8 @@ public static class Profiler
 	/// @CSharpLua.Template = "profiler.get_cpu_usage()"
 	/// </summary>
 	public static extern double get_cpu_usage();
-	
-	
+
+
 	/// <summary>
 	/// Creates and shows or hides and destroys the on-sceen profiler ui
 	/// The profiler is a real-time tool that shows the numbers of milliseconds spent
@@ -63,24 +63,24 @@ public static class Profiler
 	/// @CSharpLua.Template = "profiler.enable_ui({0})"
 	/// </summary>
 	public static extern void enable_ui(bool enabled_p1);
-	
-	
+
+
 	/// <summary>
 	/// Set the on-screen profile mode - run, pause, record or show peak frame
 	/// 
 	/// @CSharpLua.Template = "profiler.set_ui_mode({0})"
 	/// </summary>
 	public static extern void set_ui_mode(ProfilerMode mode_p1);
-	
-	
+
+
 	/// <summary>
 	/// Set the on-screen profile view mode - minimized or expanded
 	/// 
 	/// @CSharpLua.Template = "profiler.set_ui_view_mode({0})"
 	/// </summary>
 	public static extern void set_ui_view_mode(ProfilerViewMode mode_p1);
-	
-	
+
+
 	/// <summary>
 	/// Shows or hides the time the engine waits for vsync in the on-screen profiler
 	/// Each frame the engine waits for vsync and depending on your vsync settings and how much time
@@ -96,16 +96,16 @@ public static class Profiler
 	/// @CSharpLua.Template = "profiler.set_ui_vsync_wait_visible({0})"
 	/// </summary>
 	public static extern void set_ui_vsync_wait_visible(bool visible_p1);
-	
-	
+
+
 	/// <summary>
 	/// Get the number of recorded frames in the on-screen profiler ui recording buffer
 	/// 
 	/// @CSharpLua.Template = "profiler.recorded_frame_count()"
 	/// </summary>
 	public static extern double recorded_frame_count();
-	
-	
+
+
 	/// <summary>
 	/// Pauses and displays a frame from the recording buffer in the on-screen profiler ui
 	/// The frame to show can either be an absolute frame or a relative frame to the current frame.
@@ -113,31 +113,31 @@ public static class Profiler
 	/// @CSharpLua.Template = "profiler.view_recorded_frame({0})"
 	/// </summary>
 	public static extern void view_recorded_frame(ILuaTable frame_index_p1);
-	
-	
+
+
 	/// <summary>
 	/// Send a text to the profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.log_text({0})"
 	/// </summary>
 	public static extern void log_text(string text_p1);
-	
-	
+
+
 	/// <summary>
 	/// Starts a profile scope.
 	/// 
 	/// @CSharpLua.Template = "profiler.scope_begin({0})"
 	/// </summary>
 	public static extern void scope_begin(string name_p1);
-	
-	
+
+
 	/// <summary>
 	/// End the current profile scope.
 	/// 
 	/// @CSharpLua.Template = "profiler.scope_end()"
 	/// </summary>
 	public static extern void scope_end();
-	
-	
+
+
 	#endregion Defold API
 }

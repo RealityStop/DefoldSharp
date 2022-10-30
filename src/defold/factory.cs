@@ -17,8 +17,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.get_status()"
 	/// </summary>
 	public static extern FactoryStatus get_status();
-	
-	
+
+
 	/// <summary>
 	/// This returns status of the factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns
@@ -27,8 +27,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.get_status({0})"
 	/// </summary>
 	public static extern FactoryStatus get_status(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This returns status of the factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns
@@ -37,8 +37,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.get_status({0})"
 	/// </summary>
 	public static extern FactoryStatus get_status(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This returns status of the factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns
@@ -47,8 +47,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.get_status({0})"
 	/// </summary>
 	public static extern FactoryStatus get_status(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -56,8 +56,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.unload()"
 	/// </summary>
 	public static extern void unload();
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -65,8 +65,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.unload({0})"
 	/// </summary>
 	public static extern void unload(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -74,8 +74,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.unload({0})"
 	/// </summary>
 	public static extern void unload(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -83,8 +83,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.unload({0})"
 	/// </summary>
 	public static extern void unload(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -92,8 +92,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load()"
 	/// </summary>
 	public static extern void load();
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -101,8 +101,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load({0})"
 	/// </summary>
 	public static extern void load(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -110,8 +110,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load({0}, {1})"
 	/// </summary>
 	public static extern void load(string url_p1, Action<object,Url,bool> complete_function_p2);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -119,8 +119,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load({0})"
 	/// </summary>
 	public static extern void load(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -128,8 +128,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load({0}, {1})"
 	/// </summary>
 	public static extern void load(Hash url_p1, Action<object,Url,bool> complete_function_p2);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -137,8 +137,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load({0})"
 	/// </summary>
 	public static extern void load(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -146,8 +146,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.load({0}, {1})"
 	/// </summary>
 	public static extern void load(Url url_p1, Action<object,Url,bool> complete_function_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -159,8 +159,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0})"
 	/// </summary>
 	public static extern Hash create(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -172,8 +172,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1})"
 	/// </summary>
 	public static extern Hash create(string url_p1, Vector3 position_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -185,8 +185,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2})"
 	/// </summary>
 	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -198,8 +198,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -211,8 +211,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -224,8 +224,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, Vector3 scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -237,8 +237,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0})"
 	/// </summary>
 	public static extern Hash create(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -250,8 +250,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1})"
 	/// </summary>
 	public static extern Hash create(Hash url_p1, Vector3 position_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -263,8 +263,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2})"
 	/// </summary>
 	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -276,8 +276,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -289,8 +289,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -302,8 +302,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, Vector3 scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -315,8 +315,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0})"
 	/// </summary>
 	public static extern Hash create(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -328,8 +328,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1})"
 	/// </summary>
 	public static extern Hash create(Url url_p1, Vector3 position_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -341,8 +341,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2})"
 	/// </summary>
 	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -354,8 +354,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -367,8 +367,8 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies which factory should create the game object.
 	/// If the game object is created inside of the frame (e.g. from an update callback), the game object will be created instantly, but none of its component will be updated in the same frame.
@@ -380,66 +380,66 @@ public class Factory : BuiltInComponentBase
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, Vector3 scale_p5);
-	
-	
+
+
 	#endregion Defold API
-	
+
 	/// <summary>
 	/// Calling this function when the factory is not marked as dynamic loading always returns
 	/// factory.STATUS_LOADED.
 	/// </summary>
 	public FactoryStatus Status => get_status(this);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
 	/// </summary>
 	public void Unload() => unload(this);
-	
-	
+
+
 	/// <summary>
 	/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
 	/// </summary>
 	public void Load() => load(this);
-	
-	
+
+
 	public void Load(Action<object, Factory, bool> callback)
 	{
 	   void IntermediateCallback(object obj, Url url, bool b)
 	   {
 	      callback(obj, this, b);
 	   }
-	
+
 	   load(this, IntermediateCallback);
 	}
-	
-	
+
+
 	public Hash Create()
 	{
 	   return (dynamic)create(this);
 	}
-	
-	
+
+
 	public Hash Create(Vector3 position)
 	{
 	   return (dynamic)create(this, position);
 	}
-	
-	
+
+
 	public Hash Create(Vector3 position, Quaternion rotation)
 	{
 	   return (dynamic)create(this, position, rotation);
 	}
-	
-	
+
+
 	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties)
 	{
 	   return (dynamic)create(this, position, rotation, properties);
 	}
-	
-	
+
+
 	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties, double scale)
 	{
 	   return (dynamic)create(this, position, rotation, properties, scale);

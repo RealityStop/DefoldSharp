@@ -15,8 +15,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector3()"
 	/// </summary>
 	public static extern Vector3 vector3();
-	
-	
+
+
 	/// <summary>
 	/// Creates a new vector with all components set to the
 	/// supplied scalar value.
@@ -24,8 +24,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector3({0})"
 	/// </summary>
 	public static extern Vector3 vector3(double n_p1);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new vector with all components set to the
 	/// corresponding values from the supplied vector. I.e.
@@ -34,8 +34,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector3({0})"
 	/// </summary>
 	public static extern Vector3 vector3(Vector3 v1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new vector with the components set to the
 	/// supplied values.
@@ -43,16 +43,16 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector3({0}, {1}, {2})"
 	/// </summary>
 	public static extern Vector3 vector3(double x_p1, double y_p2, double z_p3);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new zero vector with all components set to 0.
 	/// 
 	/// @CSharpLua.Template = "vmath.vector4()"
 	/// </summary>
 	public static extern Vector4 vector4();
-	
-	
+
+
 	/// <summary>
 	/// Creates a new vector with all components set to the
 	/// supplied scalar value.
@@ -60,8 +60,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector4({0})"
 	/// </summary>
 	public static extern Vector4 vector4(double n_p1);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new vector with all components set to the
 	/// corresponding values from the supplied vector. I.e.
@@ -70,8 +70,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector4({0})"
 	/// </summary>
 	public static extern Vector4 vector4(Vector4 v1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new vector with the components set to the
 	/// supplied values.
@@ -79,8 +79,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.vector4({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern Vector4 vector4(double x_p1, double y_p2, double z_p3, double w_p4);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new identity quaternion. The identity
 	/// quaternion is equal to:
@@ -89,8 +89,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat()"
 	/// </summary>
 	public static extern Quaternion quat();
-	
-	
+
+
 	/// <summary>
 	/// Creates a new quaternion with all components set to the
 	/// corresponding values from the supplied quaternion. I.e.
@@ -99,8 +99,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat({0})"
 	/// </summary>
 	public static extern Quaternion quat(Quaternion q1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Creates a new quaternion with the components set
 	/// according to the supplied parameter values.
@@ -108,8 +108,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern Quaternion quat(double x_p1, double y_p2, double z_p3, double w_p4);
-	
-	
+
+
 	/// <summary>
 	/// The resulting quaternion describes the rotation that,
 	/// if applied to the first vector, would rotate the first
@@ -120,8 +120,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat_from_to({0}, {1})"
 	/// </summary>
 	public static extern Quaternion quat_from_to(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// The resulting quaternion describes a rotation of <code>angle</code>
 	/// radians around the axis described by the unit vector <code>v</code>.
@@ -129,8 +129,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat_axis_angle({0}, {1})"
 	/// </summary>
 	public static extern Quaternion quat_axis_angle(Vector3 v_p1, double angle_p2);
-	
-	
+
+
 	/// <summary>
 	/// The resulting quaternion describes the rotation from the
 	/// identity quaternion (no rotation) to the coordinate system
@@ -139,8 +139,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat_basis({0}, {1}, {2})"
 	/// </summary>
 	public static extern Quaternion quat_basis(Vector3 x_p1, Vector3 y_p2, Vector3 z_p3);
-	
-	
+
+
 	/// <summary>
 	/// The resulting quaternion describes a rotation of <code>angle</code>
 	/// radians around the x-axis.
@@ -148,8 +148,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat_rotation_x({0})"
 	/// </summary>
 	public static extern Quaternion quat_rotation_x(double angle_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting quaternion describes a rotation of <code>angle</code>
 	/// radians around the y-axis.
@@ -157,8 +157,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat_rotation_y({0})"
 	/// </summary>
 	public static extern Quaternion quat_rotation_y(double angle_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting quaternion describes a rotation of <code>angle</code>
 	/// radians around the z-axis.
@@ -166,8 +166,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.quat_rotation_z({0})"
 	/// </summary>
 	public static extern Quaternion quat_rotation_z(double angle_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting identity matrix describes a transform with
 	/// no translation or rotation.
@@ -175,8 +175,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4()"
 	/// </summary>
 	public static extern Matrix4 matrix4();
-	
-	
+
+
 	/// <summary>
 	/// Creates a new matrix with all components set to the
 	/// corresponding values from the supplied matrix. I.e.
@@ -185,8 +185,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4(Matrix4 m1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Constructs a frustum matrix from the given values. The left, right,
 	/// top and bottom coordinates of the view cone are expressed as distances
@@ -196,8 +196,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_frustum({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
 	public static extern Matrix4 matrix4_frustum(double left_p1, double right_p2, double bottom_p3, double top_p4, double near_p5, double far_p6);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix is created from the supplied look-at parameters.
 	/// This is useful for constructing a view matrix for a camera or
@@ -206,8 +206,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_look_at({0}, {1}, {2})"
 	/// </summary>
 	public static extern Matrix4 matrix4_look_at(Vector3 eye_p1, Vector3 look_at_p2, Vector3 up_p3);
-	
-	
+
+
 	/// <summary>
 	/// Creates an orthographic projection matrix.
 	/// This is useful to construct a projection matrix for a camera or rendering in general.
@@ -215,8 +215,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_orthographic({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
 	public static extern Matrix4 matrix4_orthographic(double left_p1, double right_p2, double bottom_p3, double top_p4, double near_p5, double far_p6);
-	
-	
+
+
 	/// <summary>
 	/// Creates a perspective projection matrix.
 	/// This is useful to construct a projection matrix for a camera or rendering in general.
@@ -224,24 +224,24 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_perspective({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern Matrix4 matrix4_perspective(double fov_p1, double aspect_p2, double near_p3, double far_p4);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes the same rotation as the quaternion, but does not have any translation (also like the quaternion).
 	/// 
 	/// @CSharpLua.Template = "vmath.matrix4_from_quat({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4_from_quat(Quaternion q_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes a rotation around the axis by the specified angle.
 	/// 
 	/// @CSharpLua.Template = "vmath.matrix4_axis_angle({0}, {1})"
 	/// </summary>
 	public static extern Matrix4 matrix4_axis_angle(Vector3 v_p1, double angle_p2);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes a rotation around the x-axis
 	/// by the specified angle.
@@ -249,8 +249,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_rotation_x({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4_rotation_x(double angle_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes a rotation around the y-axis
 	/// by the specified angle.
@@ -258,8 +258,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_rotation_y({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4_rotation_y(double angle_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes a rotation around the z-axis
 	/// by the specified angle.
@@ -267,8 +267,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_rotation_z({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4_rotation_z(double angle_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes a translation of a point
 	/// in euclidean space.
@@ -276,8 +276,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_translation({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4_translation(Vector3 position_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix describes a translation of a point
 	/// in euclidean space.
@@ -285,8 +285,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.matrix4_translation({0})"
 	/// </summary>
 	public static extern Matrix4 matrix4_translation(Vector4 position_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix is the inverse of the supplied matrix.
 	/// <span class="icon-attention"></span> For ortho-normal matrices, e.g. regular object transformation,
@@ -297,8 +297,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.inv({0})"
 	/// </summary>
 	public static extern Matrix4 inv(Matrix4 m1_p1);
-	
-	
+
+
 	/// <summary>
 	/// The resulting matrix is the inverse of the supplied matrix.
 	/// The supplied matrix has to be an ortho-normal matrix, e.g.
@@ -309,8 +309,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.ortho_inv({0})"
 	/// </summary>
 	public static extern Matrix4 ortho_inv(Matrix4 m1_p1);
-	
-	
+
+
 	/// <summary>
 	/// The returned value is a scalar defined as:
 	/// <code>P &#x22C5; Q = |P| |Q| cos &#x03B8;</code>
@@ -324,8 +324,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
 	public static extern double dot(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// The returned value is a scalar defined as:
 	/// <code>P &#x22C5; Q = |P| |Q| cos &#x03B8;</code>
@@ -339,8 +339,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
 	public static extern double dot(Vector3 v1_p1, Vector4 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// The returned value is a scalar defined as:
 	/// <code>P &#x22C5; Q = |P| |Q| cos &#x03B8;</code>
@@ -354,8 +354,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
 	public static extern double dot(Vector4 v1_p1, Vector3 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// The returned value is a scalar defined as:
 	/// <code>P &#x22C5; Q = |P| |Q| cos &#x03B8;</code>
@@ -369,32 +369,32 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
 	public static extern double dot(Vector4 v1_p1, Vector4 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// Returns the squared length of the supplied vector or quaternion.
 	/// 
 	/// @CSharpLua.Template = "vmath.length_sqr({0})"
 	/// </summary>
 	public static extern double length_sqr(Vector3 v_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns the squared length of the supplied vector or quaternion.
 	/// 
 	/// @CSharpLua.Template = "vmath.length_sqr({0})"
 	/// </summary>
 	public static extern double length_sqr(Vector4 v_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns the squared length of the supplied vector or quaternion.
 	/// 
 	/// @CSharpLua.Template = "vmath.length_sqr({0})"
 	/// </summary>
 	public static extern double length_sqr(Quaternion v_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns the length of the supplied vector or quaternion.
 	/// If you are comparing the lengths of vectors or quaternions, you should compare
@@ -404,8 +404,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.length({0})"
 	/// </summary>
 	public static extern double length(Vector3 v_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns the length of the supplied vector or quaternion.
 	/// If you are comparing the lengths of vectors or quaternions, you should compare
@@ -415,8 +415,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.length({0})"
 	/// </summary>
 	public static extern double length(Vector4 v_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns the length of the supplied vector or quaternion.
 	/// If you are comparing the lengths of vectors or quaternions, you should compare
@@ -426,8 +426,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.length({0})"
 	/// </summary>
 	public static extern double length(Quaternion v_p1);
-	
-	
+
+
 	/// <summary>
 	/// Normalizes a vector, i.e. returns a new vector with the same
 	/// direction as the input vector, but with length 1.
@@ -437,8 +437,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.normalize({0})"
 	/// </summary>
 	public static extern Vector3 normalize(Vector3 v1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Normalizes a vector, i.e. returns a new vector with the same
 	/// direction as the input vector, but with length 1.
@@ -448,8 +448,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.normalize({0})"
 	/// </summary>
 	public static extern Vector4 normalize(Vector4 v1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Normalizes a vector, i.e. returns a new vector with the same
 	/// direction as the input vector, but with length 1.
@@ -459,8 +459,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.normalize({0})"
 	/// </summary>
 	public static extern Quaternion normalize(Quaternion v1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Given two linearly independent vectors P and Q, the cross product,
 	/// P &#x00D7; Q, is a vector that is perpendicular to both P and Q and
@@ -472,8 +472,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.cross({0}, {1})"
 	/// </summary>
 	public static extern Vector3 cross(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// Linearly interpolate between two vectors. The function
 	/// treats the vectors as positions and interpolates between
@@ -484,8 +484,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern Vector3 lerp(double t_p1, Vector3 v1_p2, Vector3 v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Linearly interpolate between two vectors. The function
 	/// treats the vectors as positions and interpolates between
@@ -496,8 +496,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern Vector4 lerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Linearly interpolate between two vectors. The function
 	/// treats the vectors as positions and interpolates between
@@ -508,8 +508,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern Quaternion lerp(double t_p1, Quaternion v1_p2, Quaternion v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Linearly interpolate between two vectors. The function
 	/// treats the vectors as positions and interpolates between
@@ -520,8 +520,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern double lerp(double t_p1, double v1_p2, double v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Spherically interpolates between two vectors. The difference to
 	/// lerp is that slerp treats the vectors as directions instead of
@@ -535,8 +535,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern Vector3 slerp(double t_p1, Vector3 v1_p2, Vector3 v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Spherically interpolates between two vectors. The difference to
 	/// lerp is that slerp treats the vectors as directions instead of
@@ -550,8 +550,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern Vector4 slerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Spherically interpolates between two vectors. The difference to
 	/// lerp is that slerp treats the vectors as directions instead of
@@ -565,8 +565,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
 	public static extern Quaternion slerp(double t_p1, Quaternion v1_p2, Quaternion v2_p3);
-	
-	
+
+
 	/// <summary>
 	/// Calculates the conjugate of a quaternion. The result is a
 	/// quaternion with the same magnitudes but with the sign of
@@ -576,8 +576,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.conj({0})"
 	/// </summary>
 	public static extern Quaternion conj(Quaternion q1_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns a new vector from the supplied vector that is
 	/// rotated by the rotation described by the supplied
@@ -586,8 +586,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.rotate({0}, {1})"
 	/// </summary>
 	public static extern Vector3 rotate(Quaternion q_p1, Vector3 v1_p2);
-	
-	
+
+
 	/// <summary>
 	/// Calculates the extent the projection of the first vector onto the second.
 	/// The returned value is a scalar p defined as:
@@ -597,8 +597,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.project({0}, {1})"
 	/// </summary>
 	public static extern double project(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// Performs an element wise multiplication between two vectors of the same type
 	/// The returned value is a vector defined as (e.g. for a vector3):
@@ -607,8 +607,8 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
 	/// </summary>
 	public static extern Vector3 mul_per_elem(Vector3 v1_p1, Vector3 v2_p2);
-	
-	
+
+
 	/// <summary>
 	/// Performs an element wise multiplication between two vectors of the same type
 	/// The returned value is a vector defined as (e.g. for a vector3):
@@ -617,7 +617,7 @@ public static class Vmath
 	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
 	/// </summary>
 	public static extern Vector4 mul_per_elem(Vector4 v1_p1, Vector4 v2_p2);
-	
-	
+
+
 	#endregion Defold API
 }

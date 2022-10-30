@@ -14,7 +14,6 @@ namespace types
 		/// </summary>
 		public extern Vector4();
 
-
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.vector4({0},{1},{2},{3})"
 		/// </summary>
@@ -32,7 +31,6 @@ namespace types
 		/// </summary>
 		public static extern Vector4 operator -(Vector4 a, Vector4 b);
 
-
 		/// <summary>
 		/// @CSharpLua.Template = "-{0}"
 		/// </summary>
@@ -44,12 +42,10 @@ namespace types
 		/// </summary>
 		public static extern Vector4 operator *(Vector4 a, float b);
 
-
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
 		public static extern Vector4 operator *(float a, Vector4 b);
-
 
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
@@ -61,7 +57,6 @@ namespace types
 		/// @CSharpLua.Template = "{0} / {1}"
 		/// </summary>
 		public static extern Vector4 operator /(Vector4 a, float b);
-
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.length({this})"

@@ -7,8 +7,8 @@ namespace types
 	public class LuaArray<TValue> : LuaTableOf<int, TValue>
 	{
 		/// <summary>
-/// @CSharpLua.Template = "{}"
-/// </summary> 
-public extern LuaArray();
+		/// @CSharpLua.Template = "{}"
+		/// </summary> 
+		public extern LuaArray();
 	}
 }
