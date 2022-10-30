@@ -48,7 +48,7 @@ namespace support
 
 		
 		
-		public static TComponent At<TComponent>(ComponentLocator locator)
+		public static TComponent At<TComponent>(Locator locator)
 			where TComponent : IComponent, new()
 		{
 			if (builtInType.IsAssignableFrom(typeof(TComponent)))
@@ -71,7 +71,7 @@ namespace support
 		/// <returns></returns>
 		/// <exception cref="InvalidCastException"></exception>
 		/// <exception cref="KeyNotFoundException"></exception>
-		private static TComponent AtUser<TComponent>(ComponentLocator locator)
+		private static TComponent AtUser<TComponent>(Locator locator)
 			where TComponent : IComponent, new()
 		{
 			var url = locator.FetchUrl();
@@ -105,7 +105,7 @@ namespace support
 		/// <returns></returns>
 		/// <exception cref="InvalidCastException"></exception>
 		/// <exception cref="KeyNotFoundException"></exception>
-		private static TComponent AtBuiltIn<TComponent>(ComponentLocator locator)
+		private static TComponent AtBuiltIn<TComponent>(Locator locator)
 			where TComponent : IComponent, new()
 		{
 			var url = locator.FetchUrl();

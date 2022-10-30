@@ -14,7 +14,7 @@ namespace support
 	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
 		private readonly Url _gameObjectUrl;
-		public Url Locator { get; }
+		public Url LocatorUrl { get; }
 		protected bool IsInputFocusHeld { get; private set; }
 
 
@@ -25,7 +25,7 @@ namespace support
 			{
 				if (_gameObjectReference == null)
 				{
-					_gameObjectReference = new GameObjectReference(Msg.url(Locator.socket, Locator.path));
+					_gameObjectReference = new GameObjectReference(Msg.url(LocatorUrl.socket, LocatorUrl.path));
 				}
 
 				return _gameObjectReference;
@@ -37,7 +37,7 @@ namespace support
 		
 		protected GameObjectScript()
 		{
-			Locator = Msg.url();
+			LocatorUrl = Msg.url();
 		}
 
 
@@ -74,7 +74,7 @@ namespace support
 		/// </summary>
 		protected virtual void final()
 		{
-			Component.Unregister(Locator);
+			Component.Unregister(LocatorUrl);
 		}
 
 

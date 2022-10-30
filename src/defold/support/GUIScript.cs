@@ -13,12 +13,12 @@ namespace support
 	[DoNotGenerate]
 	public abstract class GUIScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
-		public Url Locator { get; }
+		public Url LocatorUrl { get; }
 
 
 		protected GUIScript()
 		{
-			Locator = Msg.url();
+			LocatorUrl = Msg.url();
 		}
 
 

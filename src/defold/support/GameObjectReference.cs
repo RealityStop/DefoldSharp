@@ -10,13 +10,13 @@ namespace support
 	{
 		public bool isDestroyed = false;
 		
-		public GameObjectReference(Url locator)
+		public GameObjectReference(Url locatorUrl)
 		{
-			Locator = locator;
+			LocatorUrl = locatorUrl;
 		}
 
 
-		public Url Locator { get; }
+		public Url LocatorUrl { get; }
 		
 		
 		
@@ -24,11 +24,11 @@ namespace support
 		{
 			get
 			{
-				return Go.get_position(Locator);
+				return Go.get_position(LocatorUrl);
 			}
 			set
 			{
-				Go.set_position(value, Locator);
+				Go.set_position(value, LocatorUrl);
 			}
 		}
 
@@ -39,11 +39,11 @@ namespace support
 		{
 			get
 			{
-				return Go.get_rotation(Locator);
+				return Go.get_rotation(LocatorUrl);
 			}
 			set
 			{
-				Go.set_rotation(value, Locator);
+				Go.set_rotation(value, LocatorUrl);
 			}
 		}
 
@@ -52,11 +52,11 @@ namespace support
 		{
 			get
 			{
-				return Go.get_scale(Locator);
+				return Go.get_scale(LocatorUrl);
 			}
 			set
 			{
-				Go.set_scale(value, Locator);
+				Go.set_scale(value, LocatorUrl);
 			}
 		}
 		
@@ -64,7 +64,7 @@ namespace support
 		{
 			get
 			{
-				return Go.get_scale_uniform(Locator);
+				return Go.get_scale_uniform(LocatorUrl);
 			}
 		}
 		
@@ -73,7 +73,7 @@ namespace support
 		{
 			get
 			{
-				return Go.get_world_position(Locator);
+				return Go.get_world_position(LocatorUrl);
 			}
 		}
 		
@@ -81,7 +81,7 @@ namespace support
 		{
 			get
 			{
-				return Go.get_world_rotation(Locator);
+				return Go.get_world_rotation(LocatorUrl);
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace support
 		{
 			get
 			{
-				return Go.get_world_scale(Locator);
+				return Go.get_world_scale(LocatorUrl);
 			}
 		}
 
@@ -97,7 +97,7 @@ namespace support
 		{
 			get
 			{
-				return Go.get_world_scale_uniform(Locator);
+				return Go.get_world_scale_uniform(LocatorUrl);
 			}
 		}
 
@@ -106,44 +106,63 @@ namespace support
 		{
 			get
 			{
-				return Go.get_world_transform(Locator);
+				return Go.get_world_transform(LocatorUrl);
 			}
 		}
 
 
 		public T GetProperty<T>(__Hash2 property) where T : unmanaged, IComparable, IFormattable, IConvertible, IComparable<T>, IEquatable<T>
 		{
-			return (dynamic)Go.get(Locator, property.ToHash());
+			return (dynamic)Go.get(LocatorUrl, property.ToHash());
 		}
 		public string GetProperty<T>(__Hash3 property) where T : IComparable, IEnumerable, IConvertible, IEnumerable<char>, IComparable<String>, IEquatable<String>
 		{
-			return (dynamic)Go.get(Locator, property.ToHash());
+			return (dynamic)Go.get(LocatorUrl, property.ToHash());
 		}
 		public T GetProperty<T>(Hash property) where T:ILuaType
 		{
-			return (dynamic)Go.get(Locator, property);
+			return (dynamic)Go.get(LocatorUrl, property);
 		}
 		
 		public void SetProperty<T>(__Hash2 property, T value) where T : unmanaged, IComparable, IFormattable, IConvertible, IComparable<T>, IEquatable<T>
 		{
-			Go.set(Locator, property.ToHash(), (dynamic)value);
+			Go.set(LocatorUrl, property.ToHash(), (dynamic)value);
 		}
 		public void SetProperty<T>(__Hash3 property, string value) where T : IComparable, IEnumerable, IConvertible, IEnumerable<char>, IComparable<String>, IEquatable<String>
 		{
-			Go.set(Locator, property.ToHash(), value);
+			Go.set(LocatorUrl, property.ToHash(), value);
 		}
 		public void SetProperty<T>(Hash property, T value) where T:ILuaType
 		{
-			Go.set(Locator, property, (dynamic)value);
+			Go.set(LocatorUrl, property, (dynamic)value);
 		}
 
 
 		public void Delete()
 		{
 			isDestroyed = true;
-			Go.delete(Locator);
+			Go.delete(LocatorUrl);
 		}
 		
+		/// <summary>
+		/// A convenience shortcut for Component.At that handles fetching the Component relative
+		/// to this gameobject.
+		/// </summary>
+		/// <param name="hash"></param>
+		/// <typeparam name="T"></typeparam>
+		/// <returns></returns>
+		public T Component<T>(string hash) where T : IComponent, new()
+		{
+			var targetUrl = new Url();
+			targetUrl.socket = LocatorUrl.socket;
+			targetUrl.path = LocatorUrl.path;
+			targetUrl.fragment = hash;
+
+			return support.Component.At<T>(Locator.AtUrl(targetUrl));
+		}
+		
+		
 		//TODO:Animations
+
 	}
 }

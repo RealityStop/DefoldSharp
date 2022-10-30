@@ -4,6 +4,6 @@ namespace support
 {
 	public interface IComponent
 	{
-		Url Locator { get; }
+		Url LocatorUrl { get; }
 	}
 }
