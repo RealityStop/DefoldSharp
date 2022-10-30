@@ -6,7 +6,7 @@ using types;
 /// Sound API documentation
 /// 
 /// </summary>
-public static class Sound
+public class Sound : BuiltInComponentBase
 {
 	#region Defold API
 	#region Messages
