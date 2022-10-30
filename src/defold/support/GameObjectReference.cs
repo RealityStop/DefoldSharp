@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Xml.Schema;
 using types;
 
@@ -113,9 +115,9 @@ namespace support
 		{
 			return (dynamic)Go.get(Locator, property.ToHash());
 		}
-		public string GetProperty(Hash property)
+		public string GetProperty<T>(__Hash3 property) where T : IComparable, IEnumerable, IConvertible, IEnumerable<char>, IComparable<String>, IEquatable<String>
 		{
-			return (dynamic)Go.get(Locator, property);
+			return (dynamic)Go.get(Locator, property.ToHash());
 		}
 		public T GetProperty<T>(Hash property) where T:ILuaType
 		{
@@ -126,9 +128,9 @@ namespace support
 		{
 			Go.set(Locator, property.ToHash(), (dynamic)value);
 		}
-		public void SetProperty(Hash property, string value)
+		public void SetProperty<T>(__Hash3 property, string value) where T : IComparable, IEnumerable, IConvertible, IEnumerable<char>, IComparable<String>, IEquatable<String>
 		{
-			Go.set(Locator, property, value);
+			Go.set(Locator, property.ToHash(), value);
 		}
 		public void SetProperty<T>(Hash property, T value) where T:ILuaType
 		{
