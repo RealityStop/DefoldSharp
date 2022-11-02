@@ -1,4 +1,4 @@
-using types;
+﻿using types;
 
 namespace support
 {
@@ -17,6 +17,8 @@ namespace support
 		public Url LocatorUrl { get; }
 		protected bool IsInputFocusHeld { get; private set; }
 
+		
+		
 
 		private GameObjectReference _gameObjectReference;
 		public GameObjectReference Gameobject
@@ -39,8 +41,9 @@ namespace support
 		{
 			LocatorUrl = Msg.url();
 		}
-
-
+		
+		
+		
 		protected void RequestInput()
 		{
 			InputHelpers.RequestInput();
