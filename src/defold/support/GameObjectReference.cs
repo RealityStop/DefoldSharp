@@ -8,6 +8,9 @@ namespace support
 {
 	public class GameObjectReference
 	{
+		
+		public static GameObjectReference CurrentGameObject { get; set; }
+		
 		public bool isDestroyed = false;
 		
 		public GameObjectReference(Url locatorUrl)
@@ -24,26 +27,36 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_position();
 				return Go.get_position(LocatorUrl);
 			}
 			set
 			{
-				Go.set_position(value, LocatorUrl);
+				if (CurrentGameObject == this)
+					Go.set_position(value);
+				else
+					Go.set_position(value, LocatorUrl);
 			}
 		}
 
 
-		
+
 
 		public Quaternion Rotation
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_rotation();
 				return Go.get_rotation(LocatorUrl);
 			}
 			set
 			{
-				Go.set_rotation(value, LocatorUrl);
+				if (CurrentGameObject == this)
+					Go.set_rotation(value);
+				else
+					Go.set_rotation(value, LocatorUrl);
 			}
 		}
 
@@ -52,10 +65,15 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_scale();
 				return Go.get_scale(LocatorUrl);
 			}
 			set
 			{
+				if (CurrentGameObject == this)
+					Go.set_scale(value);
+				else
 				Go.set_scale(value, LocatorUrl);
 			}
 		}
@@ -64,6 +82,8 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_scale_uniform();
 				return Go.get_scale_uniform(LocatorUrl);
 			}
 		}
@@ -73,6 +93,8 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_world_position();
 				return Go.get_world_position(LocatorUrl);
 			}
 		}
@@ -81,6 +103,8 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_world_rotation();
 				return Go.get_world_rotation(LocatorUrl);
 			}
 		}
@@ -89,6 +113,8 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_world_scale();
 				return Go.get_world_scale(LocatorUrl);
 			}
 		}
@@ -97,6 +123,8 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_world_scale_uniform();
 				return Go.get_world_scale_uniform(LocatorUrl);
 			}
 		}
@@ -106,6 +134,8 @@ namespace support
 		{
 			get
 			{
+				if (CurrentGameObject == this)
+					return Go.get_world_transform();
 				return Go.get_world_transform(LocatorUrl);
 			}
 		}

@@ -25,8 +25,34 @@ public static class Math
 	/// 
 	/// @CSharpLua.Template = "math.random()"
 	/// </summary>
-	public static extern void random();
+	public static extern float random();
 
+	
+	/// <summary>
+	/// @CSharpLua.Template = "math.random({0})"
+	/// </summary>
+	public static extern float random(double m);
 
+	
+	/// <summary>
+	/// @CSharpLua.Template = "math.random({0}, {1})"
+	/// </summary>
+	public static extern float random(double m, double n);
+	
+	
+	/// <summary>
+	/// @CSharpLua.Template = "math.random({0})"
+	/// </summary>
+	public static extern int random(int m);
+
+	
+	/// <summary>
+	/// @CSharpLua.Template = "math.random({0}, {1})"
+	/// </summary>
+	public static extern int random(int m, int n);
+	
 	#endregion Defold API
+	
+	
+	
 }

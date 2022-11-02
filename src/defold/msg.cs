@@ -8,6 +8,8 @@ using types;
 /// </summary>
 public static class Msg
 {
+	public const string DefaultSocket = null;
+
 	#region Defold API
 	/// <summary>
 	/// This is equivalent to <code>msg.url(nil)</code> or <code>msg.url("#")</code>, which creates an url to the current

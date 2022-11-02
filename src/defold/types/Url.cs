@@ -23,5 +23,13 @@ namespace types
 		public Url(string url)
 		{
 		}
+		
+		
+		/// <summary>
+		/// @CSharpLua.Template = "msg.url({0},{1},{2})"
+		/// </summary>
+		public Url(string socket, string path, string fragment)
+		{
+		}
 	}
 }
