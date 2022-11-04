@@ -276,6 +276,12 @@ public static class Math
 	/// </summary>
 	public static extern int random(int m, int n);
 
+	
+	/// <summary>
+	/// @CSharpLua.Template = "math.randomseed({0})"
+	/// </summary>
+	public static extern void randomseed(double x);
+	
 
 	/// <summary>
 	/// @CSharpLua.Template = "math.sin({0})"
