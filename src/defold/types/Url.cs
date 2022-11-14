@@ -12,7 +12,7 @@ namespace types
 
 		/// <summary>
 		/// @CSharpLua.Template = "msg.url()"
-		   /// </summary>
+		/// </summary>
 		public Url()
 		{
 		}
@@ -23,8 +23,8 @@ namespace types
 		public Url(string url)
 		{
 		}
-		
-		
+
+
 		/// <summary>
 		/// @CSharpLua.Template = "msg.url({0},{1},{2})"
 		/// </summary>

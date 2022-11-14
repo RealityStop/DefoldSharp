@@ -462,8 +462,6 @@ public class CollectionFactory : BuiltInComponentBase
 	#endregion Defold API
 
 
-
-
 	public readonly struct CollectionFactoryCreateResult
 	{
 	   public readonly Hash RelativeHash;

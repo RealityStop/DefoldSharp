@@ -384,6 +384,7 @@ public class Factory : BuiltInComponentBase
 
 	#endregion Defold API
 
+
 	/// <summary>
 	/// Calling this function when the factory is not marked as dynamic loading always returns
 	/// factory.STATUS_LOADED.
