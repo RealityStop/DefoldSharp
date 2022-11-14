@@ -6,77 +6,83 @@ namespace types
 	/// </summary>
 	public class Vector4 : ILuaType
 	{
-		public float x, y, u, v;
+		public double x, y, u, v;
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "vmath.vector4()"
+		///     @CSharpLua.Template = "vmath.vector4()"
 		/// </summary>
 		public extern Vector4();
 
+
 		/// <summary>
-		/// @CSharpLua.Template = "vmath.vector4({0},{1},{2},{3})"
+		///     @CSharpLua.Template = "vmath.vector4({0},{1},{2},{3})"
 		/// </summary>
-		public extern Vector4(float x, float y, float u, float v);
+		public extern Vector4(double x, double y, double u, double v);
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "{0} + {1}"
+		///     @CSharpLua.Template = "{0} + {1}"
 		/// </summary>
 		public static extern Vector4 operator +(Vector4 a, Vector4 b);
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "{0} - {1}"
+		///     @CSharpLua.Template = "{0} - {1}"
 		/// </summary>
 		public static extern Vector4 operator -(Vector4 a, Vector4 b);
 
+
 		/// <summary>
-		/// @CSharpLua.Template = "-{0}"
+		///     @CSharpLua.Template = "-{0}"
 		/// </summary>
 		public static extern Vector4 neg(Vector4 a);
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "{0} * {1}"
+		///     @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Vector4 operator *(Vector4 a, float b);
+		public static extern Vector4 operator *(Vector4 a, double b);
+
 
 		/// <summary>
-		/// @CSharpLua.Template = "{0} * {1}"
+		///     @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Vector4 operator *(float a, Vector4 b);
+		public static extern Vector4 operator *(double a, Vector4 b);
+
 
 		/// <summary>
-		/// @CSharpLua.Template = "{0} * {1}"
+		///     @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
 		public static extern Vector4 operator *(Vector4 a, Vector4 b);
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "{0} / {1}"
+		///     @CSharpLua.Template = "{0} / {1}"
 		/// </summary>
-		public static extern Vector4 operator /(Vector4 a, float b);
+		public static extern Vector4 operator /(Vector4 a, double b);
+
 
 		/// <summary>
-		/// @CSharpLua.Template = "vmath.length({this})"
+		///     @CSharpLua.Template = "vmath.length({this})"
 		/// </summary>
-		public static extern float Magnitude();
-		
+		public static extern double Magnitude();
+
+
 		/// <summary>
-		/// @CSharpLua.Template = "vmath.length_sqr({this})"
+		///     @CSharpLua.Template = "vmath.length_sqr({this})"
 		/// </summary>
 		public extern double MagnitudeSqr();
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "vmath.mul_per_elem({this},{0})"
+		///     @CSharpLua.Template = "vmath.mul_per_elem({this},{0})"
 		/// </summary>
 		public extern Vector4 MultiplyByElement(Vector4 other);
 
 
 		/// <summary>
-		/// @CSharpLua.Template = "vmath.normalize({this})"
+		///     @CSharpLua.Template = "vmath.normalize({this})"
 		/// </summary>
 		public extern Vector4 Normalize();
 	}
