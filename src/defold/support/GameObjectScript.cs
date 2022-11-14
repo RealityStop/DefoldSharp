@@ -15,10 +15,7 @@ namespace support
 	{
 		private readonly Url _gameObjectUrl;
 		public Url LocatorUrl { get; }
-		protected bool IsInputFocusHeld { get; private set; }
 
-		
-		
 
 		private GameObjectReference _gameObjectReference;
 		public GameObjectReference Gameobject
@@ -35,28 +32,11 @@ namespace support
 		}
 		
 		
-		
-		
 		protected GameObjectScript()
 		{
 			LocatorUrl = Msg.url();
 		}
 		
-		
-		
-		protected void RequestInput()
-		{
-			InputHelpers.RequestInput();
-			IsInputFocusHeld = true;
-		}
-
-
-		protected void ReleaseInput()
-		{
-			IsInputFocusHeld = false;
-			InputHelpers.ReleaseInput();
-		}
-
 
 		/// <summary>
 		///     Called when a script component is initialized.

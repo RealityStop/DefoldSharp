@@ -78,7 +78,7 @@ namespace support
 		/// <param name="message_id">id of the received message</param>
 		/// <param name="message">a table containing the message data</param>
 		/// <param name="sender">address of the sender</param>
-		protected virtual void on_message(Hash message_id, object message, object sender)
+		protected virtual void on_message(Hash message_id, object message, Hash sender)
 		{
 		}
 
@@ -113,6 +113,20 @@ namespace support
 		/// </summary>
 		protected virtual void on_reload()
 		{
+		}
+		
+		
+		/// <summary>
+		/// @CSharpLua.Template = "gui.get_node({0})"
+		/// </summary>
+		protected extern Node GetNode(Hash id);
+	
+
+		protected TNode GetNode<TNode>(Hash id) where TNode : NodeProxy, new()
+		{
+			var node = new TNode();
+			node.__assignproxy__(Gui.get_node(id));
+			return node;
 		}
 	}
 }

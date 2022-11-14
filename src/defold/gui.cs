@@ -1498,4 +1498,18 @@ public static class Gui
 
 
 	#endregion Defold API
+
+
+	/// <summary>
+	/// @CSharpLua.Template = "gui.get_node({0})"
+	/// </summary>
+	public static extern Node GetNode(Hash id);
+	
+
+	public static TNode GetNode<TNode>(Hash id) where TNode : NodeProxy, new()
+	{
+		var node = new TNode();
+		node.__assignproxy__(Gui.get_node(id));
+		return node;
+	}
 }
