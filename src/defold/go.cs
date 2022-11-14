@@ -1050,6 +1050,1086 @@ public static class Go
 
 
 	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(string url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Hash url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, string property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, double to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+
+
+	/// <summary>
+	/// This is only supported for numerical properties. If the node property is already being
+	/// animated, that animation will be canceled and replaced by the new one.
+	/// If a <code>complete_function</code> (lua function) is specified, that function will be called when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced together. See the examples for more information.
+	/// <span class="icon-attention"></span> If you call <code>go.animate()</code> from a game object's <code>final()</code> function,
+	/// any passed <code>complete_function</code> will be ignored and never called upon animation completion.
+	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how
+	/// them.
+	/// 
+	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Url url_p1, Hash property_p2, PlaybackMode playback_p3, Quaternion to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+
+
+	/// <summary>
 	/// By calling this function, all or specified stored property animations of the game object or component will be canceled.
 	/// See the <a href="/manuals/properties">properties guide</a> for which properties can be animated and the <a href="/manuals/animation">animation guide</a> for how to animate them.
 	/// 
