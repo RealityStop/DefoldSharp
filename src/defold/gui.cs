@@ -95,6 +95,270 @@ public static class Gui
 
 
 	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, double to_p3, Easing easing_p4, double duration_p5);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, double to_p3, Easing easing_p4, double duration_p5, double delay_p6);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, double to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, double to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
+
+
+	/// <summary>
+	/// This starts an animation of a node property according to the specified parameters.
+	/// If the node property is already being animated, that animation will be canceled and
+	/// replaced by the new one. Note however that several different node properties
+	/// can be animated simultaneously. Use <code>gui.cancel_animation</code> to stop the animation
+	/// before it has completed.
+	/// Composite properties of type vector3, vector4 or quaternion
+	/// also expose their sub-components (x, y, z and w).
+	/// You can address the components individually by suffixing the name with a dot '.'
+	/// and the name of the component.
+	/// For instance, <code>"position.x"</code> (the position x coordinate) or <code>"color.w"</code>
+	/// (the color alpha value).
+	/// If a <code>complete_function</code> (Lua function) is specified, that function will be called
+	/// when the animation has completed.
+	/// By starting a new animation in that function, several animations can be sequenced
+	/// together. See the examples below for more information.
+	/// 
+	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
+	/// </summary>
+	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
+
+
+	/// <summary>
 	/// If an animation of the specified node is currently running (started by <code>gui.animate</code>), it will immediately be canceled.
 	/// 
 	/// @CSharpLua.Template = "gui.cancel_animation({0}, {1})"
