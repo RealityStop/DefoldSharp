@@ -95,7 +95,7 @@ namespace support
 		/// <param name="message_id">id of the received message</param>
 		/// <param name="message">a table containing the message data</param>
 		/// <param name="sender">address of the sender</param>
-		protected virtual void on_message(Hash message_id, object message, object sender)
+		protected virtual void on_message(Hash message_id, object message, Hash sender)
 		{
 		}
 

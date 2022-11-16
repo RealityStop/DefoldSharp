@@ -84,7 +84,7 @@ namespace types
 		      //Doesn't actually get called.  Instead the template is injected.  But we can't extern operators.
 		      return (dynamic)null;
 		   }
-		   
+
 
 		   /// <summary>
 		   /// @CSharpLua.Template = "hash({0})"
