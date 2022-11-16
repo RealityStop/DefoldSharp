@@ -46,7 +46,7 @@ Go to [releases](https://github.com/RealityStop/DefoldSharp/releases) and follow
 
 
 # Alpha
-Alpha 2 has been released.  The goal for this Alpha is the "minimum viable product" of being able to take a project from C# to Defold.  As a benchmark, the War Battles tutorial was used to ensure that a wide variety of requirements were met (messages, properties, user interface, custom message passing).  You can follow the examples link below to see how that was accomplished.
+The alpha has been released.  The goal for this Alpha is the "minimum viable product" of being able to take a project from C# to Defold.  As a benchmark, the War Battles tutorial was used to ensure that a wide variety of requirements were met (messages, properties, user interface, custom message passing).  You can follow the examples link below to see how that was accomplished.
 
 ## Alpha limitations
 
@@ -68,7 +68,7 @@ The future of DefoldSharp is planned to be an old school `several alphas -> seve
 Here's a short glimpse into the immediate future  (all are subject to change, and may include features not mentioned here:
 
 ## Upcoming Alphas:
-### Alpha 3
- * ✅ Fixed comments on methods.
-
+### Alpha 4
+ * Adjust OOP reference tracking
+ * Additional Component OOP API
 
