@@ -1,5 +1,4 @@
 using System;
-using support;
 
 namespace types
 {
@@ -8,43 +7,43 @@ namespace types
 	public class Node
 	{
 		/// <summary>
-		/// @CSharpLua.Template = "gui.set_enabled({this}, {0})"
-		/// </summary>
-		public extern void SetEnabled(bool enabled);
-	}
-
-	public class NodeProxy
-	{
-		private Node _proxy;
-
-
-		internal void __assignproxy__(Node proxy)
-		{
-			_proxy = proxy;
-		}
-		
-		public static implicit operator Node(NodeProxy p)
-		{
-			return p._proxy;
-		}
-	}
-	
-	public class TextNode : NodeProxy
-	{
-		public string GetText()
-		{
-			return Gui.get_text(this);
+		    /// @CSharpLua.Template = "gui.set_enabled({this}, {0})"
+		    /// </summary>
+		    public extern void SetEnabled(bool enabled);
 		}
 
-
-		public void SetText(string text)
+		public class NodeProxy
 		{
-			Gui.set_text(this, text);
-		}
-	}
+		    private Node _proxy;
 
-	public class ButtonNode : NodeProxy
-	{
-		
+
+		    internal void __assignproxy__(Node proxy)
+		    {
+		        _proxy = proxy;
+		    }
+		    
+		    public static implicit operator Node(NodeProxy p)
+		    {
+		        return p._proxy;
+		    }
+		}
+
+		public class TextNode : NodeProxy
+		{
+		    public string GetText()
+		    {
+		        return Gui.get_text(this);
+		    }
+
+
+		    public void SetText(string text)
+		    {
+		        Gui.set_text(this, text);
+		    }
+		}
+
+		public class ButtonNode : NodeProxy
+		{
+		 
 	}
 }
