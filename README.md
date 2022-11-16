@@ -46,7 +46,7 @@ Go to [releases](https://github.com/RealityStop/DefoldSharp/releases) and follow
 
 
 # Alpha
-Alpha 2 has been released.  The goal for this Alpha is the "minimum viable product" of being able to take a project from C# to Defold.  As a benchmark, the War Battles tutorial was used to ensure that a wide variety of requirements were met (messages, properties, user interface, custom message passing).  You can follow the examples link below to see how that was accomplished.
+The alpha has been released.  The goal for this Alpha is the "minimum viable product" of being able to take a project from C# to Defold.  As a benchmark, the War Battles tutorial was used to ensure that a wide variety of requirements were met (messages, properties, user interface, custom message passing).  You can follow the examples link below to see how that was accomplished.
 
 ## Alpha limitations
 
