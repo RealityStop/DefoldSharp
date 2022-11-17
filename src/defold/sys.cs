@@ -195,6 +195,14 @@ public static class Sys
 	/// <summary>
 	/// Returns a table with system information.
 	/// 
+	/// @CSharpLua.Template = "sys.get_sys_info()"
+	/// </summary>
+	public static extern ILuaTable get_sys_info();
+
+
+	/// <summary>
+	/// Returns a table with system information.
+	/// 
 	/// @CSharpLua.Template = "sys.get_sys_info({0})"
 	/// </summary>
 	public static extern ILuaTable get_sys_info(ILuaTable options_p1);

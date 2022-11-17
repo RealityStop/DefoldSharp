@@ -115,6 +115,32 @@ public class CollectionProxy : BuiltInComponentBase
 	#endregion Messages
 
 
+	/// <summary>
+	/// return an indexed table of resources for a collection proxy. Each
+	/// entry is a hexadecimal string that represents the data of the specific
+	/// resource. This representation corresponds with the filename for each
+	/// individual resource that is exported when you bundle an application with
+	/// LiveUpdate functionality.
+	/// 
+	/// @CSharpLua.Template = "collectionproxy.get_resources({0})"
+	/// </summary>
+	public static extern ILuaTable get_resources(Url collectionproxy_p1);
+
+
+	/// <summary>
+	/// return an array of missing resources for a collection proxy. Each
+	/// entry is a hexadecimal string that represents the data of the specific
+	/// resource. This representation corresponds with the filename for each
+	/// individual resource that is exported when you bundle an application with
+	/// LiveUpdate functionality. It should be considered good practise to always
+	/// check whether or not there are any missing resources in a collection proxy
+	/// before attempting to load the collection proxy.
+	/// 
+	/// @CSharpLua.Template = "collectionproxy.missing_resources({0})"
+	/// </summary>
+	public static extern ILuaTable missing_resources(Url collectionproxy_p1);
+
+
 	#endregion Defold API
 
 
