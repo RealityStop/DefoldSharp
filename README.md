@@ -6,7 +6,7 @@ C# support for the Defold game engine.  This is implemented as a transpiler that
 
 > ⚠️ This project is still in Alpha.  See #roadmap for the current issues and features planned before this should be considered for production use.
 
-During Alpha, only the current Defold version has integrations generated.  This is currently Defold 1.3.6.
+During Alpha, only the current Defold version has integrations generated.  This is currently Defold 1.4.0.
 
 ## Overview
 
@@ -68,7 +68,5 @@ The future of DefoldSharp is planned to be an old school `several alphas -> seve
 Here's a short glimpse into the immediate future  (all are subject to change, and may include features not mentioned here:
 
 ## Upcoming Alphas:
-### Alpha 4
- * Adjust OOP reference tracking
- * Additional Component OOP API
-
+### Alpha 5
+ * TBD
