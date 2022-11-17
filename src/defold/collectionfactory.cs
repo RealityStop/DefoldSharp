@@ -16,8 +16,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.get_status()"
 	/// </summary>
 	public static extern FactoryStatus get_status();
-	
-	
+
+
 	/// <summary>
 	/// This returns status of the collection factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns COMP_COLLECTION_FACTORY_STATUS_LOADED.
@@ -25,8 +25,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.get_status({0})"
 	/// </summary>
 	public static extern FactoryStatus get_status(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This returns status of the collection factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns COMP_COLLECTION_FACTORY_STATUS_LOADED.
@@ -34,8 +34,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.get_status({0})"
 	/// </summary>
 	public static extern FactoryStatus get_status(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This returns status of the collection factory.
 	/// Calling this function when the factory is not marked as dynamic loading always returns COMP_COLLECTION_FACTORY_STATUS_LOADED.
@@ -43,8 +43,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.get_status({0})"
 	/// </summary>
 	public static extern FactoryStatus get_status(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with collectionfactory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -52,8 +52,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.unload()"
 	/// </summary>
 	public static extern void unload();
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with collectionfactory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -61,8 +61,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.unload({0})"
 	/// </summary>
 	public static extern void unload(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with collectionfactory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -70,8 +70,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.unload({0})"
 	/// </summary>
 	public static extern void unload(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// This decreases the reference count for each resource loaded with collectionfactory.load. If reference is zero, the resource is destroyed.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -79,8 +79,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.unload({0})"
 	/// </summary>
 	public static extern void unload(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -88,8 +88,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load()"
 	/// </summary>
 	public static extern void load();
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -97,8 +97,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load({0})"
 	/// </summary>
 	public static extern void load(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -106,8 +106,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load({0}, {1})"
 	/// </summary>
 	public static extern void load(string url_p1, Action<object,Url,bool> complete_function_p2);
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -115,8 +115,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load({0})"
 	/// </summary>
 	public static extern void load(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -124,8 +124,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load({0}, {1})"
 	/// </summary>
 	public static extern void load(Hash url_p1, Action<object,Url,bool> complete_function_p2);
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -133,8 +133,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load({0})"
 	/// </summary>
 	public static extern void load(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// Resources loaded are referenced by the collection factory component until the existing (parent) collection is destroyed or collectionfactory.unload is called.
 	/// Calling this function when the factory is not marked as dynamic loading does nothing.
@@ -142,8 +142,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.load({0}, {1})"
 	/// </summary>
 	public static extern void load(Url url_p1, Action<object,Url,bool> complete_function_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -163,8 +163,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0})"
 	/// </summary>
 	public static extern ILuaTable create(string url_p1);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -184,8 +184,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1})"
 	/// </summary>
 	public static extern ILuaTable create(string url_p1, Vector3 position_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -205,8 +205,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2})"
 	/// </summary>
 	public static extern ILuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -226,8 +226,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern ILuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -247,8 +247,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern ILuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -268,8 +268,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0})"
 	/// </summary>
 	public static extern ILuaTable create(Hash url_p1);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -289,8 +289,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1})"
 	/// </summary>
 	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -310,8 +310,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2})"
 	/// </summary>
 	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -331,8 +331,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -352,8 +352,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -373,8 +373,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0})"
 	/// </summary>
 	public static extern ILuaTable create(Url url_p1);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -394,8 +394,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1})"
 	/// </summary>
 	public static extern ILuaTable create(Url url_p1, Vector3 position_p2);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -415,8 +415,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2})"
 	/// </summary>
 	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -436,8 +436,8 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
-	
-	
+
+
 	/// <summary>
 	/// The URL identifies the collectionfactory component that should do the spawning.
 	/// Spawning is instant, but spawned game objects get their first update calls the following frame. The supplied parameters for position, rotation and scale
@@ -457,29 +457,27 @@ public class CollectionFactory : BuiltInComponentBase
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
 	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
-	
-	
+
+
 	#endregion Defold API
-	
-	
-	
-	
-	public struct CollectionFactoryCreateResult
+
+
+	public readonly struct CollectionFactoryCreateResult
 	{
 	   public readonly Hash RelativeHash;
 	   public readonly Hash UniqueHash;
-	
-	
+
+
 	   public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)
 	   {
 	      RelativeHash = relativeHash;
 	      UniqueHash = uniqueHash;
 	   }
 	}
-	
+
 	public FactoryStatus Status => get_status(this);
-	
-	
+
+
 	public LuaTableOf<Hash, Hash> Create()
 	{
 	   return (dynamic)create(this);

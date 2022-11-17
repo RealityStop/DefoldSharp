@@ -18,8 +18,8 @@ public static class Builtins
 	/// @CSharpLua.Template = "builtins.pprint({0})"
 	/// </summary>
 	public static extern void pprint(LuaType v_p1);
-	
-	
+
+
 	/// <summary>
 	/// All ids in the engine are represented as hashes, so a string needs to be hashed
 	/// before it can be compared with an id.
@@ -27,8 +27,8 @@ public static class Builtins
 	/// @CSharpLua.Template = "builtins.hash({0})"
 	/// </summary>
 	public static extern Hash hash(string s_p1);
-	
-	
+
+
 	/// <summary>
 	/// Returns a hexadecimal representation of a hash value.
 	/// The returned string is always padded with leading zeros.
@@ -36,7 +36,7 @@ public static class Builtins
 	/// @CSharpLua.Template = "builtins.hash_to_hex({0})"
 	/// </summary>
 	public static extern string hash_to_hex(Hash h_p1);
-	
-	
+
+
 	#endregion Defold API
 }

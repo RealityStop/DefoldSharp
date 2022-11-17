@@ -4,8 +4,6 @@ namespace support
 {
 	public interface IBuiltInComponent : IComponent
 	{
-		void EnableCaching();
-		
-		void AssignLocator(ComponentLocator locator);
+		void AssignLocator(Locator locator);
 	}
 }

@@ -13,29 +13,30 @@ namespace support
 	[DoNotGenerate]
 	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{
-		public Url Locator { get; }
-		protected bool IsInputFocusHeld { get; private set; }
+		private readonly Url _gameObjectUrl;
+		public Url LocatorUrl { get; }
+
+
+		private GameObjectReference _gameObjectReference;
+		public GameObjectReference Gameobject
+		{
+			get
+			{
+				if (_gameObjectReference == null)
+				{
+					_gameObjectReference = new GameObjectReference(Msg.url(LocatorUrl.socket, LocatorUrl.path, ""));
+				}
+
+				return _gameObjectReference;
+			}
+		}
 		
 		
 		protected GameObjectScript()
 		{
-			Locator = Msg.url();
+			LocatorUrl = Msg.url();
 		}
-
-
-		protected void RequestInput()
-		{
-			InputHelpers.RequestInput();
-			IsInputFocusHeld = true;
-		}
-
-
-		protected void ReleaseInput()
-		{
-			IsInputFocusHeld = false;
-			InputHelpers.ReleaseInput();
-		}
-
+		
 
 		/// <summary>
 		///     Called when a script component is initialized.
@@ -56,6 +57,7 @@ namespace support
 		/// </summary>
 		protected virtual void final()
 		{
+			Component.Unregister(LocatorUrl);
 		}
 
 
@@ -93,7 +95,7 @@ namespace support
 		/// <param name="message_id">id of the received message</param>
 		/// <param name="message">a table containing the message data</param>
 		/// <param name="sender">address of the sender</param>
-		protected virtual void on_message(Hash message_id, object message, object sender)
+		protected virtual void on_message(Hash message_id, object message, Hash sender)
 		{
 		}
 

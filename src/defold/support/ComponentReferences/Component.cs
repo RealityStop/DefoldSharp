@@ -1,5 +1,3 @@
-#define DEFAULTTOCACHING
-
 using System;
 using System.Collections.Generic;
 using types;
@@ -42,32 +40,24 @@ namespace support
 			ComponentsByLocator.Add(locator, newRecord);
 		}
 
+
+		public static void Unregister(Url locator)
+		{
+			ComponentsByLocator.Remove(locator);
+		}
+
 		
 		
-		public static TComponent At<TComponent>(ComponentLocator locator)
+		public static TComponent At<TComponent>(Locator locator)
 			where TComponent : IComponent, new()
 		{
 			if (builtInType.IsAssignableFrom(typeof(TComponent)))
-#if DEFAULTTOCACHING
-				return AtBuiltIn<TComponent>(locator, true);
-#else
-					return AtBuiltIn<TComponent>(locator, false);
-#endif
+				return AtBuiltIn<TComponent>(locator);
+			
 			if (userComponentType.IsAssignableFrom(typeof(TComponent)))
 				return AtUser<TComponent>(locator);
 			
 			Defold.pprint($"Unhandled component type!  {typeof(TComponent).Name}");
-			throw new NotImplementedException();
-		}
-
-
-		public static TComponent At<TComponent>(ComponentLocator locator, bool cacheInternals)
-			where TComponent : IBuiltInComponent, new()
-		{
-			if (builtInType.IsAssignableFrom(typeof(TComponent)))
-				return AtBuiltIn<TComponent>(locator, cacheInternals);
-			
-			Defold.pprint($"At called with caching parameter on non-builtin component type {typeof(TComponent).Name}");
 			throw new NotImplementedException();
 		}
 
@@ -81,7 +71,7 @@ namespace support
 		/// <returns></returns>
 		/// <exception cref="InvalidCastException"></exception>
 		/// <exception cref="KeyNotFoundException"></exception>
-		private static TComponent AtUser<TComponent>(ComponentLocator locator)
+		private static TComponent AtUser<TComponent>(Locator locator)
 			where TComponent : IComponent, new()
 		{
 			var url = locator.FetchUrl();
@@ -105,6 +95,7 @@ namespace support
 			}
 		}
 
+
 		/// <summary>
 		/// Specialized variant that will handle a USERCOMPONENT only.  But exists as an unsafe private that supposedly
 		/// allows any component.  However, it really only supports IBuiltInComponent.
@@ -114,32 +105,18 @@ namespace support
 		/// <returns></returns>
 		/// <exception cref="InvalidCastException"></exception>
 		/// <exception cref="KeyNotFoundException"></exception>
-		private static TComponent AtBuiltIn<TComponent>(ComponentLocator locator, bool cacheInternals)
+		private static TComponent AtBuiltIn<TComponent>(Locator locator)
 			where TComponent : IComponent, new()
 		{
-			bool cache = cacheInternals;
-
 			var url = locator.FetchUrl();
 
-			if (ComponentsByLocator.TryGetValue(url, out var existingRecord))
-			{
-				if (!existingRecord.type.IsAssignableTo(typeof(TComponent)))
-				{
-					throw new InvalidCastException(
-						$"Requesting component of type {typeof(TComponent).Name}, but record for component is {existingRecord.type.Name}");
-				}
-				else
-					return (dynamic)existingRecord.data;
-			}
-			else
-			{
-				IBuiltInComponent newComponent = (dynamic) new TComponent();
-				newComponent.AssignLocator(locator);
-				Register<TComponent>(url, (dynamic)newComponent);
-				if (cache)
-					newComponent.EnableCaching();
-				return (dynamic)newComponent;
-			}
+			
+			//Built in components are not cached, because we cannot determine when they are cleared.
+
+			IBuiltInComponent newComponent = (dynamic)new TComponent();
+			newComponent.AssignLocator(locator);
+			Register<TComponent>(url, (dynamic)newComponent);
+			return (dynamic)newComponent;
 		}
 	}
 }

@@ -29,8 +29,13 @@ public static class Message
 	/// </summary>
 	public static extern void post(string id, string message);
 
-
+	/// <summary>
+	///     @CSharpLua.Template = msg.post({0},{1})
+	/// </summary>
 	public static extern void post(Url id, string message);
+	/// <summary>
+	///     @CSharpLua.Template = msg.post({0},{1})
+	/// </summary>
 	public static extern void post(Hash id, string message);
 
 
@@ -39,8 +44,14 @@ public static class Message
 	/// </summary>
 	public static extern void post(string id, string code, ILuaTable data);
 
-
+	/// <summary>
+	///     @CSharpLua.Template = msg.post({0},{1},{2})
+	/// </summary>
 	public static extern void post(Url id, string code, ILuaTable data);
+	
+	/// <summary>
+	///     @CSharpLua.Template = msg.post({0},{1},{2})
+	/// </summary>
 	public static extern void post(Hash id, string code, ILuaTable data);
 
 
@@ -78,30 +89,6 @@ public static class Message
 	{
 		post(id, message.FetchCode(), message.ToTable());
 	}
-
-
-	public static void postMessage<T>(string id, T message) where T : MessageImplementation
-	{
-		post(id, typeof(T).Name, message.ToTable());
-	}
-
-
-	/// <summary>
-	///     @CSharpLua.Template = msg.post({0},{1},{2})
-	/// </summary>
-	public static extern void post(string id, string code, ExpandoObject data);
-
-
-	/// <summary>
-	///     @CSharpLua.Template = msg.post({0},{1},{2})
-	/// </summary>
-	public static extern void post(Hash id, string code, ExpandoObject data);
-
-
-	/// <summary>
-	///     @CSharpLua.Template = msg.post({0},{1},{2})
-	/// </summary>
-	public static extern void post(Url id, string code, ExpandoObject data);
 
 
 	public static bool IsMessage<T>(Hash message_id, dynamic message, Hash expectedCode, out T messageImpl)

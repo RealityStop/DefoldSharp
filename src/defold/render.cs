@@ -9,67 +9,71 @@ using types;
 public static class Render
 {
 	#region Defold API
+	#region Messages
 	/// <summary>
 	/// </summary>
 	public class draw_debug_text_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("draw_debug_text");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public Vector3 position;
 		public string text;
 		public Vector4 color;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class draw_line_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("draw_line");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public Vector3 start_point;
 		public Vector3 end_point;
 		public Vector4 color;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class window_resized_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("window_resized");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public double height;
 		public double width;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class resize_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("resize");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public double height;
 		public double width;
 	}
-	
-	
+
+
 	/// <summary>
 	/// </summary>
 	public class clear_color_message : MessageImplementation
 	{
 		public static Hash __CODE__ = Defold.hash("clear_color");
 		public override Hash FetchCode() => __CODE__;
-		
+
 		public Vector4 color;
 	}
-	
-	
+
+
+	#endregion Messages
+
+
 	/// <summary>
 	/// Constant buffers are used to set shader program variables and are optionally passed to the <code>render.draw()</code> function.
 	/// The buffer's constant elements can be indexed like an ordinary Lua table, but you can't iterate over them with pairs() or ipairs().
@@ -77,40 +81,40 @@ public static class Render
 	/// @CSharpLua.Template = "render.constant_buffer()"
 	/// </summary>
 	public static extern LuaTable constant_buffer();
-	
-	
+
+
 	/// <summary>
 	/// Enables a particular render state. The state will be enabled until disabled.
 	/// 
 	/// @CSharpLua.Template = "render.enable_state({0})"
 	/// </summary>
 	public static extern void enable_state(RenderState state_p1);
-	
-	
+
+
 	/// <summary>
 	/// Disables a render state.
 	/// 
 	/// @CSharpLua.Template = "render.disable_state({0})"
 	/// </summary>
 	public static extern void disable_state(RenderState state_p1);
-	
-	
+
+
 	/// <summary>
 	/// Set the render viewport to the specified rectangle.
 	/// 
 	/// @CSharpLua.Template = "render.set_viewport({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void set_viewport(double x_p1, double y_p2, double width_p3, double height_p4);
-	
-	
+
+
 	/// <summary>
 	/// Disables a texture unit for a render target that has previourly been enabled.
 	/// 
 	/// @CSharpLua.Template = "render.disable_texture({0})"
 	/// </summary>
 	public static extern void disable_texture(double unit_p1);
-	
-	
+
+
 	/// <summary>
 	/// Clear buffers in the currently enabled render target with specified value. If the render target has been created with multiple
 	/// color attachments, all buffers will be cleared with the same value.
@@ -118,8 +122,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.clear({0})"
 	/// </summary>
 	public static extern void clear(ILuaTable buffers_p1);
-	
-	
+
+
 	/// <summary>
 	/// Draws all objects that match a specified predicate. An optional constant buffer can be
 	/// provided to override the default constants. If no constants buffer is provided, a default
@@ -129,8 +133,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.draw({0})"
 	/// </summary>
 	public static extern void draw(ILuaTable predicate_p1);
-	
-	
+
+
 	/// <summary>
 	/// Draws all objects that match a specified predicate. An optional constant buffer can be
 	/// provided to override the default constants. If no constants buffer is provided, a default
@@ -140,40 +144,40 @@ public static class Render
 	/// @CSharpLua.Template = "render.draw({0}, {1})"
 	/// </summary>
 	public static extern void draw(ILuaTable predicate_p1, ILuaTable options_p2);
-	
-	
+
+
 	/// <summary>
 	/// Draws all 3d debug graphics such as lines drawn with "draw_line" messages and physics visualization.
 	/// 
 	/// @CSharpLua.Template = "render.draw_debug3d()"
 	/// </summary>
 	public static extern void draw_debug3d();
-	
-	
+
+
 	/// <summary>
 	/// Draws all 3d debug graphics such as lines drawn with "draw_line" messages and physics visualization.
 	/// 
 	/// @CSharpLua.Template = "render.draw_debug3d({0})"
 	/// </summary>
 	public static extern void draw_debug3d(ILuaTable options_p1);
-	
-	
+
+
 	/// <summary>
 	/// Sets the view matrix to use when rendering.
 	/// 
 	/// @CSharpLua.Template = "render.set_view({0})"
 	/// </summary>
 	public static extern void set_view(Matrix4 matrix_p1);
-	
-	
+
+
 	/// <summary>
 	/// Sets the projection matrix to use when rendering.
 	/// 
 	/// @CSharpLua.Template = "render.set_projection({0})"
 	/// </summary>
 	public static extern void set_projection(Matrix4 matrix_p1);
-	
-	
+
+
 	/// <summary>
 	/// Specifies the arithmetic used when computing pixel values that are written to the frame
 	/// buffer. In RGBA mode, pixels can be drawn using a function that blends the source RGBA
@@ -273,8 +277,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_blend_func({0}, {1})"
 	/// </summary>
 	public static extern void set_blend_func(BlendFunction source_factor_p1, BlendFunction destination_factor_p2);
-	
-	
+
+
 	/// <summary>
 	/// Specifies whether the individual color components in the frame buffer is enabled for writing (<code>true</code>) or disabled (<code>false</code>). For example, if <code>blue</code> is <code>false</code>, nothing is written to the blue component of any pixel in any of the color buffers, regardless of the drawing operation attempted. Note that writing are either enabled or disabled for entire color components, not the individual bits of a component.
 	/// The component masks are all initially <code>true</code>.
@@ -282,8 +286,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_color_mask({0}, {1}, {2}, {3})"
 	/// </summary>
 	public static extern void set_color_mask(bool red_p1, bool green_p2, bool blue_p3, bool alpha_p4);
-	
-	
+
+
 	/// <summary>
 	/// Specifies whether the depth buffer is enabled for writing. The supplied mask governs
 	/// if depth buffer writing is enabled (<code>true</code>) or disabled (<code>false</code>).
@@ -292,8 +296,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_depth_mask({0})"
 	/// </summary>
 	public static extern void set_depth_mask(bool depth_p1);
-	
-	
+
+
 	/// <summary>
 	/// The stencil mask controls the writing of individual bits in the stencil buffer.
 	/// The least significant <code>n</code> bits of the parameter <code>mask</code>, where <code>n</code> is the number of
@@ -306,8 +310,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_stencil_mask({0})"
 	/// </summary>
 	public static extern void set_stencil_mask(double mask_p1);
-	
-	
+
+
 	/// <summary>
 	/// Specifies the function that should be used to compare each incoming pixel
 	/// depth value with the value present in the depth buffer.
@@ -329,8 +333,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_depth_func({0})"
 	/// </summary>
 	public static extern void set_depth_func(DepthFunction func_p1);
-	
-	
+
+
 	/// <summary>
 	/// Stenciling is similar to depth-buffering as it enables and disables drawing on a
 	/// per-pixel basis. First, GL drawing primitives are drawn into the stencil planes.
@@ -360,8 +364,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_stencil_func({0}, {1}, {2})"
 	/// </summary>
 	public static extern void set_stencil_func(DepthFunction func_p1, double ref_p2, double mask_p3);
-	
-	
+
+
 	/// <summary>
 	/// The stencil test discards a pixel based on the outcome of a comparison between the
 	/// reference value <code>ref</code> and the corresponding value in the stencil buffer.
@@ -388,8 +392,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_stencil_op({0}, {1}, {2})"
 	/// </summary>
 	public static extern void set_stencil_op(StencilOperator sfail_p1, StencilOperator dpfail_p2, StencilOperator dppass_p3);
-	
-	
+
+
 	/// <summary>
 	/// Specifies whether front- or back-facing polygons can be culled
 	/// when polygon culling is enabled. Polygon culling is initially disabled.
@@ -400,8 +404,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_cull_face({0})"
 	/// </summary>
 	public static extern void set_cull_face(FaceType face_type_p1);
-	
-	
+
+
 	/// <summary>
 	/// Sets the scale and units used to calculate depth values.
 	/// If <code>render.STATE_POLYGON_OFFSET_FILL</code> is enabled, each fragment's depth value
@@ -424,8 +428,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.set_polygon_offset({0}, {1})"
 	/// </summary>
 	public static extern void set_polygon_offset(double factor_p1, double units_p2);
-	
-	
+
+
 	/// <summary>
 	/// Returns the logical window width that is set in the "game.project" settings.
 	/// Note that the actual window pixel size can change, either by device constraints
@@ -434,8 +438,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.get_width()"
 	/// </summary>
 	public static extern double get_width();
-	
-	
+
+
 	/// <summary>
 	/// Returns the logical window height that is set in the "game.project" settings.
 	/// Note that the actual window pixel size can change, either by device constraints
@@ -444,8 +448,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.get_height()"
 	/// </summary>
 	public static extern double get_height();
-	
-	
+
+
 	/// <summary>
 	/// Returns the actual physical window width.
 	/// Note that this value might differ from the logical width that is set in the
@@ -454,8 +458,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.get_window_width()"
 	/// </summary>
 	public static extern double get_window_width();
-	
-	
+
+
 	/// <summary>
 	/// Returns the actual physical window height.
 	/// Note that this value might differ from the logical height that is set in the
@@ -464,8 +468,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.get_window_height()"
 	/// </summary>
 	public static extern double get_window_height();
-	
-	
+
+
 	/// <summary>
 	/// This function returns a new render predicate for objects with materials matching
 	/// the provided material tags. The provided tags are combined into a bit mask
@@ -476,8 +480,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.predicate({0})"
 	/// </summary>
 	public static extern ILuaTable predicate(ILuaTable tags_p1);
-	
-	
+
+
 	/// <summary>
 	/// If another material was already enabled, it will be automatically disabled
 	/// and the specified material is used instead.
@@ -487,8 +491,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.enable_material({0})"
 	/// </summary>
 	public static extern void enable_material(string material_id_p1);
-	
-	
+
+
 	/// <summary>
 	/// If another material was already enabled, it will be automatically disabled
 	/// and the specified material is used instead.
@@ -498,8 +502,8 @@ public static class Render
 	/// @CSharpLua.Template = "render.enable_material({0})"
 	/// </summary>
 	public static extern void enable_material(Hash material_id_p1);
-	
-	
+
+
 	/// <summary>
 	/// If a material is currently enabled, disable it.
 	/// The name of the material must be specified in the ".render" resource set
@@ -508,7 +512,7 @@ public static class Render
 	/// @CSharpLua.Template = "render.disable_material()"
 	/// </summary>
 	public static extern void disable_material();
-	
-	
+
+
 	#endregion Defold API
 }

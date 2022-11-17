@@ -4,24 +4,15 @@ namespace support
 {
 	public class BuiltInComponentBase : IBuiltInComponent
 	{
-		public bool IsCachingEnabled { get; private set; }
-		public Url Locator { get; private set; }
-		public void AssignLocator(ComponentLocator locator)
+		public Url LocatorUrl { get; private set; }
+		public void AssignLocator(Locator locator)
 		{
-			Locator = locator.FetchUrl();
+			LocatorUrl = locator.FetchUrl();
 		}
-
-
-		public void EnableCaching()
-		{
-			IsCachingEnabled = false;
-		}
-		
-		
 
 		public static implicit operator Url(BuiltInComponentBase self)
 		{
-			return self.Locator;
+			return self.LocatorUrl;
 		}
 	}
 }
