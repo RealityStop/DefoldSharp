@@ -1,4 +1,5 @@
 using System;
+using support;
 using lua;
 using types;
 
@@ -24,7 +25,7 @@ public static class Http
 	/// 
 	/// @CSharpLua.Template = "http.request({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void request(string url_p1, string method_p2, Action<object,Hash,LuaTable> callback_p3, LuaTable headers_p4);
+	public static extern void request(string url_p1, string method_p2, Action<object,Hash,LuaTable> callback_p3, LuaTableBase headers_p4);
 
 
 	/// <summary>
@@ -33,7 +34,7 @@ public static class Http
 	/// 
 	/// @CSharpLua.Template = "http.request({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern void request(string url_p1, string method_p2, Action<object,Hash,LuaTable> callback_p3, LuaTable headers_p4, string post_data_p5);
+	public static extern void request(string url_p1, string method_p2, Action<object,Hash,LuaTable> callback_p3, LuaTableBase headers_p4, string post_data_p5);
 
 
 	/// <summary>
@@ -42,7 +43,7 @@ public static class Http
 	/// 
 	/// @CSharpLua.Template = "http.request({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void request(string url_p1, string method_p2, Action<object,Hash,LuaTable> callback_p3, LuaTable headers_p4, string post_data_p5, LuaTable options_p6);
+	public static extern void request(string url_p1, string method_p2, Action<object,Hash,LuaTable> callback_p3, LuaTableBase headers_p4, string post_data_p5, LuaTableBase options_p6);
 
 
 	#endregion Defold API

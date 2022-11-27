@@ -1,4 +1,5 @@
 using System;
+using support;
 using lua;
 using types;
 
@@ -82,7 +83,7 @@ public static class Particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.stop({0}, {1})"
 	/// </summary>
-	public static extern void stop(string url_p1, LuaTable options_p2);
+	public static extern void stop(string url_p1, LuaTableBase options_p2);
 
 
 	/// <summary>
@@ -92,7 +93,7 @@ public static class Particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.stop({0}, {1})"
 	/// </summary>
-	public static extern void stop(Hash url_p1, LuaTable options_p2);
+	public static extern void stop(Hash url_p1, LuaTableBase options_p2);
 
 
 	/// <summary>
@@ -102,7 +103,7 @@ public static class Particlefx
 	/// 
 	/// @CSharpLua.Template = "particlefx.stop({0}, {1})"
 	/// </summary>
-	public static extern void stop(Url url_p1, LuaTable options_p2);
+	public static extern void stop(Url url_p1, LuaTableBase options_p2);
 
 
 	/// <summary>

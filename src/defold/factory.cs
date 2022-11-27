@@ -1,6 +1,6 @@
 using System;
+using support;
 using lua;
-using support.ComponentReferences;
 using types;
 
 /// <summary>
@@ -198,7 +198,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4);
+	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4);
 
 
 	/// <summary>
@@ -211,7 +211,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, double scale_p5);
+	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4, double scale_p5);
 
 
 	/// <summary>
@@ -224,7 +224,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, Vector3 scale_p5);
+	public static extern Hash create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4, Vector3 scale_p5);
 
 
 	/// <summary>
@@ -276,7 +276,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4);
+	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4);
 
 
 	/// <summary>
@@ -289,7 +289,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, double scale_p5);
+	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4, double scale_p5);
 
 
 	/// <summary>
@@ -302,7 +302,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, Vector3 scale_p5);
+	public static extern Hash create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4, Vector3 scale_p5);
 
 
 	/// <summary>
@@ -354,7 +354,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4);
+	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4);
 
 
 	/// <summary>
@@ -367,7 +367,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, double scale_p5);
+	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4, double scale_p5);
 
 
 	/// <summary>
@@ -380,7 +380,7 @@ public class Factory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "factory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, Vector3 scale_p5);
+	public static extern Hash create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTableBase properties_p4, Vector3 scale_p5);
 
 
 	#endregion Defold API
@@ -409,41 +409,41 @@ public class Factory : BuiltInComponentBase
 
 	public void Load(Action<object, Factory, bool> callback)
 	{
-		void IntermediateCallback(object obj, Url url, bool b)
-		{
-			callback(obj, this, b);
-		}
+	   void IntermediateCallback(object obj, Url url, bool b)
+	   {
+	      callback(obj, this, b);
+	   }
 
-		load(this, IntermediateCallback);
+	   load(this, IntermediateCallback);
 	}
 
 
 	public Hash Create()
 	{
-		return (dynamic)create(this);
+	   return (dynamic)create(this);
 	}
 
 
 	public Hash Create(Vector3 position)
 	{
-		return (dynamic)create(this, position);
+	   return (dynamic)create(this, position);
 	}
 
 
 	public Hash Create(Vector3 position, Quaternion rotation)
 	{
-		return (dynamic)create(this, position, rotation);
+	   return (dynamic)create(this, position, rotation);
 	}
 
 
-	public Hash Create(Vector3 position, Quaternion rotation, LuaTable properties)
+	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties)
 	{
-		return (dynamic)create(this, position, rotation, properties);
+	   return (dynamic)create(this, position, rotation, properties);
 	}
 
 
-	public Hash Create(Vector3 position, Quaternion rotation, LuaTable properties, double scale)
+	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties, double scale)
 	{
-		return (dynamic)create(this, position, rotation, properties, scale);
+	   return (dynamic)create(this, position, rotation, properties, scale);
 	}
 }

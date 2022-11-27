@@ -1,4 +1,5 @@
 using System;
+using support;
 using lua;
 using types;
 
@@ -115,7 +116,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.save({0}, {1})"
 	/// </summary>
-	public static extern bool save(string filename_p1, LuaTable table_p2);
+	public static extern bool save(string filename_p1, LuaTableBase table_p2);
 
 
 	/// <summary>
@@ -173,7 +174,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.open_url({0}, {1})"
 	/// </summary>
-	public static extern bool open_url(string url_p1, LuaTable attributes_p2);
+	public static extern bool open_url(string url_p1, LuaTableBase attributes_p2);
 
 
 	/// <summary>
@@ -205,7 +206,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_sys_info({0})"
 	/// </summary>
-	public static extern LuaTable get_sys_info(LuaTable options_p1);
+	public static extern LuaTable get_sys_info(LuaTableBase options_p1);
 
 
 	/// <summary>
@@ -317,7 +318,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.serialize({0})"
 	/// </summary>
-	public static extern string serialize(LuaTable table_p1);
+	public static extern string serialize(LuaTableBase table_p1);
 
 
 	/// <summary>

@@ -1,3 +1,5 @@
+using System;
+using support;
 using lua;
 using types;
 
@@ -115,7 +117,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.raycast_async({0}, {1}, {2})"
 	/// </summary>
-	public static extern void raycast_async(Vector3 from_p1, Vector3 to_p2, LuaTable groups_p3);
+	public static extern void raycast_async(Vector3 from_p1, Vector3 to_p2, LuaTableBase groups_p3);
 
 
 	/// <summary>
@@ -132,7 +134,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.raycast_async({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void raycast_async(Vector3 from_p1, Vector3 to_p2, LuaTable groups_p3, double request_id_p4);
+	public static extern void raycast_async(Vector3 from_p1, Vector3 to_p2, LuaTableBase groups_p3, double request_id_p4);
 
 
 	/// <summary>
@@ -144,7 +146,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.raycast({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern LuaTable raycast(Vector3 from_p1, Vector3 to_p2, LuaTable groups_p3, LuaTable options_p4);
+	public static extern LuaTable raycast(Vector3 from_p1, Vector3 to_p2, LuaTableBase groups_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -162,7 +164,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -180,7 +182,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -198,7 +200,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -216,7 +218,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -234,7 +236,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -252,7 +254,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, string collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -270,7 +272,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -288,7 +290,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -306,7 +308,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -324,7 +326,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -342,7 +344,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -360,7 +362,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Hash collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -378,7 +380,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -396,7 +398,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -414,7 +416,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, string joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -432,7 +434,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, string collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -450,7 +452,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Hash collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -468,7 +470,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.create_joint({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTable properties_p7);
+	public static extern void create_joint(double joint_type_p1, Url collisionobject_a_p2, Hash joint_id_p3, Vector3 position_a_p4, Url collisionobject_b_p5, Vector3 position_b_p6, LuaTableBase properties_p7);
 
 
 	/// <summary>
@@ -598,7 +600,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.set_joint_properties({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_joint_properties(string collisionobject_p1, string joint_id_p2, LuaTable properties_p3);
+	public static extern void set_joint_properties(string collisionobject_p1, string joint_id_p2, LuaTableBase properties_p3);
 
 
 	/// <summary>
@@ -608,7 +610,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.set_joint_properties({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_joint_properties(string collisionobject_p1, Hash joint_id_p2, LuaTable properties_p3);
+	public static extern void set_joint_properties(string collisionobject_p1, Hash joint_id_p2, LuaTableBase properties_p3);
 
 
 	/// <summary>
@@ -618,7 +620,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.set_joint_properties({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_joint_properties(Hash collisionobject_p1, string joint_id_p2, LuaTable properties_p3);
+	public static extern void set_joint_properties(Hash collisionobject_p1, string joint_id_p2, LuaTableBase properties_p3);
 
 
 	/// <summary>
@@ -628,7 +630,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.set_joint_properties({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_joint_properties(Hash collisionobject_p1, Hash joint_id_p2, LuaTable properties_p3);
+	public static extern void set_joint_properties(Hash collisionobject_p1, Hash joint_id_p2, LuaTableBase properties_p3);
 
 
 	/// <summary>
@@ -638,7 +640,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.set_joint_properties({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_joint_properties(Url collisionobject_p1, string joint_id_p2, LuaTable properties_p3);
+	public static extern void set_joint_properties(Url collisionobject_p1, string joint_id_p2, LuaTableBase properties_p3);
 
 
 	/// <summary>
@@ -648,7 +650,7 @@ public static class Physics
 	/// 
 	/// @CSharpLua.Template = "physics.set_joint_properties({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_joint_properties(Url collisionobject_p1, Hash joint_id_p2, LuaTable properties_p3);
+	public static extern void set_joint_properties(Url collisionobject_p1, Hash joint_id_p2, LuaTableBase properties_p3);
 
 
 	/// <summary>

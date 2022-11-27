@@ -1,4 +1,7 @@
+using System;
+using support;
 using lua;
+using types;
 
 /// <summary>
 /// Image API documentation

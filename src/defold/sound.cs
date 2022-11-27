@@ -248,7 +248,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(string url_p1, LuaTableOf<string, LuaType> play_properties_p2);
+	public static extern double play(string url_p1, LuaTableBase play_properties_p2);
 
 
 	/// <summary>
@@ -261,7 +261,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(string url_p1, LuaTableOf<string, LuaType> play_properties_p2, Action<object,Hash,LuaTableBase,Url> complete_function_p3);
+	public static extern double play(string url_p1, LuaTableBase play_properties_p2, Action<object,Hash,LuaTable,Url> complete_function_p3);
 
 
 	/// <summary>
@@ -287,7 +287,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(Hash url_p1, LuaTableOf<string, LuaType> play_properties_p2);
+	public static extern double play(Hash url_p1, LuaTableBase play_properties_p2);
 
 
 	/// <summary>
@@ -300,7 +300,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(Hash url_p1, LuaTableOf<string, LuaType> play_properties_p2, Action<object,Hash,LuaTableBase,Url> complete_function_p3);
+	public static extern double play(Hash url_p1, LuaTableBase play_properties_p2, Action<object,Hash,LuaTable,Url> complete_function_p3);
 
 
 	/// <summary>
@@ -326,7 +326,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(Url url_p1, LuaTableOf<string, LuaType> play_properties_p2);
+	public static extern double play(Url url_p1, LuaTableBase play_properties_p2);
 
 
 	/// <summary>
@@ -339,7 +339,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(Url url_p1, LuaTableOf<string, LuaType> play_properties_p2, Action<object,Hash,LuaTableBase,Url> complete_function_p3);
+	public static extern double play(Url url_p1, LuaTableBase play_properties_p2, Action<object,Hash,LuaTable,Url> complete_function_p3);
 
 
 	/// <summary>

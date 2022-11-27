@@ -1,3 +1,8 @@
+using System;
+using support;
+using lua;
+using types;
+
 /// <summary>
 /// HTML5 API documentation
 /// 
