@@ -1,10 +1,15 @@
-using System;
+using lua;
 
 namespace types
 {
+	public interface ILuaType
+	{
+		
+	}
+	
 	/// <summary>
 	/// </summary>
-	public class LuaType
+	public class LuaType : ILuaType
 	{
 		/// <summary>
 		/// @CSharpLua.Template = "{0}"
@@ -96,14 +101,32 @@ namespace types
 		{
 		   return default;
 		}
-
-		      
+		
+		
+		/// <summary>
+		/// @CSharpLua.Template = "{0}"
+		/// </summary>
+		public static implicit operator LuaType(LuaArrayBase v)
+		{
+			return default;
+		}
+		
+		
 		/// <summary>
 		/// @CSharpLua.Template = "{0}"
 		/// </summary>
 		public static implicit operator LuaType(LuaTableBase v)
 		{
-		   return default;
+			return default;
 		}
+	}
+
+
+	public static class __LuaTypeExt
+	{
+		/// <summary>
+		/// @CSharpLua.Template = "{0}"
+		/// </summary>		
+		public static extern LuaType AsLuaType(this ILuaType input);
 	}
 }

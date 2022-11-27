@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Schema;
+using support.ComponentReferences;
 using types;
 
 namespace support
@@ -188,7 +188,7 @@ namespace support
 			targetUrl.path = LocatorUrl.path;
 			targetUrl.fragment = hash;
 
-			return support.Component.At<T>(Locator.AtUrl(targetUrl));
+			return ComponentReferences.Component.At<T>(Locator.AtUrl(targetUrl));
 		}
 		
 		

@@ -1,5 +1,6 @@
 using System;
-using support;
+using lua;
+using support.ComponentReferences;
 using types;
 
 /// <summary>
@@ -188,7 +189,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.get_groups()"
 	/// </summary>
-	public static extern ILuaTable get_groups();
+	public static extern LuaTable get_groups();
 
 
 	/// <summary>
@@ -247,7 +248,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(string url_p1, ILuaTable play_properties_p2);
+	public static extern double play(string url_p1, LuaTableOf<string, LuaType> play_properties_p2);
 
 
 	/// <summary>
@@ -260,7 +261,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(string url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern double play(string url_p1, LuaTableOf<string, LuaType> play_properties_p2, Action<object,Hash,LuaTableBase,Url> complete_function_p3);
 
 
 	/// <summary>
@@ -286,7 +287,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(Hash url_p1, ILuaTable play_properties_p2);
+	public static extern double play(Hash url_p1, LuaTableOf<string, LuaType> play_properties_p2);
 
 
 	/// <summary>
@@ -299,7 +300,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(Hash url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern double play(Hash url_p1, LuaTableOf<string, LuaType> play_properties_p2, Action<object,Hash,LuaTableBase,Url> complete_function_p3);
 
 
 	/// <summary>
@@ -325,7 +326,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1})"
 	/// </summary>
-	public static extern double play(Url url_p1, ILuaTable play_properties_p2);
+	public static extern double play(Url url_p1, LuaTableOf<string, LuaType> play_properties_p2);
 
 
 	/// <summary>
@@ -338,7 +339,7 @@ public class Sound : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sound.play({0}, {1}, {2})"
 	/// </summary>
-	public static extern double play(Url url_p1, ILuaTable play_properties_p2, Action<object,Hash,ILuaTable,Url> complete_function_p3);
+	public static extern double play(Url url_p1, LuaTableOf<string, LuaType> play_properties_p2, Action<object,Hash,LuaTableBase,Url> complete_function_p3);
 
 
 	/// <summary>
@@ -520,127 +521,127 @@ public class Sound : BuiltInComponentBase
 
 	public int Play(string sound)
 	{
-	   return (int)play(sound);
+		return (int)play(sound);
 	}
 
 
 	public int Play(Hash sound)
 	{
-	   return (int)play(sound);
+		return (int)play(sound);
 	}
 
 
 	public int Play(Url sound)
 	{
-	   return (int)play(sound);
+		return (int)play(sound);
 	}
 
 
 	public int Play(string sound,
-	   double delay = 0,
-	   double gain = 1,
-	   double pan = 0,
-	   double speed = 1,
-	   Action<Sound, Hash, int, Url> onCompleteCallback = null)
+		double delay = 0,
+		double gain = 1,
+		double pan = 0,
+		double speed = 1,
+		Action<Sound, Hash, int, Url> onCompleteCallback = null)
 	{
-	   LuaTable table = new LuaTable();
-	   table.Add("delay", delay);
-	   table.Add("gain", gain);
-	   table.Add("pan", pan);
-	   table.Add("speed", speed);
+		var table = LuaTable.Create<string, LuaType>();
+		table.Add("delay", delay);
+		table.Add("gain", gain);
+		table.Add("pan", pan);
+		table.Add("speed", speed);
 
-	   if (onCompleteCallback != null)
-	   {
-	      void callback(object o, Hash hash, dynamic arg3, Url arg4)
-	      {
-	         onCompleteCallback(this, hash, arg3["play_id"], arg4);
-	      }
+		if (onCompleteCallback != null)
+		{
+			void callback(object o, Hash hash, dynamic arg3, Url arg4)
+			{
+				onCompleteCallback(this, hash, arg3["play_id"], arg4);
+			}
 
-	      return (int)play(sound, table, callback);
-	   }
-	   else
-	      return (int)play(sound, table);
+			return (int)play(sound, table, callback);
+		}
+		else
+			return (int)play(sound, table);
 	}
 
 	public int Play(Hash sound,
-	   double delay = 0,
-	   double gain = 1,
-	   double pan = 0,
-	   double speed = 1,
-	   Action<Sound, Hash, int, Url> onCompleteCallback = null)
+		double delay = 0,
+		double gain = 1,
+		double pan = 0,
+		double speed = 1,
+		Action<Sound, Hash, int, Url> onCompleteCallback = null)
 	{
-	   LuaTable table = new LuaTable();
-	   table.Add("delay", delay);
-	   table.Add("gain", gain);
-	   table.Add("pan", pan);
-	   table.Add("speed", speed);
+		var table = LuaTable.Create<string, LuaType>();
+		table.Add("delay", delay);
+		table.Add("gain", gain);
+		table.Add("pan", pan);
+		table.Add("speed", speed);
 
-	   if (onCompleteCallback != null)
-	   {
-	      void callback(object o, Hash hash, dynamic arg3, Url arg4)
-	      {
-	         onCompleteCallback(this, hash, arg3["play_id"], arg4);
-	      }
+		if (onCompleteCallback != null)
+		{
+			void callback(object o, Hash hash, dynamic arg3, Url arg4)
+			{
+				onCompleteCallback(this, hash, arg3["play_id"], arg4);
+			}
 
-	      return (int)play(sound, table, callback);
-	   }
-	   else
-	      return (int)play(sound, table);
+			return (int)play(sound, table, callback);
+		}
+		else
+			return (int)play(sound, table);
 	}
 
 	public int Play(Url sound,
-	   double delay = 0,
-	   double gain = 1,
-	   double pan = 0,
-	   double speed = 1,
-	   Action<Sound, Hash, int, Url> onCompleteCallback = null)
+		double delay = 0,
+		double gain = 1,
+		double pan = 0,
+		double speed = 1,
+		Action<Sound, Hash, int, Url> onCompleteCallback = null)
 	{
-	   LuaTable table = new LuaTable();
-	   table.Add("delay", delay);
-	   table.Add("gain", gain);
-	   table.Add("pan", pan);
-	   table.Add("speed", speed);
+		var table = LuaTable.Create<string, LuaType>();
+		table.Add("delay", delay);
+		table.Add("gain", gain);
+		table.Add("pan", pan);
+		table.Add("speed", speed);
 
-	   if (onCompleteCallback != null)
-	   {
-	      void callback(object o, Hash hash, dynamic arg3, Url arg4)
-	      {
-	         onCompleteCallback(this, hash, arg3["play_id"], arg4);
-	      }
+		if (onCompleteCallback != null)
+		{
+			void callback(object o, Hash hash, dynamic arg3, Url arg4)
+			{
+				onCompleteCallback(this, hash, arg3["play_id"], arg4);
+			}
 
-	      return (int)play(sound, table, callback);
-	   }
-	   else
-	      return (int)play(sound, table);
+			return (int)play(sound, table, callback);
+		}
+		else
+			return (int)play(sound, table);
 	}
 
 
 	public void Stop()
 	{
-	   stop(this);
+		stop(this);
 	}
 
 
 	public void Pause(bool shouldPause = true)
 	{
-	   pause(this, shouldPause);
+		pause(this, shouldPause);
 	}
 
 
 	public void Unpause()
 	{
-	   pause(this, false);
+		pause(this, false);
 	}
 
 
 	public void SetGain(double gain)
 	{
-	   set_gain(this, gain);
+		set_gain(this, gain);
 	}
 
 
 	public void SetPan(double pan)
 	{
-	   set_pan(this, pan);
+		set_pan(this, pan);
 	}
 }

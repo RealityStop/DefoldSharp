@@ -1,6 +1,6 @@
 using types;
 
-namespace support
+namespace support.ComponentReferences
 {
 	public interface IComponent
 	{

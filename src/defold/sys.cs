@@ -1,5 +1,5 @@
 using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -115,7 +115,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.save({0}, {1})"
 	/// </summary>
-	public static extern bool save(string filename_p1, ILuaTable table_p2);
+	public static extern bool save(string filename_p1, LuaTable table_p2);
 
 
 	/// <summary>
@@ -123,7 +123,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.load({0})"
 	/// </summary>
-	public static extern ILuaTable load(string filename_p1);
+	public static extern LuaTable load(string filename_p1);
 
 
 	/// <summary>
@@ -173,7 +173,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.open_url({0}, {1})"
 	/// </summary>
-	public static extern bool open_url(string url_p1, ILuaTable attributes_p2);
+	public static extern bool open_url(string url_p1, LuaTable attributes_p2);
 
 
 	/// <summary>
@@ -197,7 +197,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_sys_info()"
 	/// </summary>
-	public static extern ILuaTable get_sys_info();
+	public static extern LuaTable get_sys_info();
 
 
 	/// <summary>
@@ -205,7 +205,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_sys_info({0})"
 	/// </summary>
-	public static extern ILuaTable get_sys_info(ILuaTable options_p1);
+	public static extern LuaTable get_sys_info(LuaTable options_p1);
 
 
 	/// <summary>
@@ -213,7 +213,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_engine_info()"
 	/// </summary>
-	public static extern ILuaTable get_engine_info();
+	public static extern LuaTable get_engine_info();
 
 
 	/// <summary>
@@ -225,7 +225,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_application_info({0})"
 	/// </summary>
-	public static extern ILuaTable get_application_info(string app_string_p1);
+	public static extern LuaTable get_application_info(string app_string_p1);
 
 
 	/// <summary>
@@ -233,7 +233,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.get_ifaddrs()"
 	/// </summary>
-	public static extern ILuaTable get_ifaddrs();
+	public static extern LuaTable get_ifaddrs();
 
 
 	/// <summary>
@@ -317,7 +317,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.serialize({0})"
 	/// </summary>
-	public static extern string serialize(ILuaTable table_p1);
+	public static extern string serialize(LuaTable table_p1);
 
 
 	/// <summary>
@@ -325,7 +325,7 @@ public static class Sys
 	/// 
 	/// @CSharpLua.Template = "sys.deserialize({0})"
 	/// </summary>
-	public static extern ILuaTable deserialize(string buffer_p1);
+	public static extern LuaTable deserialize(string buffer_p1);
 
 
 	#endregion Defold API

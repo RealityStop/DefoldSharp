@@ -1,6 +1,4 @@
-using System;
-using support;
-using types;
+using lua;
 
 /// <summary>
 /// JSON API documentation
@@ -15,7 +13,7 @@ public static class Json
 	/// 
 	/// @CSharpLua.Template = "json.decode({0})"
 	/// </summary>
-	public static extern ILuaTable decode(string json_p1);
+	public static extern LuaTable decode(string json_p1);
 
 
 	/// <summary>
@@ -24,7 +22,7 @@ public static class Json
 	/// 
 	/// @CSharpLua.Template = "json.encode({0})"
 	/// </summary>
-	public static extern string encode(ILuaTable tbl_p1);
+	public static extern string encode(LuaTableBase tbl_p1);
 
 
 	#endregion Defold API

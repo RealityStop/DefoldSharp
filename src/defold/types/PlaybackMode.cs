@@ -1,5 +1,3 @@
-using System;
-
 namespace types
 {
 	/// <summary>

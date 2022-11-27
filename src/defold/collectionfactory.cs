@@ -1,5 +1,6 @@
 using System;
-using support;
+using lua;
+using support.ComponentReferences;
 using types;
 
 /// <summary>
@@ -162,7 +163,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0})"
 	/// </summary>
-	public static extern ILuaTable create(string url_p1);
+	public static extern LuaTable create(string url_p1);
 
 
 	/// <summary>
@@ -183,7 +184,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1})"
 	/// </summary>
-	public static extern ILuaTable create(string url_p1, Vector3 position_p2);
+	public static extern LuaTable create(string url_p1, Vector3 position_p2);
 
 
 	/// <summary>
@@ -204,7 +205,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2})"
 	/// </summary>
-	public static extern ILuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3);
+	public static extern LuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3);
 
 
 	/// <summary>
@@ -225,7 +226,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern ILuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
+	public static extern LuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4);
 
 
 	/// <summary>
@@ -246,7 +247,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern ILuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
+	public static extern LuaTable create(string url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, double scale_p5);
 
 
 	/// <summary>
@@ -267,7 +268,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0})"
 	/// </summary>
-	public static extern ILuaTable create(Hash url_p1);
+	public static extern LuaTable create(Hash url_p1);
 
 
 	/// <summary>
@@ -288,7 +289,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1})"
 	/// </summary>
-	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2);
+	public static extern LuaTable create(Hash url_p1, Vector3 position_p2);
 
 
 	/// <summary>
@@ -309,7 +310,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2})"
 	/// </summary>
-	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3);
+	public static extern LuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3);
 
 
 	/// <summary>
@@ -330,7 +331,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
+	public static extern LuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4);
 
 
 	/// <summary>
@@ -351,7 +352,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern ILuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
+	public static extern LuaTable create(Hash url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, double scale_p5);
 
 
 	/// <summary>
@@ -372,7 +373,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0})"
 	/// </summary>
-	public static extern ILuaTable create(Url url_p1);
+	public static extern LuaTable create(Url url_p1);
 
 
 	/// <summary>
@@ -393,7 +394,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1})"
 	/// </summary>
-	public static extern ILuaTable create(Url url_p1, Vector3 position_p2);
+	public static extern LuaTable create(Url url_p1, Vector3 position_p2);
 
 
 	/// <summary>
@@ -414,7 +415,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2})"
 	/// </summary>
-	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3);
+	public static extern LuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3);
 
 
 	/// <summary>
@@ -435,7 +436,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4);
+	public static extern LuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4);
 
 
 	/// <summary>
@@ -456,7 +457,7 @@ public class CollectionFactory : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "collectionfactory.create({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern ILuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, ILuaTable properties_p4, double scale_p5);
+	public static extern LuaTable create(Url url_p1, Vector3 position_p2, Quaternion rotation_p3, LuaTable properties_p4, double scale_p5);
 
 
 	#endregion Defold API
@@ -464,15 +465,15 @@ public class CollectionFactory : BuiltInComponentBase
 
 	public readonly struct CollectionFactoryCreateResult
 	{
-	   public readonly Hash RelativeHash;
-	   public readonly Hash UniqueHash;
+		public readonly Hash RelativeHash;
+		public readonly Hash UniqueHash;
 
 
-	   public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)
-	   {
-	      RelativeHash = relativeHash;
-	      UniqueHash = uniqueHash;
-	   }
+		public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)
+		{
+			RelativeHash = relativeHash;
+			UniqueHash = uniqueHash;
+		}
 	}
 
 	public FactoryStatus Status => get_status(this);
@@ -480,21 +481,21 @@ public class CollectionFactory : BuiltInComponentBase
 
 	public LuaTableOf<Hash, Hash> Create()
 	{
-	   return (dynamic)create(this);
+		return (dynamic)create(this);
 	}
 	   
 	public LuaTableOf<Hash, Hash> Create(Vector3 position)
 	{
-	   return (dynamic)create(this, position);
+		return (dynamic)create(this, position);
 	}
 	   
 	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation)
 	{
-	   return (dynamic)create(this, position, rotation);
+		return (dynamic)create(this, position, rotation);
 	}
 	   
-	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, ILuaTable properties)
+	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, LuaTable properties)
 	{
-	   return (dynamic)create(this, position, rotation, properties);
+		return (dynamic)create(this, position, rotation, properties);
 	}
 }

@@ -5,41 +5,26 @@ using types;
 namespace support
 {
 	[DoNotGenerate]
-	public abstract class GameObjectScript : GameObjectScript<EmptyProperties>
+	public abstract class RenderScript : RenderScript<EmptyProperties>
 	{
 	}
 
 	/// <summary>
-	///     Base class for all game object scripts (.script).
+	///     Base class for all render scripts (render_script). Run by the rendering pipeline and containing the logic required to render all app/game graphics each frame. Render scripts have access to the Render library functions.
 	/// </summary>
-	[GenScript("script")]
+	[GenScript("render_script")]
 	[DoNotGenerate]
-	public abstract class GameObjectScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
+	public abstract class RenderScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent
+		where TProps : AnimatableProperties
 	{
-		private readonly Url _gameObjectUrl;
 		public Url LocatorUrl { get; }
 
 
-		private GameObjectReference _gameObjectReference;
-		public GameObjectReference Gameobject
-		{
-			get
-			{
-				if (_gameObjectReference == null)
-				{
-					_gameObjectReference = new GameObjectReference(Msg.url(LocatorUrl.socket, LocatorUrl.path, ""));
-				}
-
-				return _gameObjectReference;
-			}
-		}
-		
-		
-		protected GameObjectScript()
+		protected RenderScript()
 		{
 			LocatorUrl = Msg.url();
 		}
-		
+
 
 		/// <summary>
 		///     Called when a script component is initialized.
@@ -60,7 +45,6 @@ namespace support
 		/// </summary>
 		protected virtual void final()
 		{
-			Component.Unregister(LocatorUrl);
 		}
 
 
@@ -73,8 +57,8 @@ namespace support
 		protected virtual void update(float dt)
 		{
 		}
-		
-		
+
+
 		/// <summary>
 		///     Called every frame to update the script component.
 		///     Frame-rate independent update. dt contains the delta time since the last update.

@@ -1,6 +1,4 @@
-using types;
-
-namespace support
+namespace support.ComponentReferences
 {
 	public interface IBuiltInComponent : IComponent
 	{

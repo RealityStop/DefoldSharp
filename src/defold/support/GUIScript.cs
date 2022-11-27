@@ -1,15 +1,18 @@
-﻿using types;
+﻿using attributes;
+using support.ComponentReferences;
+using types;
 
 namespace support
 {
 	[DoNotGenerate]
-	public abstract class GUIScript : GUIScript<AnimatableProperties>
+	public abstract class GUIScript : GUIScript<EmptyProperties>
 	{
 	}
 
 	/// <summary>
-	///     Base class for all game object scripts (.script).
+	///     Base class for all game object scripts (.gui_script). Run by GUI components and usually containing the logic required to display GUI elements like heads up displays, menus etc. GUI scripts have access to the GUI library functions.
 	/// </summary>
+	[GenScript("gui_script")]
 	[DoNotGenerate]
 	public abstract class GUIScript<TProps> : ScriptPropertyHost<TProps>, IUserComponent where TProps : AnimatableProperties
 	{

@@ -1,5 +1,4 @@
-using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -162,7 +161,7 @@ public static class Msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(string receiver_p1, string message_id_p2, ILuaTable message_p3);
+	public static extern void post(string receiver_p1, string message_id_p2, LuaTable message_p3);
 
 
 	/// <summary>
@@ -194,7 +193,7 @@ public static class Msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(string receiver_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void post(string receiver_p1, Hash message_id_p2, LuaTable message_p3);
 
 
 	/// <summary>
@@ -226,7 +225,7 @@ public static class Msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Url receiver_p1, string message_id_p2, ILuaTable message_p3);
+	public static extern void post(Url receiver_p1, string message_id_p2, LuaTable message_p3);
 
 
 	/// <summary>
@@ -258,7 +257,7 @@ public static class Msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Url receiver_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void post(Url receiver_p1, Hash message_id_p2, LuaTable message_p3);
 
 
 	/// <summary>
@@ -290,7 +289,7 @@ public static class Msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Hash receiver_p1, string message_id_p2, ILuaTable message_p3);
+	public static extern void post(Hash receiver_p1, string message_id_p2, LuaTable message_p3);
 
 
 	/// <summary>
@@ -322,7 +321,7 @@ public static class Msg
 	/// 
 	/// @CSharpLua.Template = "msg.post({0}, {1}, {2})"
 	/// </summary>
-	public static extern void post(Hash receiver_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void post(Hash receiver_p1, Hash message_id_p2, LuaTable message_p3);
 
 
 	#endregion Defold API

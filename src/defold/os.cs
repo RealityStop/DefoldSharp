@@ -1,4 +1,4 @@
-﻿using types;
+﻿using lua;
 
 public static class OS
 {
@@ -114,7 +114,7 @@ public static class OS
 	/// <summary>
 	/// @CSharpLua.Template = "os.time({0})"
 	/// </summary>
-	public static extern double time(ILuaTable table);
+	public static extern double time(LuaTable table);
 
 
 	/// <summary>

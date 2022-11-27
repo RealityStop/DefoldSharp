@@ -1,10 +1,11 @@
+using lua;
 using types;
 
 namespace support
 {
 	public static class LuaTableSerializableExt
 	{
-		public static ILuaTable DefaultTableSerialization(this ILuaTableSerializable self)
+		public static LuaTable DefaultTableSerialization(this ILuaTableSerializable self)
 		{
 			/*
 			[[
@@ -39,10 +40,10 @@ namespace support
 		/// <summary>
 		///     @CSharpLua.Template = table
 		/// </summary>
-		private static extern ILuaTable ReturnTable();
+		private static extern LuaTable ReturnTable();
 
 
-		public static T DefaultTableDeserialization<T>(this ILuaTable self) where T : ILuaTableSerializable, new()
+		public static T DefaultTableDeserialization<T>(this LuaTable self) where T : ILuaTableSerializable, new()
 		{
 			var table = new T();
 			/*

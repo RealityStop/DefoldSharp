@@ -8,7 +8,14 @@ namespace attributes
 	///     @CSharpLua.Ignore
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Class)]
-	public class GenGOScriptAttribute : Attribute
+	public class GenScriptAttribute : Attribute
 	{
+		private string Extension { get; }
+
+
+		public GenScriptAttribute(string extension)
+		{
+			Extension = extension;
+		}
 	}
 }

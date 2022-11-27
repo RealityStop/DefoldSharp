@@ -1,5 +1,3 @@
-using System;
-
 namespace types
 {
 	/// <summary>
@@ -7,12 +5,12 @@ namespace types
 	public class Node
 	{
 		/// <summary>
-		    /// @CSharpLua.Template = "gui.set_enabled({this}, {0})"
-		    /// </summary>
-		    public extern void SetEnabled(bool enabled);
-		}
+		/// @CSharpLua.Template = "gui.set_enabled({this}, {0})"
+		/// </summary>
+		public extern void SetEnabled(bool enabled);
+	}
 
-		public class NodeProxy
+	public class NodeProxy
 		{
 		    private Node _proxy;
 

@@ -1,7 +1,3 @@
-using System;
-using support;
-using types;
-
 /// <summary>
 /// Facebook API documentation
 /// 

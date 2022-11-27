@@ -1,5 +1,4 @@
-using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -112,7 +111,7 @@ public static class Profiler
 	/// 
 	/// @CSharpLua.Template = "profiler.view_recorded_frame({0})"
 	/// </summary>
-	public static extern void view_recorded_frame(ILuaTable frame_index_p1);
+	public static extern void view_recorded_frame(LuaTable frame_index_p1);
 
 
 	/// <summary>

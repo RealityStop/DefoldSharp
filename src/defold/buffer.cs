@@ -1,5 +1,4 @@
-using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -17,7 +16,7 @@ public static class Buffer
 	/// 
 	/// @CSharpLua.Template = "buffer.create({0}, {1})"
 	/// </summary>
-	public static extern DataBuffer create(double element_count_p1, ILuaTable declaration_p2);
+	public static extern DataBuffer create(double element_count_p1, LuaTable declaration_p2);
 
 
 	/// <summary>

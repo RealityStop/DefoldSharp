@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using types;
 
-namespace support
+namespace support.ComponentReferences
 {
 	/// <summary>
 	/// Generic access for both builtin components and user components.

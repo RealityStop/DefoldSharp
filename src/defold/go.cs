@@ -1,5 +1,5 @@
 using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -78,7 +78,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
-	public static extern LuaType get(string url_p1, string property_p2, ILuaTable options_p3);
+	public static extern LuaType get(string url_p1, string property_p2, LuaTableBase options_p3);
 
 
 	/// <summary>
@@ -94,7 +94,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
-	public static extern LuaType get(string url_p1, Hash property_p2, ILuaTable options_p3);
+	public static extern LuaType get(string url_p1, Hash property_p2, LuaTableBase options_p3);
 
 
 	/// <summary>
@@ -110,7 +110,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
-	public static extern LuaType get(Hash url_p1, string property_p2, ILuaTable options_p3);
+	public static extern LuaType get(Hash url_p1, string property_p2, LuaTableBase options_p3);
 
 
 	/// <summary>
@@ -126,7 +126,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
-	public static extern LuaType get(Hash url_p1, Hash property_p2, ILuaTable options_p3);
+	public static extern LuaType get(Hash url_p1, Hash property_p2, LuaTableBase options_p3);
 
 
 	/// <summary>
@@ -142,7 +142,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
-	public static extern LuaType get(Url url_p1, string property_p2, ILuaTable options_p3);
+	public static extern LuaType get(Url url_p1, string property_p2, LuaTableBase options_p3);
 
 
 	/// <summary>
@@ -158,7 +158,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get({0}, {1}, {2})"
 	/// </summary>
-	public static extern LuaType get(Url url_p1, Hash property_p2, ILuaTable options_p3);
+	public static extern LuaType get(Url url_p1, Hash property_p2, LuaTableBase options_p3);
 
 
 	/// <summary>
@@ -174,7 +174,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set(string url_p1, string property_p2, LuaType value_p3, ILuaTable options_p4);
+	public static extern void set(string url_p1, string property_p2, LuaType value_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -190,7 +190,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set(string url_p1, Hash property_p2, LuaType value_p3, ILuaTable options_p4);
+	public static extern void set(string url_p1, Hash property_p2, LuaType value_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -206,7 +206,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set(Hash url_p1, string property_p2, LuaType value_p3, ILuaTable options_p4);
+	public static extern void set(Hash url_p1, string property_p2, LuaType value_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -222,7 +222,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set(Hash url_p1, Hash property_p2, LuaType value_p3, ILuaTable options_p4);
+	public static extern void set(Hash url_p1, Hash property_p2, LuaType value_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -238,7 +238,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set(Url url_p1, string property_p2, LuaType value_p3, ILuaTable options_p4);
+	public static extern void set(Url url_p1, string property_p2, LuaType value_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -254,7 +254,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void set(Url url_p1, Hash property_p2, LuaType value_p3, ILuaTable options_p4);
+	public static extern void set(Url url_p1, Hash property_p2, LuaType value_p3, LuaTableBase options_p4);
 
 
 	/// <summary>
@@ -2311,7 +2311,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.delete({0})"
 	/// </summary>
-	public static extern void delete(ILuaTable id_p1);
+	public static extern void delete(LuaTableBase id_p1);
 
 
 	/// <summary>
@@ -2324,7 +2324,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.delete({0}, {1})"
 	/// </summary>
-	public static extern void delete(ILuaTable id_p1, bool recursive_p2);
+	public static extern void delete(LuaTableBase id_p1, bool recursive_p2);
 
 
 	/// <summary>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
+using lua;
 using support;
 using types;
 
@@ -42,17 +42,17 @@ public static class Message
 	/// <summary>
 	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
-	public static extern void post(string id, string code, ILuaTable data);
+	public static extern void post(string id, string code, LuaTable data);
 
 	/// <summary>
 	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
-	public static extern void post(Url id, string code, ILuaTable data);
+	public static extern void post(Url id, string code, LuaTable data);
 	
 	/// <summary>
 	///     @CSharpLua.Template = msg.post({0},{1},{2})
 	/// </summary>
-	public static extern void post(Hash id, string code, ILuaTable data);
+	public static extern void post(Hash id, string code, LuaTable data);
 
 
 	public static void postMessage(string id, string code, ILuaTableSerializable data)
@@ -134,7 +134,7 @@ public static class Message
 
 public abstract class MessageImplementation : ILuaTableSerializable
 {
-	public ILuaTable ToTable()
+	public LuaTable ToTable()
 	{
 		return this.DefaultTableSerialization();
 	}

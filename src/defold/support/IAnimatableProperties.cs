@@ -3,6 +3,11 @@ using attributes;
 
 namespace support
 {
+	public class EmptyProperties : AnimatableProperties
+	{
+		
+	}
+	
 	/// <summary>
 	///     Because Defold will establish properties on the self userobject, we have to create a proxy to source the properties
 	///     from.

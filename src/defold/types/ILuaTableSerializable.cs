@@ -1,4 +1,4 @@
-using System;
+using lua;
 
 namespace types
 {
@@ -6,6 +6,6 @@ namespace types
 	/// </summary>
 	public interface ILuaTableSerializable
 	{
-		ILuaTable ToTable();
+		LuaTable ToTable();
 	}
 }

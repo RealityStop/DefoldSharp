@@ -1,6 +1,4 @@
-using System;
-using support;
-using types;
+using lua;
 
 /// <summary>
 /// Crash API documentation
@@ -60,7 +58,7 @@ public static class Crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_modules({0})"
 	/// </summary>
-	public static extern ILuaTable get_modules(double handle_p1);
+	public static extern LuaTable get_modules(double handle_p1);
 
 
 	/// <summary>
@@ -92,7 +90,7 @@ public static class Crash
 	/// 
 	/// @CSharpLua.Template = "crash.get_backtrace({0})"
 	/// </summary>
-	public static extern ILuaTable get_backtrace(double handle_p1);
+	public static extern LuaTable get_backtrace(double handle_p1);
 
 
 	/// <summary>

@@ -1,5 +1,5 @@
 using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -14,7 +14,7 @@ public static class Window
 	/// 
 	/// @CSharpLua.Template = "window.set_listener({0})"
 	/// </summary>
-	public static extern void set_listener(Action<object,WindowEvent,ILuaTable> callback_p1);
+	public static extern void set_listener(Action<object,WindowEvent,LuaTable> callback_p1);
 
 
 	/// <summary>

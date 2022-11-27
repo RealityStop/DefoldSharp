@@ -1,5 +1,5 @@
 using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -194,7 +194,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.set_texture({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_texture(Hash path_p1, ILuaTable table_p2, DataBuffer buffer_p3);
+	public static extern void set_texture(Hash path_p1, LuaTable table_p2, DataBuffer buffer_p3);
 
 
 	/// <summary>
@@ -202,7 +202,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.set_texture({0}, {1}, {2})"
 	/// </summary>
-	public static extern void set_texture(string path_p1, ILuaTable table_p2, DataBuffer buffer_p3);
+	public static extern void set_texture(string path_p1, LuaTable table_p2, DataBuffer buffer_p3);
 
 
 	/// <summary>
@@ -258,7 +258,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.get_text_metrics({0}, {1})"
 	/// </summary>
-	public static extern ILuaTable get_text_metrics(Hash url_p1, string text_p2);
+	public static extern LuaTable get_text_metrics(Hash url_p1, string text_p2);
 
 
 	/// <summary>
@@ -266,7 +266,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.get_text_metrics({0}, {1}, {2})"
 	/// </summary>
-	public static extern ILuaTable get_text_metrics(Hash url_p1, string text_p2, ILuaTable options_p3);
+	public static extern LuaTable get_text_metrics(Hash url_p1, string text_p2, LuaTable options_p3);
 
 
 	/// <summary>
@@ -322,7 +322,7 @@ public static class Resource
 	/// 
 	/// @CSharpLua.Template = "resource.store_archive({0}, {1}, {2})"
 	/// </summary>
-	public static extern void store_archive(string path_p1, Action<object,ResourceLiveUpdate> callback_p2, ILuaTable options_p3);
+	public static extern void store_archive(string path_p1, Action<object,ResourceLiveUpdate> callback_p2, LuaTable options_p3);
 
 
 	/// <summary>

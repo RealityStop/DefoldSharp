@@ -1,4 +1,4 @@
-namespace support
+namespace support.ComponentReferences
 {
 	public interface ICachedData
 	{

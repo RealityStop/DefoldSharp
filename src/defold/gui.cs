@@ -1,5 +1,5 @@
 using System;
-using support;
+using lua;
 using types;
 
 /// <summary>
@@ -537,7 +537,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<object,Node> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(Node node_p1, string animation_p2, Action<object,Node> complete_function_p3, LuaTable play_properties_p4);
 
 
 	/// <summary>
@@ -567,7 +567,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<object,Node> complete_function_p3, ILuaTable play_properties_p4);
+	public static extern void play_flipbook(Node node_p1, Hash animation_p2, Action<object,Node> complete_function_p3, LuaTable play_properties_p4);
 
 
 	/// <summary>
@@ -1092,7 +1092,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.clone_tree({0})"
 	/// </summary>
-	public static extern ILuaTable clone_tree(Node node_p1);
+	public static extern LuaTable clone_tree(Node node_p1);
 
 
 	/// <summary>
@@ -1507,7 +1507,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.stop_particlefx({0}, {1})"
 	/// </summary>
-	public static extern void stop_particlefx(Node node_p1, ILuaTable options_p2);
+	public static extern void stop_particlefx(Node node_p1, LuaTable options_p2);
 
 
 	/// <summary>
@@ -1604,7 +1604,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.on_message({0}, {1}, {2})"
 	/// </summary>
-	public static extern void on_message(object self_p1, Hash message_id_p2, ILuaTable message_p3);
+	public static extern void on_message(object self_p1, Hash message_id_p2, LuaTable message_p3);
 
 
 	/// <summary>
@@ -1749,7 +1749,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.on_input({0}, {1}, {2})"
 	/// </summary>
-	public static extern bool on_input(object self_p1, Hash action_id_p2, ILuaTable action_p3);
+	public static extern bool on_input(object self_p1, Hash action_id_p2, LuaTable action_p3);
 
 
 	/// <summary>
@@ -1772,8 +1772,8 @@ public static class Gui
 
 	public static TNode GetNode<TNode>(Hash id) where TNode : NodeProxy, new()
 	{
-	    var node = new TNode();
-	    node.__assignproxy__(Gui.get_node(id));
-	    return node;
+		var node = new TNode();
+		node.__assignproxy__(Gui.get_node(id));
+		return node;
 	}
 }
