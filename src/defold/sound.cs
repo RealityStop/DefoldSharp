@@ -1,6 +1,6 @@
 using System;
+using support;
 using lua;
-using support.ComponentReferences;
 using types;
 
 /// <summary>

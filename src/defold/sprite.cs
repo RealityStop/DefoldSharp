@@ -1,6 +1,6 @@
 using System;
+using support;
 using lua;
-using support.ComponentReferences;
 using types;
 
 /// <summary>
@@ -127,7 +127,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,LuaTable,Url> complete_function_p3, LuaTable play_properties_p4);
+	public static extern void play_flipbook(string url_p1, Hash id_p2, Action<object,Hash,LuaTable,Url> complete_function_p3, LuaTableBase play_properties_p4);
 
 
 	/// <summary>
@@ -160,7 +160,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,LuaTable,Url> complete_function_p3, LuaTable play_properties_p4);
+	public static extern void play_flipbook(Hash url_p1, Hash id_p2, Action<object,Hash,LuaTable,Url> complete_function_p3, LuaTableBase play_properties_p4);
 
 
 	/// <summary>
@@ -193,7 +193,7 @@ public class Sprite : BuiltInComponentBase
 	/// 
 	/// @CSharpLua.Template = "sprite.play_flipbook({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,LuaTable,Url> complete_function_p3, LuaTable play_properties_p4);
+	public static extern void play_flipbook(Url url_p1, Hash id_p2, Action<object,Hash,LuaTable,Url> complete_function_p3, LuaTableBase play_properties_p4);
 
 
 	#endregion Defold API
@@ -203,95 +203,110 @@ public class Sprite : BuiltInComponentBase
 	private bool _cachedFlipVertical;
 
 
+
 	public bool FlipHorizontal
 	{
-		get
-		{
-			return _cachedFlipHorizontal;
-		}
-		set
-		{
-			_cachedFlipHorizontal = value;
-			set_hflip(this, value);
-		}
+	    get
+	    {
+	        return _cachedFlipHorizontal;
+	    }
+	    set
+	    {
+	        _cachedFlipHorizontal = value;
+	        set_hflip(this, value);
+	    }
 	}
+
 
 
 	public bool FlipVertical
 	{
-		get
-		{
-			return _cachedFlipVertical;
-		}
-		set
-		{
-			_cachedFlipVertical = value;
+	    get
+	    {
+	        return _cachedFlipVertical;
+	    }
+	    set
+	    {
+	        _cachedFlipVertical = value;
 
-			set_vflip(this, value);
-		}
+
+	        set_vflip(this, value);
+	    }
 	}
+
 
 
 	public Vector2 Size => (dynamic)Go.get(this, "size");
 
+
 	public Vector2 Scale
 	{
-		get => (dynamic)Go.get(this, "scale");
-		set => Go.set(this, "scale", value);
+	    get => (dynamic)Go.get(this, "scale");
+	    set => Go.set(this, "scale", value);
 	}
+
 
 	public Hash Image
 	{
-		get => (dynamic)Go.get(this, "image");
-		set => Go.set(this, "image", value);
+	    get => (dynamic)Go.get(this, "image");
+	    set => Go.set(this, "image", value);
 	}
+
 
 	public Hash Material
 	{
-		get => (dynamic)Go.get(this, "material");
-		set => Go.set(this, "material", value);
+	    get => (dynamic)Go.get(this, "material");
+	    set => Go.set(this, "material", value);
 	}
+
 
 	public double Cursor
 	{
-		get => (dynamic)Go.get(this, "cursor");
-		set => Go.set(this, "cursor", value);
+	    get => (dynamic)Go.get(this, "cursor");
+	    set => Go.set(this, "cursor", value);
 	}
+
 
 	public double PlaybackRate
 	{
-		get => (dynamic)Go.get(this, "playback_rate");
-		set => Go.set(this, "playback_rate", value);
+	    get => (dynamic)Go.get(this, "playback_rate");
+	    set => Go.set(this, "playback_rate", value);
 	}
+
 
 	public Hash Animation => (dynamic)Go.get(this, "animation");
 
 
+
 	public void PlayFlipbook(Hash animation)
 	{
-		play_flipbook(this, animation);
+	    play_flipbook(this, animation);
 	}
+
 
 
 	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, LuaTable, Url> onComplete)
 	{
-		void callback(object target, Hash hash, LuaTable table, Url url)
-		{
-			onComplete(this, hash, table, url);
-		}
+	    void callback(object target, Hash hash, LuaTable table, Url url)
+	    {
+	        onComplete(this, hash, table, url);
+	    }
 
-		play_flipbook(this, animation, callback);
+
+	    play_flipbook(this, animation, callback);
 	}
 
 
-	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, LuaTable, Url> onComplete,
-		LuaTable playProperties)
-	{
-		void callback(object target, Hash hash, LuaTable table, Url url)
-		{
-			onComplete(this, hash, table, url);
-		}
 
-		play_flipbook(this, animation, callback, playProperties);
+	public void PlayFlipbook(Hash animation, Action<Sprite, Hash, LuaTable, Url> onComplete,
+	    LuaTable playProperties)
+	{
+	    void callback(object target, Hash hash, LuaTable table, Url url)
+	    {
+	        onComplete(this, hash, table, url);
+	    }
+
+
+	    play_flipbook(this, animation, callback, playProperties);
 	}
 }

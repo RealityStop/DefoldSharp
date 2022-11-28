@@ -1,6 +1,6 @@
 using types;
 
-namespace support.ComponentReferences
+namespace support
 {
 	public abstract class ComponentReference
 	{

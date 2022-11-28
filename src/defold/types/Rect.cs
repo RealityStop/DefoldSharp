@@ -1,5 +1,9 @@
+using System;
+
 namespace types
 {
+	/// <summary>
+	/// </summary>
 	public class Rect
 	{
 		public double X, Y;
