@@ -494,7 +494,7 @@ public class CollectionFactory : BuiltInComponentBase
 	   return (dynamic)create(this, position, rotation);
 	}
 	   
-	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, ILuaTable properties)
+	public LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, LuaTableBase properties)
 	{
 	   return (dynamic)create(this, position, rotation, properties);
 	}

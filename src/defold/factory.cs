@@ -436,13 +436,13 @@ public class Factory : BuiltInComponentBase
 	}
 
 
-	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties)
+	public Hash Create(Vector3 position, Quaternion rotation, LuaTableBase properties)
 	{
 	   return (dynamic)create(this, position, rotation, properties);
 	}
 
 
-	public Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties, double scale)
+	public Hash Create(Vector3 position, Quaternion rotation, LuaTableBase properties, double scale)
 	{
 	   return (dynamic)create(this, position, rotation, properties, scale);
 	}
