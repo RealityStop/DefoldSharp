@@ -4,9 +4,7 @@ namespace types
 {
 	/// <summary>
 	/// </summary>
-	public enum TimeStepMode
+	public class ConstantBuffer
 	{
-		Continuous = 0,
-		Discrete = 1,
 	}
 }

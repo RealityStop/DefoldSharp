@@ -1,3 +1,5 @@
+using System;
+using support;
 using lua;
 using types;
 
@@ -79,7 +81,7 @@ public static class Render
 	/// 
 	/// @CSharpLua.Template = "render.constant_buffer()"
 	/// </summary>
-	public static extern LuaTable constant_buffer();
+	public static extern ConstantBuffer constant_buffer();
 
 
 	/// <summary>
@@ -120,7 +122,7 @@ public static class Render
 	/// 
 	/// @CSharpLua.Template = "render.clear({0})"
 	/// </summary>
-	public static extern void clear(LuaTable buffers_p1);
+	public static extern void clear(LuaTableBase buffers_p1);
 
 
 	/// <summary>
@@ -131,7 +133,7 @@ public static class Render
 	/// 
 	/// @CSharpLua.Template = "render.draw({0})"
 	/// </summary>
-	public static extern void draw(LuaTable predicate_p1);
+	public static extern void draw(LuaTableBase predicate_p1);
 
 
 	/// <summary>
@@ -142,7 +144,7 @@ public static class Render
 	/// 
 	/// @CSharpLua.Template = "render.draw({0}, {1})"
 	/// </summary>
-	public static extern void draw(LuaTable predicate_p1, LuaTable options_p2);
+	public static extern void draw(LuaTableBase predicate_p1, LuaTableBase options_p2);
 
 
 	/// <summary>
@@ -158,7 +160,7 @@ public static class Render
 	/// 
 	/// @CSharpLua.Template = "render.draw_debug3d({0})"
 	/// </summary>
-	public static extern void draw_debug3d(LuaTable options_p1);
+	public static extern void draw_debug3d(LuaTableBase options_p1);
 
 
 	/// <summary>
@@ -468,7 +470,18 @@ public static class Render
 	/// </summary>
 	public static extern double get_window_height();
 
-	
+
+	/// <summary>
+	/// This function returns a new render predicate for objects with materials matching
+	/// the provided material tags. The provided tags are combined into a bit mask
+	/// for the predicate. If multiple tags are provided, the predicate matches materials
+	/// with all tags ANDed together.
+	/// The current limit to the number of tags that can be defined is <code>64</code>.
+	/// 
+	/// @CSharpLua.Template = "render.predicate({0})"
+	/// </summary>
+	public static extern LuaTable predicate(LuaTableBase tags_p1);
+
 
 	/// <summary>
 	/// This function returns a new render predicate for objects with materials matching
@@ -480,18 +493,6 @@ public static class Render
 	/// @CSharpLua.Template = "render.predicate({0})"
 	/// </summary>
 	public static extern LuaTable predicate(LuaArrayOf<string> tags_p1);
-	
-
-	/// <summary>
-	/// This function returns a new render predicate for objects with materials matching
-	/// the provided material tags. The provided tags are combined into a bit mask
-	/// for the predicate. If multiple tags are provided, the predicate matches materials
-	/// with all tags ANDed together.
-	/// The current limit to the number of tags that can be defined is <code>64</code>.
-	/// 
-	/// @CSharpLua.Template = "render.predicate({0})"
-	/// </summary>
-	public static extern LuaTable predicate(LuaTable tags_p1);
 
 
 	/// <summary>
