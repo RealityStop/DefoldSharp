@@ -22,7 +22,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.matrix4_axis_angle({0},{1})"
 		/// </summary>
-		public static extern Matrix4 From_axis_angle(Vector3 v, float angle);
+		public static extern Matrix4 From_axis_angle(vector3 v, float angle);
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.matrix4_from_quat({0})"
@@ -37,7 +37,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.matrix4_look_at({0},{1},{2})"
 		/// </summary>
-		public static extern Matrix4 From_look_at(Vector3 eye, Vector3 lookat, Vector3 up);
+		public static extern Matrix4 From_look_at(vector3 eye, vector3 lookat, vector3 up);
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.matrix4_orthographic({0},{1},{2},{3},{4},{5})"
@@ -67,12 +67,12 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.matrix4_translation({0})"
 		/// </summary>
-		public static extern Matrix4 From_translation(Vector3 position);
+		public static extern Matrix4 From_translation(vector3 position);
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.matrix4_translation({0})"
 		/// </summary>
-		public static extern Matrix4 From_translation(Vector4 position);
+		public static extern Matrix4 From_translation(vector4 position);
 
 
 
@@ -100,12 +100,12 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Matrix4 operator *(Matrix4 a, Vector4 b);
+		public static extern Matrix4 operator *(Matrix4 a, vector4 b);
 
 		/// <summary>
 		/// @CSharpLua.Template = "{0} * {1}"
 		/// </summary>
-		public static extern Matrix4 operator *(Vector4 a, Matrix4 b);
+		public static extern Matrix4 operator *(vector4 a, Matrix4 b);
 
 
 

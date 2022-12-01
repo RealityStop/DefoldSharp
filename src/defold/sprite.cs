@@ -236,10 +236,10 @@ public class Sprite : BuiltInComponentBase
 
 
 
-	public Vector2 Size => (dynamic)Go.get(this, "size");
+	public vector2 Size => (dynamic)Go.get(this, "size");
 
 
-	public Vector2 Scale
+	public vector2 Scale
 	{
 	    get => (dynamic)Go.get(this, "scale");
 	    set => Go.set(this, "scale", value);

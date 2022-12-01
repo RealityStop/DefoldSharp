@@ -202,7 +202,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5);
+	public static extern void animate(Node node_p1, string property_p2, vector3 to_p3, Easing easing_p4, double duration_p5);
 
 
 	/// <summary>
@@ -224,7 +224,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6);
+	public static extern void animate(Node node_p1, string property_p2, vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6);
 
 
 	/// <summary>
@@ -246,7 +246,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
+	public static extern void animate(Node node_p1, string property_p2, vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
 
 
 	/// <summary>
@@ -268,7 +268,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
+	public static extern void animate(Node node_p1, string property_p2, vector3 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
 
 
 	/// <summary>
@@ -290,7 +290,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5);
+	public static extern void animate(Node node_p1, string property_p2, vector4 to_p3, Easing easing_p4, double duration_p5);
 
 
 	/// <summary>
@@ -312,7 +312,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6);
+	public static extern void animate(Node node_p1, string property_p2, vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6);
 
 
 	/// <summary>
@@ -334,7 +334,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
+	public static extern void animate(Node node_p1, string property_p2, vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7);
 
 
 	/// <summary>
@@ -356,7 +356,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Node node_p1, string property_p2, Vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
+	public static extern void animate(Node node_p1, string property_p2, vector4 to_p3, Easing easing_p4, double duration_p5, double delay_p6, Action<object,Node> complete_function_p7, GuiPlaybackMode playback_p8);
 
 
 	/// <summary>
@@ -372,7 +372,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_box_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_box_node(Vector3 pos_p1, Vector3 size_p2);
+	public static extern Node new_box_node(vector3 pos_p1, vector3 size_p2);
 
 
 	/// <summary>
@@ -380,7 +380,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_box_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_box_node(Vector4 pos_p1, Vector3 size_p2);
+	public static extern Node new_box_node(vector4 pos_p1, vector3 size_p2);
 
 
 	/// <summary>
@@ -388,7 +388,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_text_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_text_node(Vector3 pos_p1, string text_p2);
+	public static extern Node new_text_node(vector3 pos_p1, string text_p2);
 
 
 	/// <summary>
@@ -396,7 +396,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_text_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_text_node(Vector4 pos_p1, string text_p2);
+	public static extern Node new_text_node(vector4 pos_p1, string text_p2);
 
 
 	/// <summary>
@@ -404,7 +404,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_pie_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_pie_node(Vector3 pos_p1, Vector3 size_p2);
+	public static extern Node new_pie_node(vector3 pos_p1, vector3 size_p2);
 
 
 	/// <summary>
@@ -412,7 +412,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_pie_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_pie_node(Vector4 pos_p1, Vector3 size_p2);
+	public static extern Node new_pie_node(vector4 pos_p1, vector3 size_p2);
 
 
 	/// <summary>
@@ -818,7 +818,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_slice9({0}, {1})"
 	/// </summary>
-	public static extern void set_slice9(Node node_p1, Vector4 values_p2);
+	public static extern void set_slice9(Node node_p1, vector4 values_p2);
 
 
 	/// <summary>
@@ -826,7 +826,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_slice9({0})"
 	/// </summary>
-	public static extern Vector4 get_slice9(Node node_p1);
+	public static extern vector4 get_slice9(Node node_p1);
 
 
 	/// <summary>
@@ -1150,7 +1150,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_position({0})"
 	/// </summary>
-	public static extern Vector3 get_position(Node node_p1);
+	public static extern vector3 get_position(Node node_p1);
 
 
 	/// <summary>
@@ -1158,7 +1158,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_position({0}, {1})"
 	/// </summary>
-	public static extern void set_position(Node node_p1, Vector3 position_p2);
+	public static extern void set_position(Node node_p1, vector3 position_p2);
 
 
 	/// <summary>
@@ -1166,7 +1166,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_position({0}, {1})"
 	/// </summary>
-	public static extern void set_position(Node node_p1, Vector4 position_p2);
+	public static extern void set_position(Node node_p1, vector4 position_p2);
 
 
 	/// <summary>
@@ -1175,7 +1175,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_rotation({0})"
 	/// </summary>
-	public static extern Vector3 get_rotation(Node node_p1);
+	public static extern vector3 get_rotation(Node node_p1);
 
 
 	/// <summary>
@@ -1184,7 +1184,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_rotation({0}, {1})"
 	/// </summary>
-	public static extern void set_rotation(Node node_p1, Vector3 rotation_p2);
+	public static extern void set_rotation(Node node_p1, vector3 rotation_p2);
 
 
 	/// <summary>
@@ -1193,7 +1193,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_rotation({0}, {1})"
 	/// </summary>
-	public static extern void set_rotation(Node node_p1, Vector4 rotation_p2);
+	public static extern void set_rotation(Node node_p1, vector4 rotation_p2);
 
 
 	/// <summary>
@@ -1201,7 +1201,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_scale(Node node_p1);
+	public static extern vector3 get_scale(Node node_p1);
 
 
 	/// <summary>
@@ -1209,7 +1209,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_scale({0}, {1})"
 	/// </summary>
-	public static extern void set_scale(Node node_p1, Vector3 scale_p2);
+	public static extern void set_scale(Node node_p1, vector3 scale_p2);
 
 
 	/// <summary>
@@ -1217,7 +1217,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_scale({0}, {1})"
 	/// </summary>
-	public static extern void set_scale(Node node_p1, Vector4 scale_p2);
+	public static extern void set_scale(Node node_p1, vector4 scale_p2);
 
 
 	/// <summary>
@@ -1252,7 +1252,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_color({0})"
 	/// </summary>
-	public static extern Vector4 get_color(Node node_p1);
+	public static extern vector4 get_color(Node node_p1);
 
 
 	/// <summary>
@@ -1287,7 +1287,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_color({0}, {1})"
 	/// </summary>
-	public static extern void set_color(Node node_p1, Vector3 color_p2);
+	public static extern void set_color(Node node_p1, vector3 color_p2);
 
 
 	/// <summary>
@@ -1322,7 +1322,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_color({0}, {1})"
 	/// </summary>
-	public static extern void set_color(Node node_p1, Vector4 color_p2);
+	public static extern void set_color(Node node_p1, vector4 color_p2);
 
 
 	/// <summary>
@@ -1331,7 +1331,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_outline({0})"
 	/// </summary>
-	public static extern Vector4 get_outline(Node node_p1);
+	public static extern vector4 get_outline(Node node_p1);
 
 
 	/// <summary>
@@ -1340,7 +1340,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_outline({0}, {1})"
 	/// </summary>
-	public static extern void set_outline(Node node_p1, Vector3 color_p2);
+	public static extern void set_outline(Node node_p1, vector3 color_p2);
 
 
 	/// <summary>
@@ -1349,7 +1349,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_outline({0}, {1})"
 	/// </summary>
-	public static extern void set_outline(Node node_p1, Vector4 color_p2);
+	public static extern void set_outline(Node node_p1, vector4 color_p2);
 
 
 	/// <summary>
@@ -1358,7 +1358,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_shadow({0})"
 	/// </summary>
-	public static extern Vector4 get_shadow(Node node_p1);
+	public static extern vector4 get_shadow(Node node_p1);
 
 
 	/// <summary>
@@ -1367,7 +1367,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_shadow({0}, {1})"
 	/// </summary>
-	public static extern void set_shadow(Node node_p1, Vector3 color_p2);
+	public static extern void set_shadow(Node node_p1, vector3 color_p2);
 
 
 	/// <summary>
@@ -1376,7 +1376,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_shadow({0}, {1})"
 	/// </summary>
-	public static extern void set_shadow(Node node_p1, Vector4 color_p2);
+	public static extern void set_shadow(Node node_p1, vector4 color_p2);
 
 
 	/// <summary>
@@ -1385,7 +1385,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_size({0}, {1})"
 	/// </summary>
-	public static extern void set_size(Node node_p1, Vector3 size_p2);
+	public static extern void set_size(Node node_p1, vector3 size_p2);
 
 
 	/// <summary>
@@ -1394,7 +1394,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_size({0}, {1})"
 	/// </summary>
-	public static extern void set_size(Node node_p1, Vector4 size_p2);
+	public static extern void set_size(Node node_p1, vector4 size_p2);
 
 
 	/// <summary>
@@ -1402,7 +1402,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_size({0})"
 	/// </summary>
-	public static extern Vector3 get_size(Node node_p1);
+	public static extern vector3 get_size(Node node_p1);
 
 
 	/// <summary>
@@ -1412,7 +1412,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.get_screen_position({0})"
 	/// </summary>
-	public static extern Vector3 get_screen_position(Node node_p1);
+	public static extern vector3 get_screen_position(Node node_p1);
 
 
 	/// <summary>
@@ -1420,7 +1420,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.set_screen_position({0}, {1})"
 	/// </summary>
-	public static extern void set_screen_position(Node node_p1, Vector3 screen_position_p2);
+	public static extern void set_screen_position(Node node_p1, vector3 screen_position_p2);
 
 
 	/// <summary>
@@ -1428,7 +1428,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.screen_to_local({0}, {1})"
 	/// </summary>
-	public static extern Vector3 screen_to_local(Node node_p1, Vector3 screen_position_p2);
+	public static extern vector3 screen_to_local(Node node_p1, vector3 screen_position_p2);
 
 
 	/// <summary>
@@ -1460,7 +1460,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_particlefx_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_particlefx_node(Vector3 pos_p1, Hash particlefx_p2);
+	public static extern Node new_particlefx_node(vector3 pos_p1, Hash particlefx_p2);
 
 
 	/// <summary>
@@ -1468,7 +1468,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_particlefx_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_particlefx_node(Vector3 pos_p1, string particlefx_p2);
+	public static extern Node new_particlefx_node(vector3 pos_p1, string particlefx_p2);
 
 
 	/// <summary>
@@ -1476,7 +1476,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_particlefx_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_particlefx_node(Vector4 pos_p1, Hash particlefx_p2);
+	public static extern Node new_particlefx_node(vector4 pos_p1, Hash particlefx_p2);
 
 
 	/// <summary>
@@ -1484,7 +1484,7 @@ public static class Gui
 	/// 
 	/// @CSharpLua.Template = "gui.new_particlefx_node({0}, {1})"
 	/// </summary>
-	public static extern Node new_particlefx_node(Vector4 pos_p1, string particlefx_p2);
+	public static extern Node new_particlefx_node(vector4 pos_p1, string particlefx_p2);
 
 
 	/// <summary>

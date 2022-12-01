@@ -18,9 +18,9 @@ public static class Render
 		public static Hash __CODE__ = Defold.hash("draw_debug_text");
 		public override Hash FetchCode() => __CODE__;
 
-		public Vector3 position;
+		public vector3 position;
 		public string text;
-		public Vector4 color;
+		public vector4 color;
 	}
 
 
@@ -31,9 +31,9 @@ public static class Render
 		public static Hash __CODE__ = Defold.hash("draw_line");
 		public override Hash FetchCode() => __CODE__;
 
-		public Vector3 start_point;
-		public Vector3 end_point;
-		public Vector4 color;
+		public vector3 start_point;
+		public vector3 end_point;
+		public vector4 color;
 	}
 
 
@@ -68,7 +68,7 @@ public static class Render
 		public static Hash __CODE__ = Defold.hash("clear_color");
 		public override Hash FetchCode() => __CODE__;
 
-		public Vector4 color;
+		public vector4 color;
 	}
 
 

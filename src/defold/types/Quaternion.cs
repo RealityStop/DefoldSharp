@@ -26,17 +26,17 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.quat_axis_angle({0},{1})"
 		/// </summary>
-		public static extern Quaternion From_axis_angle(Vector3 v, float angle);
+		public static extern Quaternion From_axis_angle(vector3 v, float angle);
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.quat_basis({0},{1},{2})"
 		/// </summary>
-		public static extern Quaternion From_basis(Vector3 x, Vector3 y, Vector3 z);
+		public static extern Quaternion From_basis(vector3 x, vector3 y, vector3 z);
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.quat_from_to({0},{1})"
 		/// </summary>
-		public static extern Quaternion From_to(Vector3 v1, Vector3 v2);
+		public static extern Quaternion From_to(vector3 v1, vector3 v2);
 
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.quat_rotation_x({0})"
@@ -57,7 +57,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "vmath.rotate({this},{0})"
 		/// </summary>
-		public extern Vector3 RotateVector(Vector3 v);
+		public extern vector3 RotateVector(vector3 v);
 
 
 

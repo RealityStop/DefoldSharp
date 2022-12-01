@@ -263,7 +263,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_position()"
 	/// </summary>
-	public static extern Vector3 get_position();
+	public static extern vector3 get_position();
 
 
 	/// <summary>
@@ -271,7 +271,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_position({0})"
 	/// </summary>
-	public static extern Vector3 get_position(string id_p1);
+	public static extern vector3 get_position(string id_p1);
 
 
 	/// <summary>
@@ -279,7 +279,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_position({0})"
 	/// </summary>
-	public static extern Vector3 get_position(Hash id_p1);
+	public static extern vector3 get_position(Hash id_p1);
 
 
 	/// <summary>
@@ -287,7 +287,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_position({0})"
 	/// </summary>
-	public static extern Vector3 get_position(Url id_p1);
+	public static extern vector3 get_position(Url id_p1);
 
 
 	/// <summary>
@@ -327,7 +327,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_scale()"
 	/// </summary>
-	public static extern Vector3 get_scale();
+	public static extern vector3 get_scale();
 
 
 	/// <summary>
@@ -335,7 +335,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_scale(string id_p1);
+	public static extern vector3 get_scale(string id_p1);
 
 
 	/// <summary>
@@ -343,7 +343,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_scale(Hash id_p1);
+	public static extern vector3 get_scale(Hash id_p1);
 
 
 	/// <summary>
@@ -351,7 +351,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_scale(Url id_p1);
+	public static extern vector3 get_scale(Url id_p1);
 
 
 	/// <summary>
@@ -391,7 +391,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_position({0})"
 	/// </summary>
-	public static extern void set_position(Vector3 position_p1);
+	public static extern void set_position(vector3 position_p1);
 
 
 	/// <summary>
@@ -399,7 +399,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_position({0}, {1})"
 	/// </summary>
-	public static extern void set_position(Vector3 position_p1, string id_p2);
+	public static extern void set_position(vector3 position_p1, string id_p2);
 
 
 	/// <summary>
@@ -407,7 +407,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_position({0}, {1})"
 	/// </summary>
-	public static extern void set_position(Vector3 position_p1, Hash id_p2);
+	public static extern void set_position(vector3 position_p1, Hash id_p2);
 
 
 	/// <summary>
@@ -415,7 +415,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_position({0}, {1})"
 	/// </summary>
-	public static extern void set_position(Vector3 position_p1, Url id_p2);
+	public static extern void set_position(vector3 position_p1, Url id_p2);
 
 
 	/// <summary>
@@ -492,7 +492,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_scale({0})"
 	/// </summary>
-	public static extern void set_scale(Vector3 scale_p1);
+	public static extern void set_scale(vector3 scale_p1);
 
 
 	/// <summary>
@@ -501,7 +501,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_scale({0}, {1})"
 	/// </summary>
-	public static extern void set_scale(Vector3 scale_p1, string id_p2);
+	public static extern void set_scale(vector3 scale_p1, string id_p2);
 
 
 	/// <summary>
@@ -510,7 +510,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_scale({0}, {1})"
 	/// </summary>
-	public static extern void set_scale(Vector3 scale_p1, Hash id_p2);
+	public static extern void set_scale(vector3 scale_p1, Hash id_p2);
 
 
 	/// <summary>
@@ -519,7 +519,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.set_scale({0}, {1})"
 	/// </summary>
-	public static extern void set_scale(Vector3 scale_p1, Url id_p2);
+	public static extern void set_scale(vector3 scale_p1, Url id_p2);
 
 
 	/// <summary>
@@ -846,7 +846,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_position()"
 	/// </summary>
-	public static extern Vector3 get_world_position();
+	public static extern vector3 get_world_position();
 
 
 	/// <summary>
@@ -855,7 +855,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_position({0})"
 	/// </summary>
-	public static extern Vector3 get_world_position(string id_p1);
+	public static extern vector3 get_world_position(string id_p1);
 
 
 	/// <summary>
@@ -864,7 +864,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_position({0})"
 	/// </summary>
-	public static extern Vector3 get_world_position(Hash id_p1);
+	public static extern vector3 get_world_position(Hash id_p1);
 
 
 	/// <summary>
@@ -873,7 +873,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_position({0})"
 	/// </summary>
-	public static extern Vector3 get_world_position(Url id_p1);
+	public static extern vector3 get_world_position(Url id_p1);
 
 
 	/// <summary>
@@ -920,7 +920,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_scale()"
 	/// </summary>
-	public static extern Vector3 get_world_scale();
+	public static extern vector3 get_world_scale();
 
 
 	/// <summary>
@@ -931,7 +931,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_world_scale(string id_p1);
+	public static extern vector3 get_world_scale(string id_p1);
 
 
 	/// <summary>
@@ -942,7 +942,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_world_scale(Hash id_p1);
+	public static extern vector3 get_world_scale(Hash id_p1);
 
 
 	/// <summary>
@@ -953,7 +953,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.get_world_scale({0})"
 	/// </summary>
-	public static extern Vector3 get_world_scale(Url id_p1);
+	public static extern vector3 get_world_scale(Url id_p1);
 
 
 	/// <summary>
@@ -1107,7 +1107,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1122,7 +1122,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1137,7 +1137,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1152,7 +1152,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1167,7 +1167,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1182,7 +1182,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(string url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1287,7 +1287,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1302,7 +1302,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1317,7 +1317,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1332,7 +1332,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1347,7 +1347,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1362,7 +1362,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(string url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1467,7 +1467,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1482,7 +1482,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1497,7 +1497,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1512,7 +1512,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1527,7 +1527,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1542,7 +1542,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Hash url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1647,7 +1647,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1662,7 +1662,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1677,7 +1677,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1692,7 +1692,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1707,7 +1707,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1722,7 +1722,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Hash url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1827,7 +1827,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1842,7 +1842,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1857,7 +1857,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -1872,7 +1872,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -1887,7 +1887,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -1902,7 +1902,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Url url_p1, string property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -2007,7 +2007,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -2022,7 +2022,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -2037,7 +2037,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector3 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -2052,7 +2052,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5})"
 	/// </summary>
-	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6);
+	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6);
 
 
 	/// <summary>
@@ -2067,7 +2067,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6})"
 	/// </summary>
-	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
+	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7);
 
 
 	/// <summary>
@@ -2082,7 +2082,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.animate({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7})"
 	/// </summary>
-	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, Vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
+	public static extern void animate(Url url_p1, Hash property_p2, GoPlaybackMode playback_p3, vector4 to_p4, Easing easing_p5, double duration_p6, double delay_p7, Action<object,Url,Hash> complete_function_p8);
 
 
 	/// <summary>
@@ -2365,7 +2365,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.property({0}, {1})"
 	/// </summary>
-	public static extern void property(string name_p1, Vector3 value_p2);
+	public static extern void property(string name_p1, vector3 value_p2);
 
 
 	/// <summary>
@@ -2375,7 +2375,7 @@ public static class Go
 	/// 
 	/// @CSharpLua.Template = "go.property({0}, {1})"
 	/// </summary>
-	public static extern void property(string name_p1, Vector4 value_p2);
+	public static extern void property(string name_p1, vector4 value_p2);
 
 
 	/// <summary>

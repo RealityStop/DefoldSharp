@@ -2,9 +2,11 @@ namespace lua
 {
 	/// <summary>
 	/// Lua math standard library
+	///
+	///	@CSharpLua.Ignore
 	/// 
 	/// </summary>
-	public static class Math
+	public static class math
 	{
 		#region Defold API
 		/// <summary>

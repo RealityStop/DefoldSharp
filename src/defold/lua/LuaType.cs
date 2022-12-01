@@ -72,7 +72,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0}"
 		/// </summary>
-		public static implicit operator LuaType(Vector2 v)
+		public static implicit operator LuaType(vector2 v)
 		{
 		   return default;
 		}
@@ -80,7 +80,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0}"
 		/// </summary>
-		public static implicit operator LuaType(Vector3 v)
+		public static implicit operator LuaType(vector3 v)
 		{
 		   return default;
 		}
@@ -89,7 +89,7 @@ namespace types
 		/// <summary>
 		/// @CSharpLua.Template = "{0}"
 		/// </summary>
-		public static implicit operator LuaType(Vector4 v)
+		public static implicit operator LuaType(vector4 v)
 		{
 		   return default;
 		}

@@ -22,7 +22,7 @@ namespace support
 		
 		
 		
-		public Vector3 Position
+		public vector3 Position
 		{
 			get
 			{
@@ -60,7 +60,7 @@ namespace support
 		}
 
 
-		public Vector3 Scale
+		public vector3 Scale
 		{
 			get
 			{
@@ -88,7 +88,7 @@ namespace support
 		}
 		
 		
-		public Vector3 WorldPosition
+		public vector3 WorldPosition
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace support
 			}
 		}
 
-		public Vector3 WorldScale
+		public vector3 WorldScale
 		{
 			get
 			{
@@ -187,7 +187,7 @@ namespace support
 			targetUrl.path = LocatorUrl.path;
 			targetUrl.fragment = hash;
 
-			return ComponentReferences.Component.At<T>(Locator.AtUrl(targetUrl));
+			return support.Component.At<T>(Locator.AtUrl(targetUrl));
 		}
 		
 		

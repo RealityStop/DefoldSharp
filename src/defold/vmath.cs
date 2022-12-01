@@ -15,7 +15,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector3()"
 	/// </summary>
-	public static extern Vector3 vector3();
+	public static extern vector3 vector3();
 
 
 	/// <summary>
@@ -24,7 +24,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector3({0})"
 	/// </summary>
-	public static extern Vector3 vector3(double n_p1);
+	public static extern vector3 vector3(double n_p1);
 
 
 	/// <summary>
@@ -34,7 +34,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector3({0})"
 	/// </summary>
-	public static extern Vector3 vector3(Vector3 v1_p1);
+	public static extern vector3 vector3(vector3 v1_p1);
 
 
 	/// <summary>
@@ -43,7 +43,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector3({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector3 vector3(double x_p1, double y_p2, double z_p3);
+	public static extern vector3 vector3(double x_p1, double y_p2, double z_p3);
 
 
 	/// <summary>
@@ -51,7 +51,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector4()"
 	/// </summary>
-	public static extern Vector4 vector4();
+	public static extern vector4 vector4();
 
 
 	/// <summary>
@@ -60,7 +60,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector4({0})"
 	/// </summary>
-	public static extern Vector4 vector4(double n_p1);
+	public static extern vector4 vector4(double n_p1);
 
 
 	/// <summary>
@@ -70,7 +70,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector4({0})"
 	/// </summary>
-	public static extern Vector4 vector4(Vector4 v1_p1);
+	public static extern vector4 vector4(vector4 v1_p1);
 
 
 	/// <summary>
@@ -79,7 +79,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.vector4({0}, {1}, {2}, {3})"
 	/// </summary>
-	public static extern Vector4 vector4(double x_p1, double y_p2, double z_p3, double w_p4);
+	public static extern vector4 vector4(double x_p1, double y_p2, double z_p3, double w_p4);
 
 
 	/// <summary>
@@ -120,7 +120,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.quat_from_to({0}, {1})"
 	/// </summary>
-	public static extern Quaternion quat_from_to(Vector3 v1_p1, Vector3 v2_p2);
+	public static extern Quaternion quat_from_to(vector3 v1_p1, vector3 v2_p2);
 
 
 	/// <summary>
@@ -129,7 +129,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.quat_axis_angle({0}, {1})"
 	/// </summary>
-	public static extern Quaternion quat_axis_angle(Vector3 v_p1, double angle_p2);
+	public static extern Quaternion quat_axis_angle(vector3 v_p1, double angle_p2);
 
 
 	/// <summary>
@@ -139,7 +139,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.quat_basis({0}, {1}, {2})"
 	/// </summary>
-	public static extern Quaternion quat_basis(Vector3 x_p1, Vector3 y_p2, Vector3 z_p3);
+	public static extern Quaternion quat_basis(vector3 x_p1, vector3 y_p2, vector3 z_p3);
 
 
 	/// <summary>
@@ -206,7 +206,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.matrix4_look_at({0}, {1}, {2})"
 	/// </summary>
-	public static extern Matrix4 matrix4_look_at(Vector3 eye_p1, Vector3 look_at_p2, Vector3 up_p3);
+	public static extern Matrix4 matrix4_look_at(vector3 eye_p1, vector3 look_at_p2, vector3 up_p3);
 
 
 	/// <summary>
@@ -240,7 +240,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.matrix4_axis_angle({0}, {1})"
 	/// </summary>
-	public static extern Matrix4 matrix4_axis_angle(Vector3 v_p1, double angle_p2);
+	public static extern Matrix4 matrix4_axis_angle(vector3 v_p1, double angle_p2);
 
 
 	/// <summary>
@@ -276,7 +276,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.matrix4_translation({0})"
 	/// </summary>
-	public static extern Matrix4 matrix4_translation(Vector3 position_p1);
+	public static extern Matrix4 matrix4_translation(vector3 position_p1);
 
 
 	/// <summary>
@@ -285,7 +285,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.matrix4_translation({0})"
 	/// </summary>
-	public static extern Matrix4 matrix4_translation(Vector4 position_p1);
+	public static extern Matrix4 matrix4_translation(vector4 position_p1);
 
 
 	/// <summary>
@@ -324,7 +324,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
-	public static extern double dot(Vector3 v1_p1, Vector3 v2_p2);
+	public static extern double dot(vector3 v1_p1, vector3 v2_p2);
 
 
 	/// <summary>
@@ -339,7 +339,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
-	public static extern double dot(Vector3 v1_p1, Vector4 v2_p2);
+	public static extern double dot(vector3 v1_p1, vector4 v2_p2);
 
 
 	/// <summary>
@@ -354,7 +354,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
-	public static extern double dot(Vector4 v1_p1, Vector3 v2_p2);
+	public static extern double dot(vector4 v1_p1, vector3 v2_p2);
 
 
 	/// <summary>
@@ -369,7 +369,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.dot({0}, {1})"
 	/// </summary>
-	public static extern double dot(Vector4 v1_p1, Vector4 v2_p2);
+	public static extern double dot(vector4 v1_p1, vector4 v2_p2);
 
 
 	/// <summary>
@@ -377,7 +377,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.length_sqr({0})"
 	/// </summary>
-	public static extern double length_sqr(Vector3 v_p1);
+	public static extern double length_sqr(vector3 v_p1);
 
 
 	/// <summary>
@@ -385,7 +385,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.length_sqr({0})"
 	/// </summary>
-	public static extern double length_sqr(Vector4 v_p1);
+	public static extern double length_sqr(vector4 v_p1);
 
 
 	/// <summary>
@@ -404,7 +404,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.length({0})"
 	/// </summary>
-	public static extern double length(Vector3 v_p1);
+	public static extern double length(vector3 v_p1);
 
 
 	/// <summary>
@@ -415,7 +415,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.length({0})"
 	/// </summary>
-	public static extern double length(Vector4 v_p1);
+	public static extern double length(vector4 v_p1);
 
 
 	/// <summary>
@@ -437,7 +437,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.normalize({0})"
 	/// </summary>
-	public static extern Vector3 normalize(Vector3 v1_p1);
+	public static extern vector3 normalize(vector3 v1_p1);
 
 
 	/// <summary>
@@ -448,7 +448,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.normalize({0})"
 	/// </summary>
-	public static extern Vector4 normalize(Vector4 v1_p1);
+	public static extern vector4 normalize(vector4 v1_p1);
 
 
 	/// <summary>
@@ -472,7 +472,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.cross({0}, {1})"
 	/// </summary>
-	public static extern Vector3 cross(Vector3 v1_p1, Vector3 v2_p2);
+	public static extern vector3 cross(vector3 v1_p1, vector3 v2_p2);
 
 
 	/// <summary>
@@ -484,7 +484,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector3 lerp(double t_p1, Vector3 v1_p2, Vector3 v2_p3);
+	public static extern vector3 lerp(double t_p1, vector3 v1_p2, vector3 v2_p3);
 
 
 	/// <summary>
@@ -496,7 +496,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.lerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector4 lerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
+	public static extern vector4 lerp(double t_p1, vector4 v1_p2, vector4 v2_p3);
 
 
 	/// <summary>
@@ -535,7 +535,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector3 slerp(double t_p1, Vector3 v1_p2, Vector3 v2_p3);
+	public static extern vector3 slerp(double t_p1, vector3 v1_p2, vector3 v2_p3);
 
 
 	/// <summary>
@@ -550,7 +550,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.slerp({0}, {1}, {2})"
 	/// </summary>
-	public static extern Vector4 slerp(double t_p1, Vector4 v1_p2, Vector4 v2_p3);
+	public static extern vector4 slerp(double t_p1, vector4 v1_p2, vector4 v2_p3);
 
 
 	/// <summary>
@@ -586,7 +586,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.rotate({0}, {1})"
 	/// </summary>
-	public static extern Vector3 rotate(Quaternion q_p1, Vector3 v1_p2);
+	public static extern vector3 rotate(Quaternion q_p1, vector3 v1_p2);
 
 
 	/// <summary>
@@ -597,7 +597,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.project({0}, {1})"
 	/// </summary>
-	public static extern double project(Vector3 v1_p1, Vector3 v2_p2);
+	public static extern double project(vector3 v1_p1, vector3 v2_p2);
 
 
 	/// <summary>
@@ -607,7 +607,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
 	/// </summary>
-	public static extern Vector3 mul_per_elem(Vector3 v1_p1, Vector3 v2_p2);
+	public static extern vector3 mul_per_elem(vector3 v1_p1, vector3 v2_p2);
 
 
 	/// <summary>
@@ -617,7 +617,7 @@ public static class Vmath
 	/// 
 	/// @CSharpLua.Template = "vmath.mul_per_elem({0}, {1})"
 	/// </summary>
-	public static extern Vector4 mul_per_elem(Vector4 v1_p1, Vector4 v2_p2);
+	public static extern vector4 mul_per_elem(vector4 v1_p1, vector4 v2_p2);
 
 
 	#endregion Defold API
