@@ -3,16 +3,17 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <LangVersion>7.3</LangVersion>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <NoWarn>1701;1702;0626;0824;0169</NoWarn>
+      <NoWarn>1701;1702;0626;0824;0169;1591;1570;1573;1572</NoWarn>
       <DocumentationFile>..\out\net6.0\DefoldSharp.xml</DocumentationFile>
       <OutputPath>..\out\</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <NoWarn>1701;1702;0626;0824;0169</NoWarn>
+        <NoWarn>1701;1702;0626;0824;0169;1591;1570;1573;1572</NoWarn>
       <DocumentationFile>..\out\net6.0\DefoldSharp.xml</DocumentationFile>
       <OutputPath>..\out\</OutputPath>
     </PropertyGroup>
@@ -30,7 +31,7 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="..\compiler\CSharp.lua.Launcher.exe -s .\ -d ..\out\lib -c -inline-property -module" />
+      <Exec Command="..\compiler\CSharp.lua.Launcher.exe -s .\ -d ..\out\lib -c -inline-property -module&#xA;rmdir ..\out\ref /S /Q&#xA;rmdir ..\out\net6.0 /S /Q&#xA;Del ..\out\DefoldSharp.deps.json /Q&#xA;Del ..\out\DefoldSharp.pdb /Q" />
     </Target>
 
 </Project>

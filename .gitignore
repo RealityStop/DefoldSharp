@@ -4,3 +4,7 @@
 compiler/
 
 out/
+
+.idea/
+
+DefoldSharpLib/obj/
