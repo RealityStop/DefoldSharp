@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>7.3</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <NoWarn>1701;1702;0626;0824;0169</NoWarn>
+      <DocumentationFile>..\out\net6.0\DefoldSharp.xml</DocumentationFile>
+      <OutputPath>..\out\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <NoWarn>1701;1702;0626;0824;0169</NoWarn>
+      <DocumentationFile>..\out\net6.0\DefoldSharp.xml</DocumentationFile>
+      <OutputPath>..\out\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="compiler\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="compiler\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="compiler\**" />
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="..\compiler\CSharp.lua.Launcher.exe -s .\ -d ..\out\lib -c -inline-property -module" />
+    </Target>
+
+</Project>
