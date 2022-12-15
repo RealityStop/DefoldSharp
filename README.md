@@ -52,7 +52,7 @@ The alpha has been released.  The goal for this Alpha is the "minimum viable pro
 
 * Most of C# is supported.  For now, the included project file limits C# to C# 7 but, since it runs with Roslyn, in principle some of the newer features are supported.  I'm just not sure where those boundaries are.  Bump the version number up at your risk.
 * Reflection is not supported.
-* For now, single-assembly code is supported.  Importing via dlls/nuget will never be supported, as we aren't decompiling the 3rd party code to generate lua from.  However, 3rd-party assemblies that you have the code for should be supported in the future by allowing you to create a special lua export of your dependencies and import it into your DefoldSharp project.  How to do this will be expanded in the future, and the main Defold api will be moved out this way as well..  In Alpha 1, everything must be in the same project.
+* For now, single-assembly code is supported.  Importing directly from dlls/nuget will never be supported, as we aren't decompiling the 3rd party code to generate lua from.  However, 3rd-party assemblies that you have the code for should be able to be compiled such that they output a special lua export that can be imported into your DefoldSharp project.  How to do this will be expanded in the future, and the main Defold api will be moved out this way as well..  In Alpha 1, everything must be in the same project.
 * All C# code is contained in the generated out.lua file, with simple stubs being generated for the `.script` and `.gui_script files`.  See [Issue 2](https://github.com/RealityStop/DefoldSharp/issues/2) for progress on moving the logic to the generated files.
 * Hot Reload does NOT work.  This is because the logic is contained in secondary scripts (this is required to support inheritance), rather than in the actual .script.  I am unsure if this is something that can be worked around.
 
@@ -69,4 +69,4 @@ Here's a short glimpse into the immediate future  (all are subject to change, an
 
 ## Upcoming Alphas:
 ### Alpha 5
- * TBD
+ * Assembly support
