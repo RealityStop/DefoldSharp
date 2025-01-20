@@ -2,9 +2,9 @@
 
 # DefoldSharp
 
-C# support for the Defold game engine.  This is implemented as a transpiler that will convert valid C# to valid lua with Defold game integrations provided.
+Early C# support for the Defold game engine.  This is implemented as a transpiler that will convert valid C# to valid lua with Defold game integrations provided.
 
-> ⚠️ This project is still in Alpha.  See #roadmap for the current issues and features planned before this should be considered for production use.
+> ⚠️ This project is Deprecated.  The Defold game engine now has official first-party C# support, and no further development will occur on this project.
 
 During Alpha, only the current Defold version has integrations generated.  This is currently Defold 1.4.0.
 
